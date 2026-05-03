@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "ScanController",
+    "Method": "Scan",
+    "RelativePath": "api/Scan",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ScanRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
