@@ -1,95 +1,104 @@
-﻿@{
-    Layout = null;
-}
+﻿@model DashboardViewModel
 
-<!DOCTYPE html>
-<html lang="ar">
 <head>
-    <meta charset="utf-8" />
-    <title>Dashboard</title>
-
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- CSS -->
-    <link href="~/css/dashboard.css" rel="stylesheet">
-
-    <!-- Chart.js -->
+    <link rel="stylesheet" href="~/css/dashboard.css" />
+    <script src="~/js/dashboard.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<body>
-
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <h3 class="text-center p-3">📊 لوحة التحكم</h3>
-
-        <a href="#">🏠 الرئيسية</a>
-        <a href="#">📚 الحروف</a>
-        <a href="#">🐾 الحيوانات</a>
-        <a href="#">📈 الإحصائيات</a>
-        <a href="/Auth/Logout">🚪 تسجيل خروج</a>
-    </div>
-    <h2>@Model.LearnedCount</h2>
-    <h2>@Model.Attempts</h2>
-    <h2>@Model.Errors</h2>
-    <!-- Content -->
-    <div class="content">
-
-        <!-- Navbar -->
-        <nav class="navbar navbar-light bg-light rounded mb-4">
-            <span class="navbar-brand mb-0 h5">مرحباً 👋</span>
-        </nav>
-
-        <!-- Cards -->
-        <div class="row mb-4">
-
-            <div class="col-md-4">
-                <div class="card text-white bg-primary p-3">
-                    <h5>الحروف المتعلمة</h5>
-                    <h2 id="learnedCount">12</h2>
-                </div>
+<div class="dashboard-container">
+    <div class="main-glass-panel">
+        <!-- الهيدر العلوي -->
+        <div class="panel-header">
+            <div class="header-main">
+                <span class="user-icon">👩‍🏫</span>
+                <h2>لوحة تحكم الأم</h2>
             </div>
-
-            <div class="col-md-4">
-                <div class="card text-white bg-success p-3">
-                    <h5>عدد المحاولات</h5>
-                    <h2 id="attempts">45</h2>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card text-white bg-danger p-3">
-                    <h5>الأخطاء</h5>
-                    <h2 id="errors">8</h2>
-                </div>
-            </div>
-
+            <p class="brand-text">• Smart Learning Platform •</p>
         </div>
 
-        <!-- Charts -->
-        <div class="row">
+        <!-- الكونتينر الجديد: عمودين -->
+        <div class="control-grid">
+            <!-- العمود الأول: وضع تشغيل الروبوت -->
+            <div class="section-box">
+                <h3>2. وضع تشغيل الروبوت</h3>
+                <div class="button-list">
+                    <button class="glass-button action-btn metal-btn @(Model.ActiveMode == "Learning" ? "active" : "")"
+                            onclick="updateMode('Status', 'Learning')">
+                        <span class="btn-icon large">🎓</span>
+                        <div class="btn-text"><span>وضع التعليم</span><small>Learning Mode</small></div>
+                    </button>
 
-            <div class="col-md-6">
-                <div class="card p-3">
-                    <h5>📊 تقدم التعلم</h5>
-                    <canvas id="progressChart"></canvas>
+                    <button class="glass-button action-btn metal-btn @(Model.ActiveMode == "Exam" ? "active" : "")"
+                            onclick="updateMode('Status', 'Exam')">
+                        <span class="btn-icon large">📜</span>
+                        <div class="btn-text"><span>وضع الاختبار</span><small>Exam Mode</small></div>
+                    </button>
                 </div>
             </div>
 
-            <div class="col-md-6">
-                <div class="card p-3">
-                    <h5>📈 النتائج</h5>
-                    <canvas id="resultChart"></canvas>
+            <!-- العمود الثاني: نوع المحتوى التعليمي -->
+            <div class="section-box">
+                <h3>1. نوع المحتوى التعليمي</h3>
+                <div class="button-list">
+                    <button class="glass-button metal-btn @(Model.ActiveCategory == "Arabic" ? "active" : "")"
+                            onclick="updateMode('Category', 'Arabic')">
+                        <span class="btn-icon">🇸🇦</span>
+                        <div class="btn-text"><span>عربي •</span><small>Arabic Content</small></div>
+                    </button>
+
+                    <button class="glass-button metal-btn @(Model.ActiveCategory == "English" ? "active" : "")"
+                            onclick="updateMode('Category', 'English')">
+                        <span class="btn-icon">🇺🇸</span>
+                        <div class="btn-text"><span>إنجليزي •</span><small>English Content</small></div>
+                    </button>
+
+                    <button class="glass-button metal-btn @(Model.ActiveCategory == "Colors" ? "active" : "")"
+                            onclick="updateMode('Category', 'Colors')">
+                        <span class="btn-icon">🎨</span>
+                        <div class="btn-text"><span>ألوان •</span><small>Colors</small></div>
+                    </button>
                 </div>
             </div>
-
         </div>
 
+        <!-- زر الإحصائيات -->
+        <div class="stats-footer">
+            <button class="stats-trigger-btn" onclick="openStatsModal()">
+                <i class="fas fa-chart-line"></i> عرض أداء وتقدم الطفل (إحصائيات متقدمة)
+            </button>
+        </div>
+
+        <!-- شريط الحالة السفلي -->
+        <div class="bottom-status-bar">
+            <span>Robot Connected • النظام متصل بالروبوت</span>
+            <i class="fas fa-check-circle status-dot"></i>
+        </div>
     </div>
+</div>
 
-    <!-- JS -->
-    <script src="~/js/dashboard.js"></script>
-
-</body>
-</html>
+<!-- النافذة الثانية: نافذة الإحصائيات (باقية كما هي) -->
+<div id="statsModal" class="modal-overlay">
+    <div class="modal-content glass-panel">
+        <div class="modal-header">
+            <h3><i class="fas fa-analytics"></i> تقرير الأداء التحليلي للطفل</h3>
+            <span class="close-btn" onclick="closeStatsModal()">&times;</span>
+        </div>
+        <div class="modal-body">
+            <div class="quick-stats">
+                <div class="q-card"><h5>@Model.LearnedCount</h5><p>كلمة مكتسبة</p></div>
+                <div class="q-card"><h5>@Model.Attempts</h5><p>إجمالي المحاولات</p></div>
+                <div class="q-card"><h5>@Model.Errors</h5><p>أخطاء مرصودة</p></div>
+            </div>
+            <div class="charts-container">
+                <div class="chart-box">
+                    <canvas id="performanceChart"></canvas>
+                </div>
+                <div class="chart-box">
+                    <canvas id="activityChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

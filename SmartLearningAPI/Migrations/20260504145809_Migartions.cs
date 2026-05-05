@@ -2,16 +2,28 @@
 
 #nullable disable
 
-#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
-
 namespace SmartLearningAPI.Migrations
 {
     /// <inheritdoc />
-    public partial class SyncEspData : Migration
+    public partial class Migartions : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "AppSettings",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    CurrentMode = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CurrentCategory = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_AppSettings", x => x.Id);
+                });
+
             migrationBuilder.CreateTable(
                 name: "Cards",
                 columns: table => new
@@ -58,17 +70,6 @@ namespace SmartLearningAPI.Migrations
                 });
 
             migrationBuilder.InsertData(
-                table: "Cards",
-                columns: new[] { "Id", "Category", "Name", "TrackNumber", "UID" },
-                values: new object[,]
-                {
-                    { 1, "Arabic", "أ", 1, "47 27 DB A2" },
-                    { 2, "Arabic", "ب", 2, "A8 5F 7C A2" },
-                    { 3, "Arabic", "ت", 3, "B8 30 24 A2" },
-                    { 4, "Arabic", "ث", 4, "58 5 A5 A2" }
-                });
-
-            migrationBuilder.InsertData(
                 table: "Sessions",
                 columns: new[] { "Id", "CurrentExpectedUID", "Mode" },
                 values: new object[] { 1, null, "learning" });
@@ -77,6 +78,9 @@ namespace SmartLearningAPI.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "AppSettings");
+
             migrationBuilder.DropTable(
                 name: "Cards");
 

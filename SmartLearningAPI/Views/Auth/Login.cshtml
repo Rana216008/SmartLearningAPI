@@ -1,32 +1,28 @@
 ﻿@{
     Layout = null;
 }
-
 <!DOCTYPE html>
-<html lang="en" id="html-root">
+<html lang="ar" dir="rtl">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <title id="page-title">تسجيل الدخول</title>
     <link rel="stylesheet" href="~/css/Login.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-
 <body>
-
     <div class="robot-bg"></div>
 
     <nav class="navbar">
         <div class="navbar-brand">
-
-            <p class="subtitle">Learning Robot</p>
+            <span class="brand-name">RASH  </span>
+            <span id="nav-subtitle" class="subtitle">Smart Learning Platform</span>
         </div>
-
         <div class="language-toggle">
             <button id="lang-btn" class="dropbtn">
-                🌐 <span id="lang-label">EN</span>
-                <span class="arrow">▼</span>
+                🌐 <span id="lang-label">AR</span> ▼
             </button>
-
             <div id="lang-dropdown" class="dropdown-content hide">
                 <a href="#" data-lang="en">🇺🇸 English</a>
                 <a href="#" data-lang="ar">🇸🇦 العربية</a>
@@ -34,27 +30,37 @@
         </div>
     </nav>
 
-    <div class="login-container">
-        <form class="login-form" asp-action="Login" asp-controller="Auth" method="post">
+    <div class="main-content">
+        <div class="login-panel">
+            <form asp-action="Login" asp-controller="Auth" method="post">
+                <h1 id="login-title">منصة التعلم الذكي</h1>
 
-            <h2 id="login-title">RASH</h2>
-            <p id="login-subtitle">Login</p>
+                <div class="input-section">
+                    <div class="input-group">
+                        <label id="user-label" class="field-label">اسم المستخدم</label>
+                        <input type="text" name="username" id="username" required />
+                    </div>
 
-            <div class="input-group">
-                <label id="password-label">Password</label>
-                <input type="password" name="password" required />
-            </div>
+                    <div class="input-group">
+                        <label id="pass-label" class="field-label">كلمة المرور</label>
+                        <div class="password-wrapper">
+                            <input type="password" name="password" id="password" required />
+                            <i class="fas fa-eye toggle-password" id="toggleEye"></i>
+                        </div>
+                    </div>
+                </div>
 
-            <button type="submit" id="login-button">Login</button>
+                <button type="submit" id="login-button">دخول</button>
 
-            @if (ViewBag.Error != null)
-            {
-                <p class="error-message">@ViewBag.Error</p>
-            }
-
-        </form>
+                @if (ViewBag.Error != null)
+                {
+                    <div style="text-align: center; margin-top: 15px;">
+                        <span class="error-message">@ViewBag.Error</span>
+                    </div>
+                }
+            </form>
+        </div>
     </div>
-
     <script src="~/js/Login.js"></script>
 </body>
 </html>

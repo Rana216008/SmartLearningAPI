@@ -1,15 +1,2 @@
-D:\ENG\Final-Prpject\Visual Studio\SmartLearningAPI\SmartLearningAPI\wwwroot\audio\0000.mp3
-D:\ENG\Final-Prpject\Visual Studio\SmartLearningAPI\SmartLearningAPI\wwwroot\audio\0001.mp3
-D:\ENG\Final-Prpject\Visual Studio\SmartLearningAPI\SmartLearningAPI\wwwroot\audio\0002.mp3
-D:\ENG\Final-Prpject\Visual Studio\SmartLearningAPI\SmartLearningAPI\wwwroot\audio\0003.mp3
-D:\ENG\Final-Prpject\Visual Studio\SmartLearningAPI\SmartLearningAPI\wwwroot\audio\0004.mp3
-D:\ENG\Final-Prpject\Visual Studio\SmartLearningAPI\SmartLearningAPI\wwwroot\audio\0005.mp3
-D:\ENG\Final-Prpject\Visual Studio\SmartLearningAPI\SmartLearningAPI\wwwroot\audio\0006.mp3
-D:\ENG\Final-Prpject\Visual Studio\SmartLearningAPI\SmartLearningAPI\wwwroot\audio\0007.mp3
-D:\ENG\Final-Prpject\Visual Studio\SmartLearningAPI\SmartLearningAPI\wwwroot\audio\0008.mp3
-D:\ENG\Final-Prpject\Visual Studio\SmartLearningAPI\SmartLearningAPI\wwwroot\audio\0009.mp3
-D:\ENG\Final-Prpject\Visual Studio\SmartLearningAPI\SmartLearningAPI\wwwroot\audio\0010.mp3
-D:\ENG\Final-Prpject\Visual Studio\SmartLearningAPI\SmartLearningAPI\wwwroot\audio\0011.mp3
-D:\ENG\Final-Prpject\Visual Studio\SmartLearningAPI\SmartLearningAPI\wwwroot\audio\0012.mp3
-D:\ENG\Final-Prpject\Visual Studio\SmartLearningAPI\SmartLearningAPI\wwwroot\audio\0013.mp3
-D:\ENG\Final-Prpject\Visual Studio\SmartLearningAPI\SmartLearningAPI\wwwroot\audio\0014.mp3
+D:\ENG\Final-Prpject\Visual Studio\SmartLearningAPI\SmartLearningAPI\wwwroot\imge\robot1.png
+D:\ENG\Final-Prpject\Visual Studio\SmartLearningAPI\SmartLearningAPI\wwwroot\imge\robot2.webp

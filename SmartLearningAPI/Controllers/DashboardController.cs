@@ -19,5 +19,20 @@ public class DashboardController : Controller
         };
 
         return View(model);
+ 
+    }
+
+    [HttpPost]
+    public IActionResult UpdateSettings(string type, string value)
+    {
+        var settings = _db.AppSettings.First();
+
+        if (type == "Category")
+            settings.CurrentCategory = value;
+        else if (type == "Status")
+            settings.CurrentMode = value;
+
+        _db.SaveChanges();
+        return Ok();
     }
 }

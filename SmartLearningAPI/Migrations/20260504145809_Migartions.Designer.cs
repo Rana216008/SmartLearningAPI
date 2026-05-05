@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace SmartLearningAPI.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260501132039_SyncEspData")]
-    partial class SyncEspData
+    [Migration("20260504145809_Migartions")]
+    partial class Migartions
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -22,6 +22,27 @@ namespace SmartLearningAPI.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("AppSettings", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("CurrentCategory")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CurrentMode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("AppSettings");
+                });
 
             modelBuilder.Entity("Card", b =>
                 {
@@ -49,40 +70,6 @@ namespace SmartLearningAPI.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Cards");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Category = "Arabic",
-                            Name = "أ",
-                            TrackNumber = 1,
-                            UID = "47 27 DB A2"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Category = "Arabic",
-                            Name = "ب",
-                            TrackNumber = 2,
-                            UID = "A8 5F 7C A2"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Category = "Arabic",
-                            Name = "ت",
-                            TrackNumber = 3,
-                            UID = "B8 30 24 A2"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Category = "Arabic",
-                            Name = "ث",
-                            TrackNumber = 4,
-                            UID = "58 5 A5 A2"
-                        });
                 });
 
             modelBuilder.Entity("Session", b =>

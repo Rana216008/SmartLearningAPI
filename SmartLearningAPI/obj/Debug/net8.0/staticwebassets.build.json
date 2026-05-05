@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "bEoG0fKGdc/lQhlOtiQyl3JTggRThYIHOZ1EqewklAs=",
+  "Hash": "ppHrd1gmBmRY2K/YjBrP9HTysgFtQozmFmUsTFJipEA=",
   "Source": "SmartLearningAPI",
   "BasePath": "_content/SmartLearningAPI",
   "Mode": "Default",
@@ -59,321 +59,6 @@
       "OriginalItemSpec": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\SmartLearningAPI.bundle.scp.css"
     },
     {
-      "Identity": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\audio\\0000.mp3",
-      "SourceId": "SmartLearningAPI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\",
-      "BasePath": "_content/SmartLearningAPI",
-      "RelativePath": "audio/0000#[.{fingerprint}]?.mp3",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "ivv05hy9uq",
-      "Integrity": "Xgq87IzYFksPxr1uWlH4vPbscO+8LnMr1hQWxIwhVuM=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\audio\\0000.mp3"
-    },
-    {
-      "Identity": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\audio\\0001.mp3",
-      "SourceId": "SmartLearningAPI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\",
-      "BasePath": "_content/SmartLearningAPI",
-      "RelativePath": "audio/0001#[.{fingerprint}]?.mp3",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "z90570sdd9",
-      "Integrity": "WQipC8PtEXWGDu/oN8Sygs3NjqagE/LzWH6BUcbxJ5o=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\audio\\0001.mp3"
-    },
-    {
-      "Identity": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\audio\\0002.mp3",
-      "SourceId": "SmartLearningAPI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\",
-      "BasePath": "_content/SmartLearningAPI",
-      "RelativePath": "audio/0002#[.{fingerprint}]?.mp3",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "e99mgxw8h8",
-      "Integrity": "YgzONCQyJvlu6leiubn3bWF5RY4FVp0x5sAl/Z1bSuw=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\audio\\0002.mp3"
-    },
-    {
-      "Identity": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\audio\\0003.mp3",
-      "SourceId": "SmartLearningAPI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\",
-      "BasePath": "_content/SmartLearningAPI",
-      "RelativePath": "audio/0003#[.{fingerprint}]?.mp3",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "ms55t81tvq",
-      "Integrity": "llnT+tzkKtNABTyrJWXd/+vK4+kWbVWMeeUUZz6+WvY=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\audio\\0003.mp3"
-    },
-    {
-      "Identity": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\audio\\0004.mp3",
-      "SourceId": "SmartLearningAPI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\",
-      "BasePath": "_content/SmartLearningAPI",
-      "RelativePath": "audio/0004#[.{fingerprint}]?.mp3",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "tp002trd4m",
-      "Integrity": "ockTyl+YSFQJyXtbP4erOuLd6grNbcRAqBmi2ml2V0M=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\audio\\0004.mp3"
-    },
-    {
-      "Identity": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\audio\\0005.mp3",
-      "SourceId": "SmartLearningAPI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\",
-      "BasePath": "_content/SmartLearningAPI",
-      "RelativePath": "audio/0005#[.{fingerprint}]?.mp3",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "nxscsqpnjf",
-      "Integrity": "hU4FJIt0uYqBx5DuODILwyuqvqK5BUS7faKsrYSSydM=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\audio\\0005.mp3"
-    },
-    {
-      "Identity": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\audio\\0006.mp3",
-      "SourceId": "SmartLearningAPI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\",
-      "BasePath": "_content/SmartLearningAPI",
-      "RelativePath": "audio/0006#[.{fingerprint}]?.mp3",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "3zwcv82n8c",
-      "Integrity": "77CWR8ZwBoQvq99pEnVF9u+1VQOGb6eIWweYjegWUZ8=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\audio\\0006.mp3"
-    },
-    {
-      "Identity": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\audio\\0007.mp3",
-      "SourceId": "SmartLearningAPI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\",
-      "BasePath": "_content/SmartLearningAPI",
-      "RelativePath": "audio/0007#[.{fingerprint}]?.mp3",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "968sux4gbm",
-      "Integrity": "YVoXufp0eqlJz/ds1A36g/JaLvrFQHkd68D/awXAS54=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\audio\\0007.mp3"
-    },
-    {
-      "Identity": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\audio\\0008.mp3",
-      "SourceId": "SmartLearningAPI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\",
-      "BasePath": "_content/SmartLearningAPI",
-      "RelativePath": "audio/0008#[.{fingerprint}]?.mp3",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "7qec6ftel2",
-      "Integrity": "j4e7Hg8ijdoZwaWngZsQrUGlVn2mAGhmfwSWsJWw4CE=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\audio\\0008.mp3"
-    },
-    {
-      "Identity": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\audio\\0009.mp3",
-      "SourceId": "SmartLearningAPI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\",
-      "BasePath": "_content/SmartLearningAPI",
-      "RelativePath": "audio/0009#[.{fingerprint}]?.mp3",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "4o01p7a2yo",
-      "Integrity": "XPGeo1zLPzz4XWkllJ/rk2YIg25VgLoa7a3M51/NnlA=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\audio\\0009.mp3"
-    },
-    {
-      "Identity": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\audio\\0010.mp3",
-      "SourceId": "SmartLearningAPI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\",
-      "BasePath": "_content/SmartLearningAPI",
-      "RelativePath": "audio/0010#[.{fingerprint}]?.mp3",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "5ha2bmh8hl",
-      "Integrity": "ibRMb04HfCZVrN9HyC3IC5i+DSyiucV/rucfHcYmB9g=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\audio\\0010.mp3"
-    },
-    {
-      "Identity": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\audio\\0011.mp3",
-      "SourceId": "SmartLearningAPI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\",
-      "BasePath": "_content/SmartLearningAPI",
-      "RelativePath": "audio/0011#[.{fingerprint}]?.mp3",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "mvc6ojtnlf",
-      "Integrity": "TqU8T5OwZnb7e4fLnxO2baa6hReKCtOxBblLYaFXoik=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\audio\\0011.mp3"
-    },
-    {
-      "Identity": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\audio\\0012.mp3",
-      "SourceId": "SmartLearningAPI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\",
-      "BasePath": "_content/SmartLearningAPI",
-      "RelativePath": "audio/0012#[.{fingerprint}]?.mp3",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "02pbpk2byr",
-      "Integrity": "aEPZMtUBjZ+o3M/GwhHKttvnaBbIYxtWnMxRV9cPgOs=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\audio\\0012.mp3"
-    },
-    {
-      "Identity": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\audio\\0013.mp3",
-      "SourceId": "SmartLearningAPI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\",
-      "BasePath": "_content/SmartLearningAPI",
-      "RelativePath": "audio/0013#[.{fingerprint}]?.mp3",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "ez0near2uv",
-      "Integrity": "RjUhnO93qzKquE1uFcQ7o00MhpT0AP6ArHQB5FCxHvs=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\audio\\0013.mp3"
-    },
-    {
-      "Identity": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\audio\\0014.mp3",
-      "SourceId": "SmartLearningAPI",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\",
-      "BasePath": "_content/SmartLearningAPI",
-      "RelativePath": "audio/0014#[.{fingerprint}]?.mp3",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "hbnnj4hebe",
-      "Integrity": "MxeDkvoLBzSxktb9y9Kl5KvQEzpc8B2v0M41MXOrj2Q=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\audio\\0014.mp3"
-    },
-    {
       "Identity": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\css\\dashboard.css",
       "SourceId": "SmartLearningAPI",
       "SourceType": "Discovered",
@@ -388,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "plslcxdzk3",
-      "Integrity": "DcToKvFa8FAcn0tLbyjBb7k/LJ+f3GA2mzi/2OlI3Xc=",
+      "Fingerprint": "to3uhmkmdf",
+      "Integrity": "0wgNt6o7y5+sUPb4wR7Ce9+MHSINbipW1Y+/nb/1TA4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\dashboard.css"
@@ -409,8 +94,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "fykx4ilg5c",
-      "Integrity": "V0SzVZcJQCtAIw2F6J+seI8x3+58MJMOCQhguIQJHVY=",
+      "Fingerprint": "og92sez8ur",
+      "Integrity": "aGCvPduRVPh6o73Yg8Bfhbq109Su0+FkXDvWYR2Ikqc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Login.css"
@@ -458,12 +143,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\imge\\robot1.png",
+      "Identity": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\imge\\Gemini_Generated_Image_8gu77b8gu77b8gu7.png",
       "SourceId": "SmartLearningAPI",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\",
       "BasePath": "_content/SmartLearningAPI",
-      "RelativePath": "imge/robot1#[.{fingerprint}]?.png",
+      "RelativePath": "imge/Gemini_Generated_Image_8gu77b8gu77b8gu7#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -472,19 +157,19 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ghvymh5d5q",
-      "Integrity": "HOJ89O7CfsPLRcV74/uF2nzLXQZ73y9aFqzP8LgrFBE=",
+      "Fingerprint": "62t3vokbp8",
+      "Integrity": "3pQP8WtcHYALq7+yBo0PqFYlI+al8N+8KcOWBaS186I=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\imge\\robot1.png"
+      "OriginalItemSpec": "wwwroot\\imge\\Gemini_Generated_Image_8gu77b8gu77b8gu7.png"
     },
     {
-      "Identity": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\imge\\robot2.webp",
+      "Identity": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\imge\\imgdashboard.png",
       "SourceId": "SmartLearningAPI",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\",
       "BasePath": "_content/SmartLearningAPI",
-      "RelativePath": "imge/robot2#[.{fingerprint}]?.webp",
+      "RelativePath": "imge/imgdashboard#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -493,11 +178,11 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "z2pu4unjvk",
-      "Integrity": "hTlMORxnMHS8z2SsMzi/WPytfCJa8sqRFQLUF5Qseys=",
+      "Fingerprint": "biyuneg96r",
+      "Integrity": "M7kLc3XM60024CBLiI7UkCw8Z0gB0kHXwCe1ZYOYL0k=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\imge\\robot2.webp"
+      "OriginalItemSpec": "wwwroot\\imge\\imgdashboard.png"
     },
     {
       "Identity": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\js\\dashboard.js",
@@ -514,8 +199,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "tfkzsrohh4",
-      "Integrity": "xwU9zCIgShi2CJGmo793micjoCFMbVegr4Jov4W9F+Y=",
+      "Fingerprint": "hyqfyih97j",
+      "Integrity": "x49aJHhp5+is0+g02OfzDyX/VIsq8I3LxfDZS6YauVY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\dashboard.js"
@@ -535,8 +220,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "t0mnn3itsj",
-      "Integrity": "PZKCMaq32/Rmm/zz61f9bQLhuAiN4QUXlw4JXUzRk7g=",
+      "Fingerprint": "n8v3fmw1ub",
+      "Integrity": "54dXkdq7niYV/UoNqPBGDT3sZuXxWAbr3QeJjqonQu4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\Login.js"
@@ -1762,1236 +1447,6 @@
   ],
   "Endpoints": [
     {
-      "Route": "audio/0000.ivv05hy9uq.mp3",
-      "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\audio\\0000.mp3",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "115430"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "audio/mpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Xgq87IzYFksPxr1uWlH4vPbscO+8LnMr1hQWxIwhVuM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 01 May 2026 13:44:32 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "ivv05hy9uq"
-        },
-        {
-          "Name": "label",
-          "Value": "audio/0000.mp3"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-Xgq87IzYFksPxr1uWlH4vPbscO+8LnMr1hQWxIwhVuM="
-        }
-      ]
-    },
-    {
-      "Route": "audio/0000.mp3",
-      "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\audio\\0000.mp3",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "115430"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "audio/mpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Xgq87IzYFksPxr1uWlH4vPbscO+8LnMr1hQWxIwhVuM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 01 May 2026 13:44:32 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-Xgq87IzYFksPxr1uWlH4vPbscO+8LnMr1hQWxIwhVuM="
-        }
-      ]
-    },
-    {
-      "Route": "audio/0001.mp3",
-      "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\audio\\0001.mp3",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "28368"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "audio/mpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"WQipC8PtEXWGDu/oN8Sygs3NjqagE/LzWH6BUcbxJ5o=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 01 May 2026 13:44:17 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-WQipC8PtEXWGDu/oN8Sygs3NjqagE/LzWH6BUcbxJ5o="
-        }
-      ]
-    },
-    {
-      "Route": "audio/0001.z90570sdd9.mp3",
-      "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\audio\\0001.mp3",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "28368"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "audio/mpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"WQipC8PtEXWGDu/oN8Sygs3NjqagE/LzWH6BUcbxJ5o=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 01 May 2026 13:44:17 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "z90570sdd9"
-        },
-        {
-          "Name": "label",
-          "Value": "audio/0001.mp3"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-WQipC8PtEXWGDu/oN8Sygs3NjqagE/LzWH6BUcbxJ5o="
-        }
-      ]
-    },
-    {
-      "Route": "audio/0002.e99mgxw8h8.mp3",
-      "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\audio\\0002.mp3",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "24768"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "audio/mpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"YgzONCQyJvlu6leiubn3bWF5RY4FVp0x5sAl/Z1bSuw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 01 May 2026 13:44:18 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "e99mgxw8h8"
-        },
-        {
-          "Name": "label",
-          "Value": "audio/0002.mp3"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-YgzONCQyJvlu6leiubn3bWF5RY4FVp0x5sAl/Z1bSuw="
-        }
-      ]
-    },
-    {
-      "Route": "audio/0002.mp3",
-      "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\audio\\0002.mp3",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "24768"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "audio/mpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"YgzONCQyJvlu6leiubn3bWF5RY4FVp0x5sAl/Z1bSuw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 01 May 2026 13:44:18 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-YgzONCQyJvlu6leiubn3bWF5RY4FVp0x5sAl/Z1bSuw="
-        }
-      ]
-    },
-    {
-      "Route": "audio/0003.mp3",
-      "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\audio\\0003.mp3",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "29088"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "audio/mpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"llnT+tzkKtNABTyrJWXd/+vK4+kWbVWMeeUUZz6+WvY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 01 May 2026 13:44:19 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-llnT+tzkKtNABTyrJWXd/+vK4+kWbVWMeeUUZz6+WvY="
-        }
-      ]
-    },
-    {
-      "Route": "audio/0003.ms55t81tvq.mp3",
-      "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\audio\\0003.mp3",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "29088"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "audio/mpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"llnT+tzkKtNABTyrJWXd/+vK4+kWbVWMeeUUZz6+WvY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 01 May 2026 13:44:19 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "ms55t81tvq"
-        },
-        {
-          "Name": "label",
-          "Value": "audio/0003.mp3"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-llnT+tzkKtNABTyrJWXd/+vK4+kWbVWMeeUUZz6+WvY="
-        }
-      ]
-    },
-    {
-      "Route": "audio/0004.mp3",
-      "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\audio\\0004.mp3",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "27216"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "audio/mpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ockTyl+YSFQJyXtbP4erOuLd6grNbcRAqBmi2ml2V0M=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 01 May 2026 13:44:19 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-ockTyl+YSFQJyXtbP4erOuLd6grNbcRAqBmi2ml2V0M="
-        }
-      ]
-    },
-    {
-      "Route": "audio/0004.tp002trd4m.mp3",
-      "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\audio\\0004.mp3",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "27216"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "audio/mpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ockTyl+YSFQJyXtbP4erOuLd6grNbcRAqBmi2ml2V0M=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 01 May 2026 13:44:19 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "tp002trd4m"
-        },
-        {
-          "Name": "label",
-          "Value": "audio/0004.mp3"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-ockTyl+YSFQJyXtbP4erOuLd6grNbcRAqBmi2ml2V0M="
-        }
-      ]
-    },
-    {
-      "Route": "audio/0005.mp3",
-      "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\audio\\0005.mp3",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "26928"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "audio/mpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"hU4FJIt0uYqBx5DuODILwyuqvqK5BUS7faKsrYSSydM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 01 May 2026 13:44:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-hU4FJIt0uYqBx5DuODILwyuqvqK5BUS7faKsrYSSydM="
-        }
-      ]
-    },
-    {
-      "Route": "audio/0005.nxscsqpnjf.mp3",
-      "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\audio\\0005.mp3",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "26928"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "audio/mpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"hU4FJIt0uYqBx5DuODILwyuqvqK5BUS7faKsrYSSydM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 01 May 2026 13:44:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "nxscsqpnjf"
-        },
-        {
-          "Name": "label",
-          "Value": "audio/0005.mp3"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-hU4FJIt0uYqBx5DuODILwyuqvqK5BUS7faKsrYSSydM="
-        }
-      ]
-    },
-    {
-      "Route": "audio/0006.3zwcv82n8c.mp3",
-      "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\audio\\0006.mp3",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "27936"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "audio/mpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"77CWR8ZwBoQvq99pEnVF9u+1VQOGb6eIWweYjegWUZ8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 01 May 2026 13:44:21 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "3zwcv82n8c"
-        },
-        {
-          "Name": "label",
-          "Value": "audio/0006.mp3"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-77CWR8ZwBoQvq99pEnVF9u+1VQOGb6eIWweYjegWUZ8="
-        }
-      ]
-    },
-    {
-      "Route": "audio/0006.mp3",
-      "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\audio\\0006.mp3",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "27936"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "audio/mpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"77CWR8ZwBoQvq99pEnVF9u+1VQOGb6eIWweYjegWUZ8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 01 May 2026 13:44:21 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-77CWR8ZwBoQvq99pEnVF9u+1VQOGb6eIWweYjegWUZ8="
-        }
-      ]
-    },
-    {
-      "Route": "audio/0007.968sux4gbm.mp3",
-      "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\audio\\0007.mp3",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "29376"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "audio/mpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"YVoXufp0eqlJz/ds1A36g/JaLvrFQHkd68D/awXAS54=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 01 May 2026 13:44:22 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "968sux4gbm"
-        },
-        {
-          "Name": "label",
-          "Value": "audio/0007.mp3"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-YVoXufp0eqlJz/ds1A36g/JaLvrFQHkd68D/awXAS54="
-        }
-      ]
-    },
-    {
-      "Route": "audio/0007.mp3",
-      "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\audio\\0007.mp3",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "29376"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "audio/mpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"YVoXufp0eqlJz/ds1A36g/JaLvrFQHkd68D/awXAS54=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 01 May 2026 13:44:22 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-YVoXufp0eqlJz/ds1A36g/JaLvrFQHkd68D/awXAS54="
-        }
-      ]
-    },
-    {
-      "Route": "audio/0008.7qec6ftel2.mp3",
-      "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\audio\\0008.mp3",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "29664"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "audio/mpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"j4e7Hg8ijdoZwaWngZsQrUGlVn2mAGhmfwSWsJWw4CE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 01 May 2026 13:44:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "7qec6ftel2"
-        },
-        {
-          "Name": "label",
-          "Value": "audio/0008.mp3"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-j4e7Hg8ijdoZwaWngZsQrUGlVn2mAGhmfwSWsJWw4CE="
-        }
-      ]
-    },
-    {
-      "Route": "audio/0008.mp3",
-      "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\audio\\0008.mp3",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "29664"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "audio/mpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"j4e7Hg8ijdoZwaWngZsQrUGlVn2mAGhmfwSWsJWw4CE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 01 May 2026 13:44:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-j4e7Hg8ijdoZwaWngZsQrUGlVn2mAGhmfwSWsJWw4CE="
-        }
-      ]
-    },
-    {
-      "Route": "audio/0009.4o01p7a2yo.mp3",
-      "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\audio\\0009.mp3",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "35280"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "audio/mpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"XPGeo1zLPzz4XWkllJ/rk2YIg25VgLoa7a3M51/NnlA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 01 May 2026 13:44:24 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "4o01p7a2yo"
-        },
-        {
-          "Name": "label",
-          "Value": "audio/0009.mp3"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-XPGeo1zLPzz4XWkllJ/rk2YIg25VgLoa7a3M51/NnlA="
-        }
-      ]
-    },
-    {
-      "Route": "audio/0009.mp3",
-      "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\audio\\0009.mp3",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "35280"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "audio/mpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"XPGeo1zLPzz4XWkllJ/rk2YIg25VgLoa7a3M51/NnlA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 01 May 2026 13:44:24 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-XPGeo1zLPzz4XWkllJ/rk2YIg25VgLoa7a3M51/NnlA="
-        }
-      ]
-    },
-    {
-      "Route": "audio/0010.5ha2bmh8hl.mp3",
-      "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\audio\\0010.mp3",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "49159"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "audio/mpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ibRMb04HfCZVrN9HyC3IC5i+DSyiucV/rucfHcYmB9g=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 01 May 2026 13:44:25 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "5ha2bmh8hl"
-        },
-        {
-          "Name": "label",
-          "Value": "audio/0010.mp3"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-ibRMb04HfCZVrN9HyC3IC5i+DSyiucV/rucfHcYmB9g="
-        }
-      ]
-    },
-    {
-      "Route": "audio/0010.mp3",
-      "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\audio\\0010.mp3",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "49159"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "audio/mpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ibRMb04HfCZVrN9HyC3IC5i+DSyiucV/rucfHcYmB9g=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 01 May 2026 13:44:25 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-ibRMb04HfCZVrN9HyC3IC5i+DSyiucV/rucfHcYmB9g="
-        }
-      ]
-    },
-    {
-      "Route": "audio/0011.mp3",
-      "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\audio\\0011.mp3",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "52292"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "audio/mpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"TqU8T5OwZnb7e4fLnxO2baa6hReKCtOxBblLYaFXoik=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 01 May 2026 13:44:26 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-TqU8T5OwZnb7e4fLnxO2baa6hReKCtOxBblLYaFXoik="
-        }
-      ]
-    },
-    {
-      "Route": "audio/0011.mvc6ojtnlf.mp3",
-      "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\audio\\0011.mp3",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "52292"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "audio/mpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"TqU8T5OwZnb7e4fLnxO2baa6hReKCtOxBblLYaFXoik=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 01 May 2026 13:44:26 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "mvc6ojtnlf"
-        },
-        {
-          "Name": "label",
-          "Value": "audio/0011.mp3"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-TqU8T5OwZnb7e4fLnxO2baa6hReKCtOxBblLYaFXoik="
-        }
-      ]
-    },
-    {
-      "Route": "audio/0012.02pbpk2byr.mp3",
-      "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\audio\\0012.mp3",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "55569"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "audio/mpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"aEPZMtUBjZ+o3M/GwhHKttvnaBbIYxtWnMxRV9cPgOs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 01 May 2026 13:44:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "02pbpk2byr"
-        },
-        {
-          "Name": "label",
-          "Value": "audio/0012.mp3"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-aEPZMtUBjZ+o3M/GwhHKttvnaBbIYxtWnMxRV9cPgOs="
-        }
-      ]
-    },
-    {
-      "Route": "audio/0012.mp3",
-      "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\audio\\0012.mp3",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "55569"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "audio/mpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"aEPZMtUBjZ+o3M/GwhHKttvnaBbIYxtWnMxRV9cPgOs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 01 May 2026 13:44:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-aEPZMtUBjZ+o3M/GwhHKttvnaBbIYxtWnMxRV9cPgOs="
-        }
-      ]
-    },
-    {
-      "Route": "audio/0013.ez0near2uv.mp3",
-      "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\audio\\0013.mp3",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "63495"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "audio/mpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"RjUhnO93qzKquE1uFcQ7o00MhpT0AP6ArHQB5FCxHvs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 01 May 2026 13:44:29 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "ez0near2uv"
-        },
-        {
-          "Name": "label",
-          "Value": "audio/0013.mp3"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-RjUhnO93qzKquE1uFcQ7o00MhpT0AP6ArHQB5FCxHvs="
-        }
-      ]
-    },
-    {
-      "Route": "audio/0013.mp3",
-      "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\audio\\0013.mp3",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "63495"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "audio/mpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"RjUhnO93qzKquE1uFcQ7o00MhpT0AP6ArHQB5FCxHvs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 01 May 2026 13:44:29 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-RjUhnO93qzKquE1uFcQ7o00MhpT0AP6ArHQB5FCxHvs="
-        }
-      ]
-    },
-    {
-      "Route": "audio/0014.hbnnj4hebe.mp3",
-      "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\audio\\0014.mp3",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "72672"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "audio/mpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"MxeDkvoLBzSxktb9y9Kl5KvQEzpc8B2v0M41MXOrj2Q=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 01 May 2026 13:44:30 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "hbnnj4hebe"
-        },
-        {
-          "Name": "label",
-          "Value": "audio/0014.mp3"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-MxeDkvoLBzSxktb9y9Kl5KvQEzpc8B2v0M41MXOrj2Q="
-        }
-      ]
-    },
-    {
-      "Route": "audio/0014.mp3",
-      "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\audio\\0014.mp3",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "72672"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "audio/mpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"MxeDkvoLBzSxktb9y9Kl5KvQEzpc8B2v0M41MXOrj2Q=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 01 May 2026 13:44:30 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-MxeDkvoLBzSxktb9y9Kl5KvQEzpc8B2v0M41MXOrj2Q="
-        }
-      ]
-    },
-    {
       "Route": "css/dashboard.css",
       "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\css\\dashboard.css",
       "Selectors": [],
@@ -3002,7 +1457,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "517"
+          "Value": "6942"
         },
         {
           "Name": "Content-Type",
@@ -3010,11 +1465,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"DcToKvFa8FAcn0tLbyjBb7k/LJ+f3GA2mzi/2OlI3Xc=\""
+          "Value": "\"0wgNt6o7y5+sUPb4wR7Ce9+MHSINbipW1Y+/nb/1TA4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 24 Apr 2026 18:44:48 GMT"
+          "Value": "Mon, 04 May 2026 17:03:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3024,12 +1479,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-DcToKvFa8FAcn0tLbyjBb7k/LJ+f3GA2mzi/2OlI3Xc="
+          "Value": "sha256-0wgNt6o7y5+sUPb4wR7Ce9+MHSINbipW1Y+/nb/1TA4="
         }
       ]
     },
     {
-      "Route": "css/dashboard.plslcxdzk3.css",
+      "Route": "css/dashboard.to3uhmkmdf.css",
       "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\css\\dashboard.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3039,7 +1494,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "517"
+          "Value": "6942"
         },
         {
           "Name": "Content-Type",
@@ -3047,11 +1502,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"DcToKvFa8FAcn0tLbyjBb7k/LJ+f3GA2mzi/2OlI3Xc=\""
+          "Value": "\"0wgNt6o7y5+sUPb4wR7Ce9+MHSINbipW1Y+/nb/1TA4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 24 Apr 2026 18:44:48 GMT"
+          "Value": "Mon, 04 May 2026 17:03:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3061,7 +1516,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "plslcxdzk3"
+          "Value": "to3uhmkmdf"
         },
         {
           "Name": "label",
@@ -3069,7 +1524,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-DcToKvFa8FAcn0tLbyjBb7k/LJ+f3GA2mzi/2OlI3Xc="
+          "Value": "sha256-0wgNt6o7y5+sUPb4wR7Ce9+MHSINbipW1Y+/nb/1TA4="
         }
       ]
     },
@@ -3084,7 +1539,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3923"
+          "Value": "4444"
         },
         {
           "Name": "Content-Type",
@@ -3092,11 +1547,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"V0SzVZcJQCtAIw2F6J+seI8x3+58MJMOCQhguIQJHVY=\""
+          "Value": "\"aGCvPduRVPh6o73Yg8Bfhbq109Su0+FkXDvWYR2Ikqc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 25 Apr 2026 12:46:25 GMT"
+          "Value": "Mon, 04 May 2026 15:05:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3106,12 +1561,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-V0SzVZcJQCtAIw2F6J+seI8x3+58MJMOCQhguIQJHVY="
+          "Value": "sha256-aGCvPduRVPh6o73Yg8Bfhbq109Su0+FkXDvWYR2Ikqc="
         }
       ]
     },
     {
-      "Route": "css/Login.fykx4ilg5c.css",
+      "Route": "css/Login.og92sez8ur.css",
       "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\css\\Login.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3121,7 +1576,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3923"
+          "Value": "4444"
         },
         {
           "Name": "Content-Type",
@@ -3129,11 +1584,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"V0SzVZcJQCtAIw2F6J+seI8x3+58MJMOCQhguIQJHVY=\""
+          "Value": "\"aGCvPduRVPh6o73Yg8Bfhbq109Su0+FkXDvWYR2Ikqc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 25 Apr 2026 12:46:25 GMT"
+          "Value": "Mon, 04 May 2026 15:05:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3143,7 +1598,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "fykx4ilg5c"
+          "Value": "og92sez8ur"
         },
         {
           "Name": "label",
@@ -3151,7 +1606,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-V0SzVZcJQCtAIw2F6J+seI8x3+58MJMOCQhguIQJHVY="
+          "Value": "sha256-aGCvPduRVPh6o73Yg8Bfhbq109Su0+FkXDvWYR2Ikqc="
         }
       ]
     },
@@ -3320,8 +1775,8 @@
       ]
     },
     {
-      "Route": "imge/robot1.ghvymh5d5q.png",
-      "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\imge\\robot1.png",
+      "Route": "imge/Gemini_Generated_Image_8gu77b8gu77b8gu7.62t3vokbp8.png",
+      "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\imge\\Gemini_Generated_Image_8gu77b8gu77b8gu7.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3330,7 +1785,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "121785"
+          "Value": "1937454"
         },
         {
           "Name": "Content-Type",
@@ -3338,11 +1793,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"HOJ89O7CfsPLRcV74/uF2nzLXQZ73y9aFqzP8LgrFBE=\""
+          "Value": "\"3pQP8WtcHYALq7+yBo0PqFYlI+al8N+8KcOWBaS186I=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 24 Apr 2026 19:02:48 GMT"
+          "Value": "Sun, 03 May 2026 15:09:51 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3352,21 +1807,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "ghvymh5d5q"
+          "Value": "62t3vokbp8"
         },
         {
           "Name": "label",
-          "Value": "imge/robot1.png"
+          "Value": "imge/Gemini_Generated_Image_8gu77b8gu77b8gu7.png"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-HOJ89O7CfsPLRcV74/uF2nzLXQZ73y9aFqzP8LgrFBE="
+          "Value": "sha256-3pQP8WtcHYALq7+yBo0PqFYlI+al8N+8KcOWBaS186I="
         }
       ]
     },
     {
-      "Route": "imge/robot1.png",
-      "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\imge\\robot1.png",
+      "Route": "imge/Gemini_Generated_Image_8gu77b8gu77b8gu7.png",
+      "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\imge\\Gemini_Generated_Image_8gu77b8gu77b8gu7.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3375,7 +1830,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "121785"
+          "Value": "1937454"
         },
         {
           "Name": "Content-Type",
@@ -3383,11 +1838,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"HOJ89O7CfsPLRcV74/uF2nzLXQZ73y9aFqzP8LgrFBE=\""
+          "Value": "\"3pQP8WtcHYALq7+yBo0PqFYlI+al8N+8KcOWBaS186I=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 24 Apr 2026 19:02:48 GMT"
+          "Value": "Sun, 03 May 2026 15:09:51 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3397,13 +1852,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-HOJ89O7CfsPLRcV74/uF2nzLXQZ73y9aFqzP8LgrFBE="
+          "Value": "sha256-3pQP8WtcHYALq7+yBo0PqFYlI+al8N+8KcOWBaS186I="
         }
       ]
     },
     {
-      "Route": "imge/robot2.webp",
-      "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\imge\\robot2.webp",
+      "Route": "imge/imgdashboard.biyuneg96r.png",
+      "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\imge\\imgdashboard.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3412,56 +1867,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "20282"
+          "Value": "1784735"
         },
         {
           "Name": "Content-Type",
-          "Value": "image/webp"
+          "Value": "image/png"
         },
         {
           "Name": "ETag",
-          "Value": "\"hTlMORxnMHS8z2SsMzi/WPytfCJa8sqRFQLUF5Qseys=\""
+          "Value": "\"M7kLc3XM60024CBLiI7UkCw8Z0gB0kHXwCe1ZYOYL0k=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 24 Apr 2026 19:03:55 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-hTlMORxnMHS8z2SsMzi/WPytfCJa8sqRFQLUF5Qseys="
-        }
-      ]
-    },
-    {
-      "Route": "imge/robot2.z2pu4unjvk.webp",
-      "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\imge\\robot2.webp",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "20282"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/webp"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"hTlMORxnMHS8z2SsMzi/WPytfCJa8sqRFQLUF5Qseys=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 24 Apr 2026 19:03:55 GMT"
+          "Value": "Mon, 04 May 2026 16:06:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3471,15 +1889,97 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "z2pu4unjvk"
+          "Value": "biyuneg96r"
         },
         {
           "Name": "label",
-          "Value": "imge/robot2.webp"
+          "Value": "imge/imgdashboard.png"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-hTlMORxnMHS8z2SsMzi/WPytfCJa8sqRFQLUF5Qseys="
+          "Value": "sha256-M7kLc3XM60024CBLiI7UkCw8Z0gB0kHXwCe1ZYOYL0k="
+        }
+      ]
+    },
+    {
+      "Route": "imge/imgdashboard.png",
+      "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\imge\\imgdashboard.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1784735"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"M7kLc3XM60024CBLiI7UkCw8Z0gB0kHXwCe1ZYOYL0k=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 04 May 2026 16:06:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-M7kLc3XM60024CBLiI7UkCw8Z0gB0kHXwCe1ZYOYL0k="
+        }
+      ]
+    },
+    {
+      "Route": "js/dashboard.hyqfyih97j.js",
+      "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\js\\dashboard.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3953"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"x49aJHhp5+is0+g02OfzDyX/VIsq8I3LxfDZS6YauVY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 04 May 2026 16:37:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hyqfyih97j"
+        },
+        {
+          "Name": "label",
+          "Value": "js/dashboard.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-x49aJHhp5+is0+g02OfzDyX/VIsq8I3LxfDZS6YauVY="
         }
       ]
     },
@@ -3494,7 +1994,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "502"
+          "Value": "3953"
         },
         {
           "Name": "Content-Type",
@@ -3502,11 +2002,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"xwU9zCIgShi2CJGmo793micjoCFMbVegr4Jov4W9F+Y=\""
+          "Value": "\"x49aJHhp5+is0+g02OfzDyX/VIsq8I3LxfDZS6YauVY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 24 Apr 2026 18:44:48 GMT"
+          "Value": "Mon, 04 May 2026 16:37:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3516,52 +2016,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-xwU9zCIgShi2CJGmo793micjoCFMbVegr4Jov4W9F+Y="
-        }
-      ]
-    },
-    {
-      "Route": "js/dashboard.tfkzsrohh4.js",
-      "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\js\\dashboard.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "502"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"xwU9zCIgShi2CJGmo793micjoCFMbVegr4Jov4W9F+Y=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 24 Apr 2026 18:44:48 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "tfkzsrohh4"
-        },
-        {
-          "Name": "label",
-          "Value": "js/dashboard.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-xwU9zCIgShi2CJGmo793micjoCFMbVegr4Jov4W9F+Y="
+          "Value": "sha256-x49aJHhp5+is0+g02OfzDyX/VIsq8I3LxfDZS6YauVY="
         }
       ]
     },
@@ -3576,7 +2031,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1632"
+          "Value": "4099"
         },
         {
           "Name": "Content-Type",
@@ -3584,11 +2039,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"PZKCMaq32/Rmm/zz61f9bQLhuAiN4QUXlw4JXUzRk7g=\""
+          "Value": "\"54dXkdq7niYV/UoNqPBGDT3sZuXxWAbr3QeJjqonQu4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 25 Apr 2026 12:32:45 GMT"
+          "Value": "Mon, 04 May 2026 15:57:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3598,12 +2053,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-PZKCMaq32/Rmm/zz61f9bQLhuAiN4QUXlw4JXUzRk7g="
+          "Value": "sha256-54dXkdq7niYV/UoNqPBGDT3sZuXxWAbr3QeJjqonQu4="
         }
       ]
     },
     {
-      "Route": "js/Login.t0mnn3itsj.js",
+      "Route": "js/Login.n8v3fmw1ub.js",
       "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\js\\Login.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3613,7 +2068,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1632"
+          "Value": "4099"
         },
         {
           "Name": "Content-Type",
@@ -3621,11 +2076,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"PZKCMaq32/Rmm/zz61f9bQLhuAiN4QUXlw4JXUzRk7g=\""
+          "Value": "\"54dXkdq7niYV/UoNqPBGDT3sZuXxWAbr3QeJjqonQu4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 25 Apr 2026 12:32:45 GMT"
+          "Value": "Mon, 04 May 2026 15:57:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3635,7 +2090,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "t0mnn3itsj"
+          "Value": "n8v3fmw1ub"
         },
         {
           "Name": "label",
@@ -3643,7 +2098,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-PZKCMaq32/Rmm/zz61f9bQLhuAiN4QUXlw4JXUzRk7g="
+          "Value": "sha256-54dXkdq7niYV/UoNqPBGDT3sZuXxWAbr3QeJjqonQu4="
         }
       ]
     },
