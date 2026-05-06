@@ -202,3 +202,21 @@ body {
     font-size: 0.9rem;
     font-weight: bold;
 }
+@media (max-width: 768px) {
+    .control-grid {
+        grid-template-columns: 1fr;
+    }
+
+        .control-grid::after {
+            display: none;
+        }
+
+    .main-glass-panel {
+        max-width: 95%;
+        padding: 18px;
+    }
+
+    .header-main h2 {
+        font-size: 1.5rem;
+    }
+}

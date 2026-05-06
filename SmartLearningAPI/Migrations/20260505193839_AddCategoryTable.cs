@@ -5,7 +5,7 @@
 namespace SmartLearningAPI.Migrations
 {
     /// <inheritdoc />
-    public partial class Migartions : Migration
+    public partial class AddCategoryTable : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -25,19 +25,16 @@ namespace SmartLearningAPI.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Cards",
+                name: "Categories",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    UID = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Category = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    TrackNumber = table.Column<int>(type: "int", nullable: false)
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Cards", x => x.Id);
+                    table.PrimaryKey("PK_Categories", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -69,10 +66,37 @@ namespace SmartLearningAPI.Migrations
                     table.PrimaryKey("PK_Sessions", x => x.Id);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Cards",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    UID = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CategoryId = table.Column<int>(type: "int", nullable: false),
+                    TrackNumber = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Cards", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Cards_Categories_CategoryId",
+                        column: x => x.CategoryId,
+                        principalTable: "Categories",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.InsertData(
                 table: "Sessions",
                 columns: new[] { "Id", "CurrentExpectedUID", "Mode" },
                 values: new object[] { 1, null, "learning" });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Cards_CategoryId",
+                table: "Cards",
+                column: "CategoryId");
         }
 
         /// <inheritdoc />
@@ -89,6 +113,9 @@ namespace SmartLearningAPI.Migrations
 
             migrationBuilder.DropTable(
                 name: "Sessions");
+
+            migrationBuilder.DropTable(
+                name: "Categories");
         }
     }
 }

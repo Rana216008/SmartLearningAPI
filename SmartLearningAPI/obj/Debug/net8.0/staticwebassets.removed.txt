@@ -1,2 +1,0 @@
-D:\ENG\Final-Prpject\Visual Studio\SmartLearningAPI\SmartLearningAPI\wwwroot\imge\robot1.png
-D:\ENG\Final-Prpject\Visual Studio\SmartLearningAPI\SmartLearningAPI\wwwroot\imge\robot2.webp

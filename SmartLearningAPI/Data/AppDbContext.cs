@@ -8,6 +8,7 @@ public class AppDbContext : DbContext
     public DbSet<UserProgress> Progress { get; set; }
     public DbSet<Session> Sessions { get; set; }
     public DbSet<AppSettings> AppSettings { get; set; }
+    public DbSet<Category> Categories { get; set; } 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);

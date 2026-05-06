@@ -1,0 +1,260 @@
+﻿body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: radial-gradient(circle at top, #0b1020, #05060f);
+    color: #e5e7eb;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    background: rgba(10, 12, 25, 0.85);
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: 1px solid rgba(0, 255, 255, 0.25);
+    box-shadow: 0 0 25px rgba(0, 247, 255, 0.15);
+    backdrop-filter: blur(14px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* اسم التطبيق */
+.app-name {
+    font-size: 1.9rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, #00f7ff, #b026ff, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 12px rgba(0, 247, 255, 0.3);
+}
+
+/* ================= BUTTONS ================= */
+.button-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.pink-button {
+    background: linear-gradient(145deg, #0f172a, #020617);
+    color: #00f7ff;
+    border: 1px solid rgba(0, 247, 255, 0.35);
+    padding: 9px 18px;
+    border-radius: 14px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: inset 0 1px 1px rgba(255,255,255,0.08), 0 0 12px rgba(0,247,255,0.15);
+}
+
+    .pink-button:hover {
+        background: rgba(0, 247, 255, 0.08);
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 0 18px rgba(0,247,255,0.35), 0 0 25px rgba(176,38,255,0.2);
+    }
+
+.btn-exit {
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+/* ================= MAIN ================= */
+.main-content {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* ================= SECTIONS ================= */
+.section-wrapper {
+    background: linear-gradient( 145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02) );
+    border-radius: 20px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: inset 0 1px 1px rgba(255,255,255,0.08), 0 0 20px rgba(0,247,255,0.08);
+}
+
+    .section-wrapper h2 {
+        font-size: 1.5rem;
+        margin: 0;
+        color: #e2e8f0;
+        border-left: 4px solid #00f7ff;
+        padding-left: 10px;
+        text-shadow: 0 0 8px rgba(0,247,255,0.25);
+    }
+
+/* ================= EDIT MODE ================= */
+.edit-mode-border {
+    border: 2px solid #00f7ff !important;
+    display: none;
+}
+
+/* ================= GRID ================= */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* ================= CARD ================= */
+.card {
+    border-radius: 20px;
+    background: rgba(10, 12, 25, 0.75);
+    border: 1px solid rgba(0, 247, 255, 0.2);
+    transition: 0.25s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-shadow: inset 0 1px 1px rgba(255,255,255,0.05), 0 0 12px rgba(0,247,255,0.08);
+}
+
+    .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 0 20px rgba(0,247,255,0.35), 0 0 30px rgba(176,38,255,0.2);
+        border-color: rgba(0, 247, 255, 0.5);
+    }
+
+.card-body {
+    padding: 0.8rem;
+    gap: 0.3rem;
+    color: #e5e7eb;
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.card-info i {
+    color: #00f7ff;
+    margin-left: 5px;
+    text-shadow: 0 0 6px rgba(0,247,255,0.5);
+}
+
+.card-meta {
+    font-size: 0.8rem;
+    color: #94a3b8;
+}
+
+/* ================= FORMS ================= */
+.admin-form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.form-input {
+    padding: 12px;
+    border-radius: 12px;
+    background: rgba(2, 6, 23, 0.8);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: white;
+    transition: 0.3s;
+}
+
+    .form-input:focus {
+        outline: none;
+        border-color: #00f7ff;
+        box-shadow: 0 0 12px rgba(0,247,255,0.3);
+    }
+
+/* زر حفظ */
+.btn-save-full {
+    width: 100%;
+    margin-top: 1.5rem;
+    background: linear-gradient(135deg, #00f7ff, #7c3aed);
+    border: none;
+    color: white;
+    font-weight: bold;
+    justify-content: center;
+    box-shadow: 0 0 18px rgba(0,247,255,0.25);
+}
+
+/* ================= HEADER ================= */
+.section-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #94a3b8;
+}
+
+    .close-btn:hover {
+        color: #00f7ff;
+    }
+
+/* ================= CARD ACTIONS ================= */
+.card-actions {
+    margin-top: auto;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 10px;
+}
+
+.btn-delete {
+    color: #ff4d4d;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+    .btn-delete:hover {
+        text-shadow: 0 0 8px rgba(255,77,77,0.6);
+    }
+
+/* ================= ICON ================= */
+.folder-icon {
+    font-size: 1.8rem;
+    color: #00f7ff;
+}
+
+/* ================= CENTER ================= */
+.center-content {
+    text-align: center;
+    align-items: center;
+}
+
+.inline-form {
+    display: flex;
+    gap: 10px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .button-row {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .admin-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .main-content {
+        padding: 1rem;
+    }
+}

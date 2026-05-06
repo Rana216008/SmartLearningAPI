@@ -1,0 +1,140 @@
+﻿@model AdminDashboardViewModel
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="~/css/Admin.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-right">
+            <span class="app-name">
+                <i class="fas fa-user-shield"></i> Dashboard
+            </span>
+        </div>
+
+        <div class="button-row">
+            @* <button type="button" class="pink-button" onclick="toggleAddCard()"> *@
+            @*     <i class="fas fa-plus"></i> Add Card *@
+            @* </button> *@
+            @* <button type="button" class="pink-button" onclick="scrollToSection('add-category-section')"> *@
+            @*     <i class="fas fa-tags"></i> Add Category *@
+            @* </button> *@
+            <form method="post" asp-action="Logout" asp-controller="Auth" style="display:inline;">
+                <button type="submit" class="pink-button btn-exit">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <section id="add-card-section" class="section-wrapper edit-mode-border">
+            <div class="section-header-flex">
+                <h2><i class="fas fa-edit"></i> Details</h2>
+                <button class="close-btn" onclick="toggleAddCard()">&times;</button>
+            </div>
+
+            <form asp-action="SaveCard" asp-controller="Admin" method="post">
+                <div class="admin-form-grid">
+                    <input type="hidden" name="Id" id="cardId" value="0" />
+
+                    <div class="input-group">
+                        <label>Card Name</label>
+                        <input type="text" name="Name" id="cardName" class="form-input" placeholder= "Card Name" required />
+                    </div>
+
+                    <div class="input-group">
+                        <label>UID</label>
+                        <input type="text" name="UID" id="cardUID" class="form-input" placeholder="00 00 00" required />
+                    </div>
+
+                    <div class="input-group">
+                        <label>Category</label>
+                        <select name="CategoryId" id="cardCat" class="form-input">
+                            @foreach (var cat in Model.Categories)
+                            {
+                                <option value="@cat.Id">@cat.Name</option>
+                            }
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Track</label>
+                        <input type="number" name="TrackNumber" id="cardTrack" class="form-input" placeholder="1" required />
+                    </div>
+                </div>
+                <button type="submit" class="pink-button btn-save-full">
+                    <i class="fas fa-save"></i> Save Data
+                </button>
+            </form>
+        </section>
+
+        <section class="section-wrapper">
+            <div class="section-header-flex">
+                <h2><i class="fas fa-layer-group"></i> Cards </h2>
+                <button class="pink-button btn-small" onclick="toggleAddCard()">
+                    <i class="fas fa-plus"></i> New
+                </button>
+            </div>
+
+            <div class="card-grid">
+                @foreach (var card in Model.Cards)
+                {
+                    <div class="card" onclick="editCard('@card.Id', '@card.Name', '@card.UID', '@card.CategoryId', '@card.TrackNumber')">
+                        <div class="card-body">
+                            <div class="card-title">@card.Name</div>
+                            <div class="card-info"><i class="fas fa-tag"></i> @(card.Category?.Name ?? "بدون فئة")</div>
+                            <div class="card-meta">UID: @card.UID</div>
+                            <div class="card-meta">صوت: #@card.TrackNumber</div>
+
+                            <div class="card-actions">
+                                <a asp-action="DeleteCard" asp-route-id="@card.Id"
+                                   class="btn-delete"
+                                   onclick="event.stopPropagation(); return confirm('Delet it?')">
+                                    <i class="fas fa-trash-alt"></i> Delet
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </section>
+
+        <section id="add-category-section" class="section-wrapper">
+            <div class="section-header-flex">
+                <h2><i class="fas fa-tags"></i> Categories</h2>
+                <form asp-action="AddCategory" method="post" class="inline-form">
+                    <input type="text" name="Name" class="form-input" placeholder="Category Name" required />
+                    <button type="submit" class="pink-button">Add Category</button>
+                </form>
+            </div>
+
+            <div class="card-grid">
+                @foreach (var cat in Model.Categories)
+                {
+                    <div class="card category-item">
+                        <div class="card-body center-content">
+                            <i class="fas fa-folder-open folder-icon"></i>
+                            <div class="card-title">@cat.Name</div>
+                            <a asp-action="DeleteCategory" asp-route-id="@cat.Id"
+                               class="btn-delete-text"
+                               onclick="return confirm('Delet This Category?')">
+                                <i class="fas fa-trash-alt"></i> Delet.
+                            </a>
+                        </div>
+                    </div>
+                }
+            </div>
+        </section>
+
+    </div>
+
+    <script src="~/js/Admin.js"></script>
+</body>
+</html>

@@ -6,5 +6,7 @@
 
 
     public string ActiveMode { get; set; } // هل النظام الآن في وضع امتحان؟
-    public string ActiveCategory { get; set; } // ما هو القسم المفتوح حالياً؟
+    public string ActiveCategory { get; set; }
+
+  
 }

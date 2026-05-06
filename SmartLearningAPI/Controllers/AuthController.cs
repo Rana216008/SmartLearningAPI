@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 
 public class AuthController : Controller
 {
-    private const string PASSWORD = "12345678";
-   
+    // كلمات المرور المحددة
+    private const string ADMIN_PASSWORD = "admin_password"; // كلمة سر الأدمن
+    private const string USER_PASSWORD = "user_password";   // كلمة سر المستخدم
 
     public IActionResult Login()
     {
@@ -13,13 +15,23 @@ public class AuthController : Controller
     [HttpPost]
     public IActionResult Login(string password)
     {
-        if (password == PASSWORD)
+        // 1. التحقق إذا كان الداخل هو الأدمن
+        if (password == ADMIN_PASSWORD)
         {
+            HttpContext.Session.SetString("Role", "Admin");
             HttpContext.Session.SetString("Auth", "OK");
-            return RedirectToAction("Index", "Dashboard");
+            return RedirectToAction("Index", "Admin"); // التوجه لصفحة الإدارة
         }
 
-        ViewBag.Error = "كلمة المرور غلط";
+        // 2. التحقق إذا كان الداخل هو المستخدم (الأم)
+        if (password == USER_PASSWORD)
+        {
+            HttpContext.Session.SetString("Role", "User");
+            HttpContext.Session.SetString("Auth", "OK");
+            return RedirectToAction("Index", "Dashboard"); // التوجه للداش بورد
+        }
+
+        ViewBag.Error = "كلمة المرور غير صحيحة، حاول مرة أخرى";
         return View();
     }
 

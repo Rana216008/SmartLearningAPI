@@ -1,38 +1,37 @@
-﻿// وظيفة تحديث الوضع (ارسال البيانات للـ Server)
-function updateMode(type, value) {
-    // يمكنك إضافة كود هنا لإظهار مؤشر تحميل بسيط داخل الزر
+﻿let performanceChart;
+let activityChart;
 
+/* تحديث وضع التشغيل أو التصنيف */
+function updateMode(type, value) {
     fetch(`/Dashboard/UpdateSettings?type=${type}&value=${value}`, {
         method: 'POST'
-    }).then(response => {
-        if (response.ok) {
-            location.reload(); // إعادة تحميل الصفحة لتحديث شكل الأزرار النشطة
-        } else {
-            console.error('Failed to update mode.');
-            // يمكنك إضافة تنبيه للمستخدم هنا
-        }
-    }).catch(error => {
-        console.error('Error:', error);
-    });
+    })
+        .then(response => {
+            if (response.ok) {
+                location.reload();
+            } else {
+                console.error('Failed to update mode.');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
 }
 
-// === وظائف عرض الإحصائيات (Stats Action) ===
-
-// وظيفة لزر الإحصائيات - تقوم بفتح الـ Modal المخصص
+/* فتح نافذة الإحصائيات */
 function openStatsModalAction() {
-    console.log("Opening Stats Modal...");
-    openStatsModal(); // استدعاء الوظيفة الأصلية لفتح الـ Modal
+    openStatsModal();
+    fetchStats();
 }
 
-// وظائف النافذة المنبثقة (بقيت كما هي)
 function openStatsModal() {
     const modal = document.getElementById('statsModal');
     if (modal) {
         modal.style.display = 'flex';
-        initCharts();
     }
 }
 
+/* إغلاق النافذة */
 function closeStatsModal() {
     const modal = document.getElementById('statsModal');
     if (modal) {
@@ -40,26 +39,43 @@ function closeStatsModal() {
     }
 }
 
-// إغلاق الـ Modal عند النقر خارجه
+/* إغلاق عند الضغط خارج النافذة */
 window.onclick = function (event) {
     const modal = document.getElementById('statsModal');
-    if (event.target == modal) {
+    if (event.target === modal) {
         closeStatsModal();
+    }
+};
+
+/* جلب البيانات من السيرفر */
+async function fetchStats() {
+    try {
+        const response = await fetch('/Dashboard/GetStats');
+        const data = await response.json();
+
+        updateCharts(data);
+    } catch (error) {
+        console.error('Stats error:', error);
     }
 }
 
-function initCharts() {
-    // إعداد الرسوم البيانية (بقيت كما هي مع مثال لبيانات حقيقية)
+/* تحديث الرسوم */
+function updateCharts(data) {
+
+    if (performanceChart) performanceChart.destroy();
+    if (activityChart) activityChart.destroy();
+
     const ctx1 = document.getElementById('performanceChart');
+    const ctx2 = document.getElementById('activityChart');
+
     if (ctx1) {
-        new Chart(ctx1.getContext('2d'), {
+        performanceChart = new Chart(ctx1.getContext('2d'), {
             type: 'doughnut',
             data: {
                 labels: ['مكتسب', 'قيد التعلم'],
                 datasets: [{
-                    // استخدم بيانات من الـ ViewModel إذا كانت متاحة، هنا مثال ثابت
-                    data: [80, 20],
-                    backgroundColor: ['#00f7ff', 'rgba(255,255,255,0.1)'],
+                    data: [data.learned, data.remaining],
+                    backgroundColor: ['#ffb36b', '#ff7a18'],
                     borderWidth: 0
                 }]
             },
@@ -68,8 +84,7 @@ function initCharts() {
                     legend: {
                         position: 'bottom',
                         labels: {
-                            color: '#fff',
-                            font: { size: 12 }
+                            color: '#fff'
                         }
                     }
                 }
@@ -77,22 +92,19 @@ function initCharts() {
         });
     }
 
-    // مثال لرسم بياني ثانٍ (نشاط الطفل)
-    const ctx2 = document.getElementById('activityChart');
     if (ctx2) {
-        new Chart(ctx2.getContext('2d'), {
+        activityChart = new Chart(ctx2.getContext('2d'), {
             type: 'bar',
             data: {
-                labels: ['الأحد', 'الاثنين', 'الثلاثاء', 'الأربعاء', 'الخميس'],
+                labels: data.days,
                 datasets: [{
-                    label: 'وقت التعلم (دقيقة)',
-                    data: [30, 45, 20, 60, 40],
-                    backgroundColor: 'rgba(0, 247, 255, 0.5)',
-                    borderColor: '#00f7ff',
-                    borderWidth: 1
+                    label: 'وقت التعلم',
+                    data: data.minutes,
+                    backgroundColor: '#ffb36b'
                 }]
             },
             options: {
+                responsive: true,
                 scales: {
                     y: {
                         beginAtZero: true,
@@ -104,7 +116,9 @@ function initCharts() {
                 },
                 plugins: {
                     legend: {
-                        labels: { color: '#fff' }
+                        labels: {
+                            color: '#fff'
+                        }
                     }
                 }
             }
