@@ -76,15 +76,12 @@
             </div>
         </div>
 
-        <div class="section-box">
-            <button type="button" class="stats-trigger-btn" onclick="openStatsModalAction()">
-                <span class="btn-icon">📊</span>
-                <div class="btn-text">
-                    <span>عرض الأداء</span>
-                    <small>Progress Analytics</small>
-                </div>
-            </button>
-        </div>
+<div style="text-align: center; margin: 1.2rem 0;">
+    <a href="/Dashboard/Analytics" 
+       style="display: inline-block; padding: 0.4rem 1.2rem; font-size: 0.9rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); border-radius: 10px; color: #e2e8f0; text-decoration: none; font-weight: 500; backdrop-filter: blur(4px); box-shadow: none;">
+        <i class="fas fa-chart-line" style="margin-left: 6px;"></i>عرض الأداء
+    </a>
+</div>
 
         <div class="bottom-status-bar">
             <span>Robot Connected • النظام متصل بالروبوت</span>
@@ -92,39 +89,8 @@
         </div>
 
     </div>
-</div>
 
-<!-- مهم: هذا الجزء كان ناقص -->
-<div id="statsModal" class="modal-overlay">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h3>تقرير الأداء التحليلي</h3>
-            <span class="close-btn" onclick="closeStatsModal()">&times;</span>
-        </div>
 
-        <div class="quick-stats">
-            <div class="q-card">
-                <h4>@Model.LearnedCount</h4>
-                <p>كلمات مكتسبة</p>
-            </div>
 
-            <div class="q-card">
-                <h4>@Model.Attempts</h4>
-                <p>محاولات</p>
-            </div>
 
-            <div class="q-card">
-                <h4>@Model.Errors</h4>
-                <p>أخطاء</p>
-            </div>
-        </div>
-
-        <div class="chart-box">
-            <canvas id="performanceChart"></canvas>
-        </div>
-
-        <div class="chart-box">
-            <canvas id="activityChart"></canvas>
-        </div>
-    </div>
-</div>
+    

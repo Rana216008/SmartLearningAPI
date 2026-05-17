@@ -5,6 +5,7 @@ wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\imge\Gemini_Generated_Image_8gu77b8gu77b8gu7.png
 wwwroot\imge\imgdashboard.png
+wwwroot\imge\Rash_and_kid.png
 wwwroot\js\Admin.js
 wwwroot\js\dashboard.js
 wwwroot\js\Login.js

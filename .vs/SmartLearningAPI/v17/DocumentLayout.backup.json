@@ -1,0 +1,584 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|c:\\users\\lenovo\\desktop\\new\\smartlearningapi\\smartlearningapi\\views\\dashboard\\analytics.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\views\\dashboard\\analytics.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|c:\\users\\lenovo\\desktop\\new\\smartlearningapi\\smartlearningapi\\wwwroot\\imge\\gemini_generated_image_8gu77b8gu77b8gu7.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\wwwroot\\imge\\gemini_generated_image_8gu77b8gu77b8gu7.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|c:\\users\\lenovo\\desktop\\new\\smartlearningapi\\smartlearningapi\\models\\appsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\models\\appsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|c:\\users\\lenovo\\desktop\\new\\smartlearningapi\\smartlearningapi\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|c:\\users\\lenovo\\desktop\\new\\smartlearningapi\\smartlearningapi\\models\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\models\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|c:\\users\\lenovo\\desktop\\new\\smartlearningapi\\smartlearningapi\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|c:\\users\\lenovo\\desktop\\new\\smartlearningapi\\smartlearningapi\\models\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\models\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|c:\\users\\lenovo\\desktop\\new\\smartlearningapi\\smartlearningapi\\smartlearningapi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\smartlearningapi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|c:\\users\\lenovo\\desktop\\new\\smartlearningapi\\smartlearningapi\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|c:\\users\\lenovo\\desktop\\new\\smartlearningapi\\smartlearningapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|c:\\users\\lenovo\\desktop\\new\\smartlearningapi\\smartlearningapi\\services\\learningservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\services\\learningservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|c:\\users\\lenovo\\desktop\\new\\smartlearningapi\\smartlearningapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|c:\\users\\lenovo\\desktop\\new\\smartlearningapi\\smartlearningapi\\wwwroot\\css\\dashboard.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\wwwroot\\css\\dashboard.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|c:\\users\\lenovo\\desktop\\new\\smartlearningapi\\smartlearningapi\\wwwroot\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\wwwroot\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|c:\\users\\lenovo\\desktop\\new\\smartlearningapi\\smartlearningapi\\wwwroot\\js\\dashboard.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\wwwroot\\js\\dashboard.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|c:\\users\\lenovo\\desktop\\new\\smartlearningapi\\smartlearningapi\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|c:\\users\\lenovo\\desktop\\new\\smartlearningapi\\smartlearningapi\\wwwroot\\css\\admin.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\wwwroot\\css\\admin.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|c:\\users\\lenovo\\desktop\\new\\smartlearningapi\\smartlearningapi\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|c:\\users\\lenovo\\desktop\\new\\smartlearningapi\\smartlearningapi\\wwwroot\\js\\admin.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\wwwroot\\js\\admin.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|c:\\users\\lenovo\\desktop\\new\\smartlearningapi\\smartlearningapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|c:\\users\\lenovo\\desktop\\new\\smartlearningapi\\smartlearningapi\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|c:\\users\\lenovo\\desktop\\new\\smartlearningapi\\smartlearningapi\\controllers\\learningcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\controllers\\learningcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|c:\\users\\lenovo\\desktop\\new\\smartlearningapi\\smartlearningapi\\controllers\\scancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\controllers\\scancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|c:\\users\\lenovo\\desktop\\new\\smartlearningapi\\smartlearningapi\\models\\admindashbardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\models\\admindashbardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|c:\\users\\lenovo\\desktop\\new\\smartlearningapi\\smartlearningapi\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|c:\\users\\lenovo\\desktop\\new\\smartlearningapi\\smartlearningapi\\models\\session.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\models\\session.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|c:\\users\\lenovo\\desktop\\new\\smartlearningapi\\smartlearningapi\\models\\userprogress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\models\\userprogress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|c:\\users\\lenovo\\desktop\\new\\smartlearningapi\\smartlearningapi\\dtos\\scanrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\dtos\\scanrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|c:\\users\\lenovo\\desktop\\new\\smartlearningapi\\smartlearningapi\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|c:\\users\\lenovo\\desktop\\new\\smartlearningapi\\smartlearningapi\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|c:\\users\\lenovo\\desktop\\new\\smartlearningapi\\smartlearningapi\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|c:\\users\\lenovo\\desktop\\new\\smartlearningapi\\smartlearningapi\\wwwroot\\js\\login.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\wwwroot\\js\\login.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|c:\\users\\lenovo\\desktop\\new\\smartlearningapi\\smartlearningapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|c:\\users\\lenovo\\desktop\\new\\smartlearningapi\\smartlearningapi\\smartlearningapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\smartlearningapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|c:\\users\\lenovo\\desktop\\new\\smartlearningapi\\smartlearningapi\\migrations\\20260505193839_addcategorytable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\migrations\\20260505193839_addcategorytable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 229,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Analytics.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Views\\Dashboard\\Analytics.cshtml",
+              "RelativeDocumentMoniker": "SmartLearningAPI\\Views\\Dashboard\\Analytics.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Views\\Dashboard\\Analytics.cshtml",
+              "RelativeToolTip": "SmartLearningAPI\\Views\\Dashboard\\Analytics.cshtml",
+              "ViewState": "AgIAAKQAAAAAAAAAAAAowLIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-13T09:38:52.198Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Gemini_Generated_Image_8gu77b8gu77b8gu7.png - PNG [1546x672, 32 bit, PNG]",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\imge\\Gemini_Generated_Image_8gu77b8gu77b8gu7.png",
+              "RelativeDocumentMoniker": "SmartLearningAPI\\wwwroot\\imge\\Gemini_Generated_Image_8gu77b8gu77b8gu7.png",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\imge\\Gemini_Generated_Image_8gu77b8gu77b8gu7.png - PNG [1546x672, 32 bit, PNG]",
+              "RelativeToolTip": "SmartLearningAPI\\wwwroot\\imge\\Gemini_Generated_Image_8gu77b8gu77b8gu7.png - PNG [1546x672, 32 bit, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2026-05-13T09:18:40.005Z",
+              "EditorCaption": " - PNG [1546x672, 32 bit, PNG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Views\\Admin\\Index.cshtml",
+              "RelativeDocumentMoniker": "SmartLearningAPI\\Views\\Admin\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Views\\Admin\\Index.cshtml",
+              "RelativeToolTip": "SmartLearningAPI\\Views\\Admin\\Index.cshtml",
+              "ViewState": "AgIAAIUAAAAAAAAAAAAAAIoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-05T17:28:53.785Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppSettings.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Models\\AppSettings.cs",
+              "RelativeDocumentMoniker": "SmartLearningAPI\\Models\\AppSettings.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Models\\AppSettings.cs",
+              "RelativeToolTip": "SmartLearningAPI\\Models\\AppSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAA+wAYAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-04T14:14:39.454Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Card.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Models\\Card.cs",
+              "RelativeDocumentMoniker": "SmartLearningAPI\\Models\\Card.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Models\\Card.cs",
+              "RelativeToolTip": "SmartLearningAPI\\Models\\Card.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T17:58:00.103Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "SmartLearningAPI\\Models\\Category.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Models\\Category.cs",
+              "RelativeToolTip": "SmartLearningAPI\\Models\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T17:58:30.826Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DashboardViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Models\\DashboardViewModel.cs",
+              "RelativeDocumentMoniker": "SmartLearningAPI\\Models\\DashboardViewModel.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Models\\DashboardViewModel.cs",
+              "RelativeToolTip": "SmartLearningAPI\\Models\\DashboardViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAMAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-04T14:13:04.964Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SmartLearningAPI",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\SmartLearningAPI.csproj",
+              "RelativeDocumentMoniker": "SmartLearningAPI\\SmartLearningAPI.csproj",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\SmartLearningAPI.csproj",
+              "RelativeToolTip": "SmartLearningAPI\\SmartLearningAPI.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-01T15:18:20.223Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "SmartLearningAPI\\Controllers\\DashboardController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "SmartLearningAPI\\Controllers\\DashboardController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-10T08:31:28.797Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "SmartLearningAPI\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "SmartLearningAPI\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAgwA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-01T15:00:16.684Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LearningService.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Services\\LearningService.cs",
+              "RelativeDocumentMoniker": "SmartLearningAPI\\Services\\LearningService.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Services\\LearningService.cs",
+              "RelativeToolTip": "SmartLearningAPI\\Services\\LearningService.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAAAEYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T18:09:10.13Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Program.cs",
+              "RelativeDocumentMoniker": "SmartLearningAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Program.cs",
+              "RelativeToolTip": "SmartLearningAPI\\Program.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAQwC4AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-01T15:01:50.623Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "dashboard.js",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\js\\dashboard.js",
+              "RelativeDocumentMoniker": "SmartLearningAPI\\wwwroot\\js\\dashboard.js",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\js\\dashboard.js",
+              "RelativeToolTip": "SmartLearningAPI\\wwwroot\\js\\dashboard.js",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAgwGcAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-05-04T14:42:30.467Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "dashboard.css",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\css\\dashboard.css",
+              "RelativeDocumentMoniker": "SmartLearningAPI\\wwwroot\\css\\dashboard.css",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\css\\dashboard.css",
+              "RelativeToolTip": "SmartLearningAPI\\wwwroot\\css\\dashboard.css",
+              "ViewState": "AgIAALMAAAAAAAAAAAAAALMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-05-04T14:19:07.867Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Login.css",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\css\\Login.css",
+              "RelativeDocumentMoniker": "SmartLearningAPI\\wwwroot\\css\\Login.css",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\css\\Login.css",
+              "RelativeToolTip": "SmartLearningAPI\\wwwroot\\css\\Login.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-05-03T14:49:55.773Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "SmartLearningAPI\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "SmartLearningAPI\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAmwBEAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T17:15:13.205Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Admin.css",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\css\\Admin.css",
+              "RelativeDocumentMoniker": "SmartLearningAPI\\wwwroot\\css\\Admin.css",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\css\\Admin.css",
+              "RelativeToolTip": "SmartLearningAPI\\wwwroot\\css\\Admin.css",
+              "ViewState": "AgIAAO8AAAAAAAAAAAAqwAQBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-05-05T18:04:37.971Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "SmartLearningAPI\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "SmartLearningAPI\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-04T15:46:28.1Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "20260505193839_AddCategoryTable.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Migrations\\20260505193839_AddCategoryTable.cs",
+              "RelativeDocumentMoniker": "SmartLearningAPI\\Migrations\\20260505193839_AddCategoryTable.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Migrations\\20260505193839_AddCategoryTable.cs",
+              "RelativeToolTip": "SmartLearningAPI\\Migrations\\20260505193839_AddCategoryTable.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAIA8wA0AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T19:38:40.147Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Views\\Auth\\Login.cshtml",
+              "RelativeDocumentMoniker": "SmartLearningAPI\\Views\\Auth\\Login.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Views\\Auth\\Login.cshtml",
+              "RelativeToolTip": "SmartLearningAPI\\Views\\Auth\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-03T14:49:38.695Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Admin.js",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\js\\Admin.js",
+              "RelativeDocumentMoniker": "SmartLearningAPI\\wwwroot\\js\\Admin.js",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\js\\Admin.js",
+              "RelativeToolTip": "SmartLearningAPI\\wwwroot\\js\\Admin.js",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAxwC0AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-05-05T20:05:24.838Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "SmartLearningAPI\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "SmartLearningAPI\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAA1wAkAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-01T15:27:41.248Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "LearningController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Controllers\\LearningController.cs",
+              "RelativeDocumentMoniker": "SmartLearningAPI\\Controllers\\LearningController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Controllers\\LearningController.cs",
+              "RelativeToolTip": "SmartLearningAPI\\Controllers\\LearningController.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAADwv1UAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-04T14:17:59.468Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ScanController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Controllers\\ScanController.cs",
+              "RelativeDocumentMoniker": "SmartLearningAPI\\Controllers\\ScanController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Controllers\\ScanController.cs",
+              "RelativeToolTip": "SmartLearningAPI\\Controllers\\ScanController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T17:13:27.153Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "AdminDashbardViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Models\\AdminDashbardViewModel.cs",
+              "RelativeDocumentMoniker": "SmartLearningAPI\\Models\\AdminDashbardViewModel.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Models\\AdminDashbardViewModel.cs",
+              "RelativeToolTip": "SmartLearningAPI\\Models\\AdminDashbardViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T18:27:05.678Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "SmartLearningAPI\\Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "SmartLearningAPI\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-04T16:38:23.776Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Session.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Models\\Session.cs",
+              "RelativeDocumentMoniker": "SmartLearningAPI\\Models\\Session.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Models\\Session.cs",
+              "RelativeToolTip": "SmartLearningAPI\\Models\\Session.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T17:13:19.893Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "UserProgress.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Models\\UserProgress.cs",
+              "RelativeDocumentMoniker": "SmartLearningAPI\\Models\\UserProgress.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Models\\UserProgress.cs",
+              "RelativeToolTip": "SmartLearningAPI\\Models\\UserProgress.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T17:21:23.649Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ScanRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\DTOs\\ScanRequest.cs",
+              "RelativeDocumentMoniker": "SmartLearningAPI\\DTOs\\ScanRequest.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\DTOs\\ScanRequest.cs",
+              "RelativeToolTip": "SmartLearningAPI\\DTOs\\ScanRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-03T12:51:07.799Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "SmartLearningAPI\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "SmartLearningAPI\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-05T16:42:22.569Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "SmartLearningAPI\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "SmartLearningAPI\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-05T16:44:04.426Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "SmartLearningAPI\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "SmartLearningAPI\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-05T16:44:19.044Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Login.js",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\js\\Login.js",
+              "RelativeDocumentMoniker": "SmartLearningAPI\\wwwroot\\js\\Login.js",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\js\\Login.js",
+              "RelativeToolTip": "SmartLearningAPI\\wwwroot\\js\\Login.js",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAAwDAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-05-03T15:50:00.479Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "SmartLearningAPI\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\Properties\\launchSettings.json",
+              "RelativeToolTip": "SmartLearningAPI\\Properties\\launchSettings.json",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAADYAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-01T15:18:23.57Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "SmartLearningAPI.csproj",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\SmartLearningAPI.csproj",
+              "RelativeDocumentMoniker": "SmartLearningAPI\\SmartLearningAPI.csproj",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\SmartLearningAPI.csproj",
+              "RelativeToolTip": "SmartLearningAPI\\SmartLearningAPI.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-01T15:18:13.138Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
