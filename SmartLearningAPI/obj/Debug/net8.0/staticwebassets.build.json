@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5rJvwP6zzs0Rd5VnHW80s1wlrCAEbVPzuG3ctG9g26A=",
+  "Hash": "n4oLHi4cnQ783g+Qxmcj0CPaNIe/2H50H2OavVtJUDI=",
   "Source": "SmartLearningAPI",
   "BasePath": "_content/SmartLearningAPI",
   "Mode": "Default",
@@ -80,12 +80,12 @@
       "OriginalItemSpec": "wwwroot\\css\\Admin.css"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\css\\dashboard.css",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\css\\analytics.css",
       "SourceId": "SmartLearningAPI",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\",
       "BasePath": "_content/SmartLearningAPI",
-      "RelativePath": "css/dashboard#[.{fingerprint}]?.css",
+      "RelativePath": "css/analytics#[.{fingerprint}]?.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -94,11 +94,32 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "u1csqcz0az",
-      "Integrity": "AmazWuB4vktQdwztFlqR1lCACdHk07bNunWS7VM16Ag=",
+      "Fingerprint": "cby8npho8r",
+      "Integrity": "uOpH0xEJNe9BgpRFz/3FB/m3BmUWbRFbL7mSWOJz0Co=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\dashboard.css"
+      "OriginalItemSpec": "wwwroot\\css\\analytics.css"
+    },
+    {
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\css\\dashboard-index.css",
+      "SourceId": "SmartLearningAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\",
+      "BasePath": "_content/SmartLearningAPI",
+      "RelativePath": "css/dashboard-index#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "yzlbgz1vgq",
+      "Integrity": "HpAXrY0lzVMa2RQphyJWR984Kcdw1kEBCapBhIWg4/U=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\dashboard-index.css"
     },
     {
       "Identity": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\css\\Login.css",
@@ -1592,8 +1613,8 @@
       ]
     },
     {
-      "Route": "css/dashboard.css",
-      "AssetFile": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\css\\dashboard.css",
+      "Route": "css/analytics.cby8npho8r.css",
+      "AssetFile": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\css\\analytics.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1602,7 +1623,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4908"
+          "Value": "10797"
         },
         {
           "Name": "Content-Type",
@@ -1610,48 +1631,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"AmazWuB4vktQdwztFlqR1lCACdHk07bNunWS7VM16Ag=\""
+          "Value": "\"uOpH0xEJNe9BgpRFz/3FB/m3BmUWbRFbL7mSWOJz0Co=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 07 May 2026 06:12:34 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-AmazWuB4vktQdwztFlqR1lCACdHk07bNunWS7VM16Ag="
-        }
-      ]
-    },
-    {
-      "Route": "css/dashboard.u1csqcz0az.css",
-      "AssetFile": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\css\\dashboard.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "4908"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"AmazWuB4vktQdwztFlqR1lCACdHk07bNunWS7VM16Ag=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 07 May 2026 06:12:34 GMT"
+          "Value": "Fri, 22 May 2026 08:21:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1661,15 +1645,134 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "u1csqcz0az"
+          "Value": "cby8npho8r"
         },
         {
           "Name": "label",
-          "Value": "css/dashboard.css"
+          "Value": "css/analytics.css"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-AmazWuB4vktQdwztFlqR1lCACdHk07bNunWS7VM16Ag="
+          "Value": "sha256-uOpH0xEJNe9BgpRFz/3FB/m3BmUWbRFbL7mSWOJz0Co="
+        }
+      ]
+    },
+    {
+      "Route": "css/analytics.css",
+      "AssetFile": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\css\\analytics.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10797"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"uOpH0xEJNe9BgpRFz/3FB/m3BmUWbRFbL7mSWOJz0Co=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 22 May 2026 08:21:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-uOpH0xEJNe9BgpRFz/3FB/m3BmUWbRFbL7mSWOJz0Co="
+        }
+      ]
+    },
+    {
+      "Route": "css/dashboard-index.css",
+      "AssetFile": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\css\\dashboard-index.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5228"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HpAXrY0lzVMa2RQphyJWR984Kcdw1kEBCapBhIWg4/U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 22 May 2026 08:43:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-HpAXrY0lzVMa2RQphyJWR984Kcdw1kEBCapBhIWg4/U="
+        }
+      ]
+    },
+    {
+      "Route": "css/dashboard-index.yzlbgz1vgq.css",
+      "AssetFile": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\css\\dashboard-index.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5228"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HpAXrY0lzVMa2RQphyJWR984Kcdw1kEBCapBhIWg4/U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 22 May 2026 08:43:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "yzlbgz1vgq"
+        },
+        {
+          "Name": "label",
+          "Value": "css/dashboard-index.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-HpAXrY0lzVMa2RQphyJWR984Kcdw1kEBCapBhIWg4/U="
         }
       ]
     },

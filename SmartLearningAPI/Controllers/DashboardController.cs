@@ -13,11 +13,16 @@ public class DashboardController : Controller
 
     public IActionResult Index()
     {
+        // Read current settings (live from DB, no cache)
+        var settings = _db.AppSettings.AsNoTracking().FirstOrDefault();
+
         var model = new DashboardViewModel
         {
             LearnedCount = _db.Progress.Count(p => p.IsLearned),
             Attempts = _db.Progress.Sum(p => p.Count),
-            Errors = 0
+            Errors = 0,
+            ActiveMode = settings?.CurrentMode ?? "Learn",
+            ActiveCategory = settings?.CurrentCategory ?? "Arabic"
         };
 
         return View(model);

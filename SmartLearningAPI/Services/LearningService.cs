@@ -27,17 +27,34 @@ public class LearningService : Controller
                 Track = 0
             };
 
-        // 2. Read settings from a fresh context (no caching)
+        // 2. Read current category and mode from a FRESH context (no cache)
+        string currentCategory = "Arabic";
         string currentMode = "Learn";
         using (var scope = _scopeFactory.CreateScope())
         {
             var freshDb = scope.ServiceProvider.GetRequiredService<AppDbContext>();
             var settings = freshDb.AppSettings.FirstOrDefault();
             if (settings != null)
+            {
+                currentCategory = settings.CurrentCategory ?? "Arabic";
                 currentMode = settings.CurrentMode ?? "Learn";
+            }
         }
 
-        // 3. Progress update and mastery check
+        // 3. Apply category filter (skip if "All")
+        if (!string.IsNullOrEmpty(currentCategory)
+            && currentCategory != "All"
+            && card.Category?.Name != currentCategory)
+        {
+            return new ScanResponse
+            {
+                Action = "error",
+                Message = $"هذا الكرت ليس ضمن محتوى {currentCategory}",
+                Track = 0
+            };
+        }
+
+        // 4. Progress update and mastery check (10 scans)
         var progress = _db.Progress.SingleOrDefault(p => p.UID == uid);
         if (progress == null)
         {
@@ -47,12 +64,12 @@ public class LearningService : Controller
         else
         {
             progress.Count++;
-            if (progress.Count >= 3)
+            if (progress.Count >= 10)
                 progress.IsLearned = true;
         }
         _db.SaveChanges();
 
-        // 4. Action based on mode (Learn / Exam)
+        // 5. Action based on mode (Learn / Exam)
         if (currentMode == "Exam")
             return new ScanResponse
             {

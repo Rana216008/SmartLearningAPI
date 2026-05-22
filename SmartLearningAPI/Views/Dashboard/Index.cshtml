@@ -1,96 +1,89 @@
 ﻿@model DashboardViewModel
+@{
+    Layout = null;
+}
 
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 <head>
-    <link rel="stylesheet" href="~/css/dashboard.css" asp-append-version="true" />
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="~/js/dashboard.js" asp-append-version="true" defer></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>لوحة التحكم | الأم</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="~/css/dashboard-index.css" asp-append-version="true" />
 </head>
+<body>
+<div class="cosmic-container">
 
-<div class="dashboard-container">
-    <div class="main-glass-panel">
-
-        <div class="panel-header">
-            <div class="header-main">
-                <span class="user-icon">👩‍🏫</span>
-                <h2>لوحة تحكم الأم</h2>
-            </div>
-            <p class="brand-text">• Smart Learning Platform •</p>
-        </div>
-
-        <div class="control-grid">
-
-            <div class="section-box">
-                <h3>2. وضع تشغيل الروبوت</h3>
-                <div class="button-list">
-                    <button class="glass-button @(Model.ActiveMode == "Learning" ? "active" : "")"
-                            onclick="updateMode('Status','Learning')">
-                        <span class="btn-icon">🎓</span>
-                        <div class="btn-text">
-                            <span>وضع التعليم</span>
-                            <small>Learning Mode</small>
-                        </div>
-                    </button>
-
-                    <button class="glass-button @(Model.ActiveMode == "Exam" ? "active" : "")"
-                            onclick="updateMode('Status','Exam')">
-                        <span class="btn-icon">📜</span>
-                        <div class="btn-text">
-                            <span>وضع الاختبار</span>
-                            <small>Exam Mode</small>
-                        </div>
-                    </button>
-                </div>
-            </div>
-
-            <div class="section-box">
-                <h3>1. نوع المحتوى التعليمي</h3>
-                <div class="button-list">
-                    <button class="glass-button @(Model.ActiveCategory == "Arabic" ? "active" : "")"
-                            onclick="updateMode('Category','Arabic')">
-                        <span class="btn-icon">🇸🇦</span>
-                        <div class="btn-text">
-                            <span>عربي</span>
-                            <small>Arabic</small>
-                        </div>
-                    </button>
-
-                    <button class="glass-button @(Model.ActiveCategory == "English" ? "active" : "")"
-                            onclick="updateMode('Category','English')">
-                        <span class="btn-icon">🇺🇸</span>
-                        <div class="btn-text">
-                            <span>إنجليزي</span>
-                            <small>English</small>
-                        </div>
-                    </button>
-
-                    <button class="glass-button @(Model.ActiveCategory == "Colors" ? "active" : "")"
-                            onclick="updateMode('Category','Colors')">
-                        <span class="btn-icon">🎨</span>
-                        <div class="btn-text">
-                            <span>ألوان</span>
-                            <small>Colors</small>
-                        </div>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-<div style="text-align: center; margin: 1.2rem 0;">
-    <a href="/Dashboard/Analytics" 
-       style="display: inline-block; padding: 0.4rem 1.2rem; font-size: 0.9rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); border-radius: 10px; color: #e2e8f0; text-decoration: none; font-weight: 500; backdrop-filter: blur(4px); box-shadow: none;">
-        <i class="fas fa-chart-line" style="margin-left: 6px;"></i>عرض الأداء
+    <!-- GIANT PROGRESS BUTTON ABOVE EVERYTHING -->
+    <a href="/Dashboard/Analytics" class="hero-stats-link">
+        <i class="fas fa-chart-line"></i> عرض رحلة الطفل التعليمية 
     </a>
-</div>
 
-        <div class="bottom-status-bar">
-            <span>Robot Connected • النظام متصل بالروبوت</span>
-            <i class="fas fa-check-circle status-dot"></i>
-        </div>
-
+    <!-- Majestic Title -->
+    <div class="page-hero">
+        <h1>لوحة تحكم الأم 🌸</h1>
+        <p>✦ التحكم الكامل بمحتوى الروبوت ✦</p>
     </div>
 
+    <!-- 1. Content Type Panel -->
+    <div class="glass-panel">
+        <h3 class="panel-title">📂 نوع المحتوى التعليمي</h3>
+        <div class="button-grid">
+            <div class="control-btn @(Model.ActiveCategory == "Arabic" ? "active" : "")"
+                 onclick="updateMode('Category','Arabic')">
+                <span class="btn-icon">🇸🇦</span>
+                <span class="btn-main-text">عربي</span>
+                <span class="btn-sub-text">Arabic</span>
+            </div>
+            <div class="control-btn @(Model.ActiveCategory == "English" ? "active" : "")"
+                 onclick="updateMode('Category','English')">
+                <span class="btn-icon">🇺🇸</span>
+                <span class="btn-main-text">إنجليزي</span>
+                <span class="btn-sub-text">English</span>
+            </div>
+            <div class="control-btn @(Model.ActiveCategory == "Colors" ? "active" : "")"
+                 onclick="updateMode('Category','Colors')">
+                <span class="btn-icon">🎨</span>
+                <span class="btn-main-text">ألوان</span>
+                <span class="btn-sub-text">Colors</span>
+            </div>
+            <div class="control-btn @(Model.ActiveCategory == "All" ? "active" : "")"
+                 onclick="updateMode('Category','All')">
+                <span class="btn-icon">🌍</span>
+                <span class="btn-main-text">الكل</span>
+                <span class="btn-sub-text">All Cards</span>
+            </div>
+        </div>
+    </div>
 
+    <!-- 2. Robot Mode Panel -->
+    <div class="glass-panel">
+        <h3 class="panel-title">🤖 وضع تشغيل الروبوت</h3>
+        <div class="button-grid">
+            <div class="control-btn @(Model.ActiveMode == "Learn" ? "active" : "")"
+                 onclick="updateMode('Status','Learn')">
+                <span class="btn-icon">🎓</span>
+                <span class="btn-main-text">وضع التعليم</span>
+                <span class="btn-sub-text">Learning Mode</span>
+            </div>
+            <div class="control-btn @(Model.ActiveMode == "Exam" ? "active" : "")"
+                 onclick="updateMode('Status','Exam')">
+                <span class="btn-icon">📜</span>
+                <span class="btn-main-text">وضع الاختبار</span>
+                <span class="btn-sub-text">Exam Mode</span>
+            </div>
+        </div>
+    </div>
 
+    <!-- Robot Connected Status -->
+    <div class="status-bar">
+        <span>Robot Connected • النظام متصل بالروبوت</span>
+        <i class="fas fa-check-circle status-dot"></i>
+    </div>
+</div>
 
-    
+<!-- keep the same dashboard.js functions -->
+<script src="~/js/dashboard.js" asp-append-version="true"></script>
+</body>
+</html>

@@ -1,5 +1,6 @@
 wwwroot\css\Admin.css
-wwwroot\css\dashboard.css
+wwwroot\css\analytics.css
+wwwroot\css\dashboard-index.css
 wwwroot\css\Login.css
 wwwroot\css\site.css
 wwwroot\favicon.ico
