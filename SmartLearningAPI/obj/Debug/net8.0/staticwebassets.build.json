@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VPm1X16iAbZrVD7dl6CHfVm6xUqQb/AsBFvtSfhqlw4=",
+  "Hash": "HF3nf65xmnMcpeehnVrJRcrkKyMDVwm9bYuU/sK3gXU=",
   "Source": "SmartLearningAPI",
   "BasePath": "_content/SmartLearningAPI",
   "Mode": "Default",
@@ -94,8 +94,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "u1csqcz0az",
-      "Integrity": "AmazWuB4vktQdwztFlqR1lCACdHk07bNunWS7VM16Ag=",
+      "Fingerprint": "moz3p4nyvz",
+      "Integrity": "mu9nZkWFfkzYMWccqlvbL9jOXtpDKUgvKKbIisRgAWw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\dashboard.css"
@@ -241,8 +241,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "yqt5ljj9zg",
-      "Integrity": "JgmGbAC6DV2OVQsaXXdbqUD0gBpOh7ETu1a+4l3ru3E=",
+      "Fingerprint": "7rvxsg8mfm",
+      "Integrity": "/QQHwc/KO02xtpCUeTZuk/eY6D4XtG5KM0Fxw8uY8Kg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\Admin.js"
@@ -262,8 +262,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "3o8a5xrc28",
-      "Integrity": "Y0O62MJdov82FQj/obgRs3L/QVNqGZqBt7J5qN4Gjhc=",
+      "Fingerprint": "35fxmh2won",
+      "Integrity": "56QaVOz58pE5O+GOvRbZwHQfWbG2FXPeRgxIOa7UT5o=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\dashboard.js"
@@ -1602,7 +1602,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4908"
+          "Value": "8174"
         },
         {
           "Name": "Content-Type",
@@ -1610,11 +1610,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"AmazWuB4vktQdwztFlqR1lCACdHk07bNunWS7VM16Ag=\""
+          "Value": "\"mu9nZkWFfkzYMWccqlvbL9jOXtpDKUgvKKbIisRgAWw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 05 May 2026 21:24:46 GMT"
+          "Value": "Sun, 14 Jun 2026 20:28:41 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1624,12 +1624,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-AmazWuB4vktQdwztFlqR1lCACdHk07bNunWS7VM16Ag="
+          "Value": "sha256-mu9nZkWFfkzYMWccqlvbL9jOXtpDKUgvKKbIisRgAWw="
         }
       ]
     },
     {
-      "Route": "css/dashboard.u1csqcz0az.css",
+      "Route": "css/dashboard.moz3p4nyvz.css",
       "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\css\\dashboard.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1639,7 +1639,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4908"
+          "Value": "8174"
         },
         {
           "Name": "Content-Type",
@@ -1647,11 +1647,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"AmazWuB4vktQdwztFlqR1lCACdHk07bNunWS7VM16Ag=\""
+          "Value": "\"mu9nZkWFfkzYMWccqlvbL9jOXtpDKUgvKKbIisRgAWw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 05 May 2026 21:24:46 GMT"
+          "Value": "Sun, 14 Jun 2026 20:28:41 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1661,7 +1661,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "u1csqcz0az"
+          "Value": "moz3p4nyvz"
         },
         {
           "Name": "label",
@@ -1669,7 +1669,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-AmazWuB4vktQdwztFlqR1lCACdHk07bNunWS7VM16Ag="
+          "Value": "sha256-mu9nZkWFfkzYMWccqlvbL9jOXtpDKUgvKKbIisRgAWw="
         }
       ]
     },
@@ -2106,7 +2106,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 17 May 2026 14:20:51 GMT"
+          "Value": "Sun, 17 May 2026 15:10:19 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2143,7 +2143,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 17 May 2026 14:20:51 GMT"
+          "Value": "Sun, 17 May 2026 15:10:19 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2166,6 +2166,51 @@
       ]
     },
     {
+      "Route": "js/Admin.7rvxsg8mfm.js",
+      "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\js\\Admin.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1983"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/QQHwc/KO02xtpCUeTZuk/eY6D4XtG5KM0Fxw8uY8Kg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 15 Jun 2026 13:46:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "7rvxsg8mfm"
+        },
+        {
+          "Name": "label",
+          "Value": "js/Admin.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/QQHwc/KO02xtpCUeTZuk/eY6D4XtG5KM0Fxw8uY8Kg="
+        }
+      ]
+    },
+    {
       "Route": "js/Admin.js",
       "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\js\\Admin.js",
       "Selectors": [],
@@ -2176,7 +2221,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1947"
+          "Value": "1983"
         },
         {
           "Name": "Content-Type",
@@ -2184,11 +2229,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"JgmGbAC6DV2OVQsaXXdbqUD0gBpOh7ETu1a+4l3ru3E=\""
+          "Value": "\"/QQHwc/KO02xtpCUeTZuk/eY6D4XtG5KM0Fxw8uY8Kg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 05 May 2026 20:13:15 GMT"
+          "Value": "Mon, 15 Jun 2026 13:46:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2198,57 +2243,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-JgmGbAC6DV2OVQsaXXdbqUD0gBpOh7ETu1a+4l3ru3E="
+          "Value": "sha256-/QQHwc/KO02xtpCUeTZuk/eY6D4XtG5KM0Fxw8uY8Kg="
         }
       ]
     },
     {
-      "Route": "js/Admin.yqt5ljj9zg.js",
-      "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\js\\Admin.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1947"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"JgmGbAC6DV2OVQsaXXdbqUD0gBpOh7ETu1a+4l3ru3E=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 05 May 2026 20:13:15 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "yqt5ljj9zg"
-        },
-        {
-          "Name": "label",
-          "Value": "js/Admin.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-JgmGbAC6DV2OVQsaXXdbqUD0gBpOh7ETu1a+4l3ru3E="
-        }
-      ]
-    },
-    {
-      "Route": "js/dashboard.3o8a5xrc28.js",
+      "Route": "js/dashboard.35fxmh2won.js",
       "AssetFile": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\js\\dashboard.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2258,7 +2258,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3541"
+          "Value": "4545"
         },
         {
           "Name": "Content-Type",
@@ -2266,11 +2266,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Y0O62MJdov82FQj/obgRs3L/QVNqGZqBt7J5qN4Gjhc=\""
+          "Value": "\"56QaVOz58pE5O+GOvRbZwHQfWbG2FXPeRgxIOa7UT5o=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 05 May 2026 20:58:44 GMT"
+          "Value": "Sun, 14 Jun 2026 19:44:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2280,7 +2280,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "3o8a5xrc28"
+          "Value": "35fxmh2won"
         },
         {
           "Name": "label",
@@ -2288,7 +2288,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Y0O62MJdov82FQj/obgRs3L/QVNqGZqBt7J5qN4Gjhc="
+          "Value": "sha256-56QaVOz58pE5O+GOvRbZwHQfWbG2FXPeRgxIOa7UT5o="
         }
       ]
     },
@@ -2303,7 +2303,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3541"
+          "Value": "4545"
         },
         {
           "Name": "Content-Type",
@@ -2311,11 +2311,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Y0O62MJdov82FQj/obgRs3L/QVNqGZqBt7J5qN4Gjhc=\""
+          "Value": "\"56QaVOz58pE5O+GOvRbZwHQfWbG2FXPeRgxIOa7UT5o=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 05 May 2026 20:58:44 GMT"
+          "Value": "Sun, 14 Jun 2026 19:44:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2325,7 +2325,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Y0O62MJdov82FQj/obgRs3L/QVNqGZqBt7J5qN4Gjhc="
+          "Value": "sha256-56QaVOz58pE5O+GOvRbZwHQfWbG2FXPeRgxIOa7UT5o="
         }
       ]
     },

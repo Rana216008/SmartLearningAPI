@@ -11,4 +11,5 @@
     public Category? Category { get; set; }
 
     public int TrackNumber { get; set; }
+    public int QuizTrackNumber { get; set; }
 }

@@ -20,68 +20,78 @@
 
         <div class="control-grid">
 
-            <div class="section-box">
+            <div class="section-box" data-type="Status">
                 <h3>2. وضع تشغيل الروبوت</h3>
                 <div class="button-list">
                     <button class="glass-button @(Model.ActiveMode == "Learning" ? "active" : "")"
-                            onclick="updateMode('Status','Learning')">
+                            data-value="Learning"
+                            onclick="updateMode('Status','Learning', this)">
                         <span class="btn-icon">🎓</span>
                         <div class="btn-text">
                             <span>وضع التعليم</span>
                             <small>Learning Mode</small>
                         </div>
+                        <i class="fas fa-check checkmark-icon"></i>
                     </button>
 
                     <button class="glass-button @(Model.ActiveMode == "Exam" ? "active" : "")"
-                            onclick="updateMode('Status','Exam')">
+                            data-value="Exam"
+                            onclick="updateMode('Status','Exam', this)">
                         <span class="btn-icon">📜</span>
                         <div class="btn-text">
                             <span>وضع الاختبار</span>
                             <small>Exam Mode</small>
                         </div>
+                        <i class="fas fa-check checkmark-icon"></i>
                     </button>
                 </div>
             </div>
 
-            <div class="section-box">
+            <div class="section-box" data-type="Category">
                 <h3>1. نوع المحتوى التعليمي</h3>
                 <div class="button-list">
                     <button class="glass-button @(Model.ActiveCategory == "Arabic" ? "active" : "")"
-                            onclick="updateMode('Category','Arabic')">
+                            data-value="Arabic"
+                            onclick="updateMode('Category','Arabic', this)">
                         <span class="btn-icon">🇸🇦</span>
                         <div class="btn-text">
                             <span>عربي</span>
                             <small>Arabic</small>
                         </div>
+                        <i class="fas fa-check checkmark-icon"></i>
                     </button>
 
                     <button class="glass-button @(Model.ActiveCategory == "English" ? "active" : "")"
-                            onclick="updateMode('Category','English')">
+                            data-value="English"
+                            onclick="updateMode('Category','English', this)">
                         <span class="btn-icon">🇺🇸</span>
                         <div class="btn-text">
                             <span>إنجليزي</span>
                             <small>English</small>
                         </div>
+                        <i class="fas fa-check checkmark-icon"></i>
                     </button>
 
                     <button class="glass-button @(Model.ActiveCategory == "Colors" ? "active" : "")"
-                            onclick="updateMode('Category','Colors')">
+                            data-value="Colors"
+                            onclick="updateMode('Category','Colors', this)">
                         <span class="btn-icon">🎨</span>
                         <div class="btn-text">
                             <span>ألوان</span>
                             <small>Colors</small>
                         </div>
+                        <i class="fas fa-check checkmark-icon"></i>
                     </button>
                 </div>
             </div>
         </div>
 
-<div style="text-align: center; margin: 1.2rem 0;">
-    <a href="/Dashboard/Analytics" 
-       style="display: inline-block; padding: 0.4rem 1.2rem; font-size: 0.9rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); border-radius: 10px; color: #e2e8f0; text-decoration: none; font-weight: 500; backdrop-filter: blur(4px); box-shadow: none;">
-        <i class="fas fa-chart-line" style="margin-left: 6px;"></i>عرض الأداء
-    </a>
-</div>
+        <div style="text-align: center; margin: 1.2rem 0;">
+            <a href="/Dashboard/Analytics"
+               style="display: inline-block; padding: 0.4rem 1.2rem; font-size: 0.9rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); border-radius: 10px; color: #e2e8f0; text-decoration: none; font-weight: 500; backdrop-filter: blur(4px); box-shadow: none;">
+                <i class="fas fa-chart-line" style="margin-left: 6px;"></i>عرض الأداء
+            </a>
+        </div>
 
         <div class="bottom-status-bar">
             <span>Robot Connected • النظام متصل بالروبوت</span>
@@ -89,8 +99,9 @@
         </div>
 
     </div>
+</div>
 
-
-
-
-    
+<div id="saveToast" class="save-toast">
+    <i class="fas fa-check-circle toast-icon"></i>
+    <span>تم حفظ الإعدادات بنجاح ومزامنة الروبوت!</span>
+</div>

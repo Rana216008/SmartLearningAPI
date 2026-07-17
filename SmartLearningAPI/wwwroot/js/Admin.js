@@ -17,20 +17,18 @@ function toggleAddCard() {
 /**
  * وظيفة ملء بيانات الكرت في الفورم للتعديل
  */
-function editCard(id, name, uid, catId, track) {
-    // 1. الوصول للقسم وإظهاره
+function editCard(id, name, uid, categoryId, trackNumber, quizTrackNumber) {
+    // إظهار السيكشن الخاص بالفورم أولاً
     const section = document.getElementById('add-card-section');
-    section.style.display = "block";
+    if (section) section.style.display = 'block';
 
-    // 2. تعبئة الحقول بالقيم الممرة
+    // تعبئة البيانات القديمة في الحقول
     document.getElementById('cardId').value = id;
     document.getElementById('cardName').value = name;
     document.getElementById('cardUID').value = uid;
-    document.getElementById('cardCat').value = catId;
-    document.getElementById('cardTrack').value = track;
-
-    // 3. التحرك بسلاسة لمكان الفورم
-    section.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('cardCat').value = categoryId;
+    document.getElementById('cardTrack').value = trackNumber;
+    document.getElementById('cardQuizTrack').value = quizTrackNumber;
 }
 
 /**

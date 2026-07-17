@@ -32,6 +32,9 @@ namespace SmartLearningAPI.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("CurrentExamTargetCardId")
+                        .HasColumnType("int");
+
                     b.Property<string>("CurrentMode")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -55,6 +58,9 @@ namespace SmartLearningAPI.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("QuizTrackNumber")
+                        .HasColumnType("int");
 
                     b.Property<int>("TrackNumber")
                         .HasColumnType("int");

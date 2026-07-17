@@ -5,7 +5,7 @@
 namespace SmartLearningAPI.Migrations
 {
     /// <inheritdoc />
-    public partial class AddCategoryTable : Migration
+    public partial class AddExamTargetToSettings : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -17,7 +17,8 @@ namespace SmartLearningAPI.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     CurrentMode = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CurrentCategory = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    CurrentCategory = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CurrentExamTargetCardId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -75,7 +76,8 @@ namespace SmartLearningAPI.Migrations
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     UID = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CategoryId = table.Column<int>(type: "int", nullable: false),
-                    TrackNumber = table.Column<int>(type: "int", nullable: false)
+                    TrackNumber = table.Column<int>(type: "int", nullable: false),
+                    QuizTrackNumber = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {

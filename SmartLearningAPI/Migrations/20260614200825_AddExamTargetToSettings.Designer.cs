@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace SmartLearningAPI.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260505193839_AddCategoryTable")]
-    partial class AddCategoryTable
+    [Migration("20260614200825_AddExamTargetToSettings")]
+    partial class AddExamTargetToSettings
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -34,6 +34,9 @@ namespace SmartLearningAPI.Migrations
                     b.Property<string>("CurrentCategory")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("CurrentExamTargetCardId")
+                        .HasColumnType("int");
 
                     b.Property<string>("CurrentMode")
                         .IsRequired()
@@ -58,6 +61,9 @@ namespace SmartLearningAPI.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("QuizTrackNumber")
+                        .HasColumnType("int");
 
                     b.Property<int>("TrackNumber")
                         .HasColumnType("int");

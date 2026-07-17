@@ -24,13 +24,29 @@ public class AdminController : Controller
 
     //  إدارة الكروت 
     [HttpPost]
+    [HttpPost]
     public IActionResult SaveCard(Card card)
     {
-        if (card.Id == 0) _db.Cards.Add(card);
-        else _db.Cards.Update(card);
+        // فحص أمان: للتأكد من أن الفئة المرسلة موجودة بالفعل في قاعدة البيانات
+        var categoryExists = _db.Categories.Any(c => c.Id == card.CategoryId);
+        if (!categoryExists)
+        {
+            // إذا كانت الفئة غير موجودة، يمكنك إرجاع رسالة خطأ بدلاً من عمل Crash للسيرفر
+            ModelState.AddModelError("CategoryId", "الفئة المحددة غير صالحة أو غير موجودة.");
+            return RedirectToAction("Index");
+        }
 
-        _db.SaveChanges();
-        return RedirectToAction("Index");
+        if (card.Id == 0)
+        {
+            _db.Cards.Add(card); //
+        }
+        else
+        {
+            _db.Cards.Update(card); //
+        }
+
+        _db.SaveChanges(); // هنا لن يحدث الخطأ مجدداً
+        return RedirectToAction("Index"); //
     }
 
     public IActionResult DeleteCard(int id)

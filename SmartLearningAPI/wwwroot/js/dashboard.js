@@ -1,14 +1,27 @@
 ﻿let performanceChart;
 let activityChart;
 
-/* تحديث وضع التشغيل أو التصنيف */
-function updateMode(type, value) {
+/* تحديث وضع التشغيل أو التصنيف بشكل تفاعلي سريع */
+function updateMode(type, value, clickedButton) {
+    // إرسال الطلب للسيرفر في الخلفية دون تعطيل الصفحة
     fetch(`/Dashboard/UpdateSettings?type=${type}&value=${value}`, {
         method: 'POST'
     })
         .then(response => {
             if (response.ok) {
-                location.reload();
+                // 1. العثور على الحاوية الخاصة بالقسم الحالي (إما قسم الوضع أو قسم اللغة)
+                const sectionBox = clickedButton.closest('.section-box');
+
+                // 2. إزالة حالة النشاط (active) من جميع الأزرار داخل هذا القسم فقط
+                sectionBox.querySelectorAll('.glass-button').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+
+                // 3. إضافة حالة النشاط للزر الذي ضغطت عليه الأم فوراً
+                clickedButton.classList.add('active');
+
+                // 4. إظهار علامة الصح وإشعار النجاح للأم
+                showSuccessToast();
             } else {
                 console.error('Failed to update mode.');
             }
@@ -16,6 +29,19 @@ function updateMode(type, value) {
         .catch(error => {
             console.error('Error:', error);
         });
+}
+
+/* دالة إظهار إشعار علامة الصح وتأكيد المزامنة */
+function showSuccessToast() {
+    const toast = document.getElementById('saveToast');
+    if (toast) {
+        toast.classList.add('show');
+
+        // إخفاء الإشعار تلقائياً بعد ثانيتين ونصف
+        setTimeout(() => {
+            toast.classList.remove('show');
+        }, 2500);
+    }
 }
 
 /* فتح نافذة الإحصائيات */
@@ -39,7 +65,6 @@ function closeStatsModal() {
     }
 }
 
-/* إغلاق عند الضغط خارج النافذة */
 window.onclick = function (event) {
     const modal = document.getElementById('statsModal');
     if (event.target === modal) {
@@ -47,21 +72,19 @@ window.onclick = function (event) {
     }
 };
 
-/* جلب البيانات من السيرفر */
+/* جلب بيانات الأداء */
 async function fetchStats() {
     try {
         const response = await fetch('/Dashboard/GetStats');
         const data = await response.json();
-
         updateCharts(data);
     } catch (error) {
         console.error('Stats error:', error);
     }
 }
 
-/* تحديث الرسوم */
+/* تحديث الرسوم البيانية */
 function updateCharts(data) {
-
     if (performanceChart) performanceChart.destroy();
     if (activityChart) activityChart.destroy();
 
@@ -83,9 +106,7 @@ function updateCharts(data) {
                 plugins: {
                     legend: {
                         position: 'bottom',
-                        labels: {
-                            color: '#fff'
-                        }
+                        labels: { color: '#fff' }
                     }
                 }
             }
@@ -106,20 +127,11 @@ function updateCharts(data) {
             options: {
                 responsive: true,
                 scales: {
-                    y: {
-                        beginAtZero: true,
-                        ticks: { color: '#fff' }
-                    },
-                    x: {
-                        ticks: { color: '#fff' }
-                    }
+                    y: { beginAtZero: true, ticks: { color: '#fff' } },
+                    x: { ticks: { color: '#fff' } }
                 },
                 plugins: {
-                    legend: {
-                        labels: {
-                            color: '#fff'
-                        }
-                    }
+                    legend: { labels: { color: '#fff' } }
                 }
             }
         });
