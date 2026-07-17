@@ -1,19 +1,16 @@
-﻿/* ==========================================================================
-   1. الإعدادات العامة لـ Body والصفحة
-   ========================================================================== */
-body {
+﻿body {
     margin: 0;
     min-height: 100vh;
     font-family: 'Segoe UI', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url("../imge/imgdashboard.png");
+    background: url("../imge/imgdashboard.png") ;
     overflow: hidden;
     position: relative;
 }
 
-    /* طبقة تعتيم الخلفية خفيفة */
+    /* طبقة تعتيم خفيفة */
     body::before {
         content: "";
         position: absolute;
@@ -31,9 +28,6 @@ body {
     padding: 20px;
 }
 
-/* ==========================================================================
-   2. اللوحة الزجاجية الرئيسية (Main Panel)
-   ========================================================================== */
 .main-glass-panel {
     width: 100%;
     max-width: 720px;
@@ -42,8 +36,9 @@ body {
     background: transparent;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 8px #00f7ff, 0 0 18px rgba(0, 247, 255, 0.25);
+    border: 5px solid rgba(130, 245, 255, 0.6);
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 0 8px #00f7ff, 0 0 18px rgba(0,247,255,0.25);
     color: white;
     position: relative;
 }
@@ -53,12 +48,12 @@ body {
         position: absolute;
         inset: 8px;
         border-radius: 22px;
-        border: 1px solid rgba(255, 255, 255, 0.18);
+        border: 1px solid rgba(255,255,255,0.18);
         background: transparent;
         pointer-events: none;
     }
 
-/* الهيدر */
+/* Header  */
 .panel-header {
     text-align: center;
     margin-bottom: 22px;
@@ -86,18 +81,17 @@ body {
     font-weight: 500;
 }
 
-/* ==========================================================================
-   3. شبكة التحكم والأزرار (Grid & Buttons)
-   ========================================================================== */
+/* ---------- Grid ---------- */
 .control-grid {
     display: grid;
+/*    background: rgba(255, 255, 255, 0.00);*/
     grid-template-columns: 1fr 1fr;
     gap: 18px;
     margin-bottom: 20px;
     position: relative;
 }
 
-    /* الخط الفاصل المضيء المنتصف */
+    /* الخط الفاصل */
     .control-grid::after {
         content: "";
         position: absolute;
@@ -105,7 +99,8 @@ body {
         top: 8px;
         bottom: 8px;
         width: 2px;
-        box-shadow: 0 0 8px rgba(0, 247, 255, 0.3);
+/*        background: rgba(255,255,255,0.15);*/
+        box-shadow: 0 0 8px rgba(0,247,255,0.3);
         transform: translateX(-50%);
     }
 
@@ -129,7 +124,6 @@ body {
     gap: 12px;
 }
 
-/* تصميم الأزرار الزجاجية الموحد والمطور */
 .glass-button {
     border: none;
     border-radius: 18px;
@@ -137,36 +131,30 @@ body {
     width: 100%;
     cursor: pointer;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: flex-start; /* ترتيب العناصر بالتوالي من اليمين للشمال */
-    gap: 15px;
+    gap: 12px;
     color: white;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.30) 0%, rgba(255, 255, 255, 0.08) 10%);
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: linear-gradient( 180deg, rgba(255,255,255,0.30) 0%, rgba(255,255,255,0.08) 10% );
+    border: 1px solid rgba(255,255,255,0.18);
+/*    box-shadow: inset 0 2px 6px rgba(255,255,255,0.15), inset 0 -4px 8px rgba(0,0,0,0.25), 0 4px 10px rgba(0,0,0,0.25);*/
     transition: all 0.3s ease;
-    direction: rtl; /* اتجاه الواجهة من اليمين لليسار */
-    position: relative;
 }
 
-    /* تأثير التمرير فوق الزر */
     .glass-button:hover {
         transform: translateY(-3px);
-        border-color: rgba(0, 247, 255, 0.5);
-        box-shadow: inset 0 2px 8px rgba(255, 255, 255, 0.18), 0 0 14px rgba(0, 247, 255, 0.25);
+        border-color: rgba(0,247,255,0.5);
+        box-shadow: inset 0 2px 8px rgba(255,255,255,0.18), 0 0 14px rgba(0,247,255,0.25);
     }
 
-    /* حالة الزر النشط (المختار حالياً) */
     .glass-button.active {
-        border-color: #00f7ff !important;
-        background: linear-gradient(180deg, rgba(0, 247, 255, 0.15) 0%, rgba(0, 247, 255, 0.03) 100%) !important;
-        box-shadow: 0 0 20px rgba(0, 247, 255, 0.35), inset 0 2px 8px rgba(255, 255, 255, 0.2) !important;
-        transform: translateY(-1px);
+        border: 1px solid rgba(0,247,255,0.8);
+        box-shadow: 0 0 15px rgba(0,247,255,0.35), inset 0 2px 8px rgba(255,255,255,0.15);
     }
 
-/* نصوص الأزرار */
 .btn-text {
     text-align: right;
-    flex-grow: 1; /* التمدد التلقائي لدفع علامة الصح للطرف الأيسر */
+    flex: 1;
 }
 
     .btn-text span {
@@ -186,46 +174,26 @@ body {
 
     .btn-icon.large {
         color: #bffcff;
-        text-shadow: 0 0 8px rgba(191, 252, 255, 0.7);
+        text-shadow: 0 0 8px rgba(191,252,255,0.7);
     }
+.stats-trigger-btn{
 
-/* ==========================================================================
-   4. أيقونة الصح المضيئة التفاعلية (Checkmark Icon)
-   ========================================================================== */
-.checkmark-icon {
-    font-size: 1.1rem;
-    color: #00f7ff;
-    opacity: 0; /* مخفية بشكل افتراضي */
-    transform: scale(0.5);
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* تأثير ظهور مطاطي ممتع */
-    margin-right: auto; /* يدفع الأيقونة لأقصى اليسار إجبارياً */
-    padding-left: 5px;
-    text-shadow: 0 0 8px rgba(0, 247, 255, 0.8);
 }
-
-/* تظهر الأيقونة فوراً عندما يحمل الزر كلاس الـ active */
-.glass-button.active .checkmark-icon {
-    opacity: 1;
-    transform: scale(1);
-}
-
-/* ==========================================================================
-   5. شريط الحالة السفلي والإشعارات (Status Bar & Toast)
-   ========================================================================== */
+/* ---------- Status bar ---------- */
 .bottom-status-bar {
     margin: auto;
     margin-top: 10px;
     width: fit-content;
     padding: 10px 25px;
     border-radius: 16px;
-    background: rgba(0, 0, 0, 0.18);
-    border: 1px solid rgba(0, 247, 255, 0.35);
+    background: rgba(0,0,0,0.18);
+    border: 1px solid rgba(0,247,255,0.35);
     display: flex;
     align-items: center;
     gap: 8px;
     font-size: 0.95rem;
     font-weight: 500;
-    box-shadow: 0 0 12px rgba(0, 247, 255, 0.15);
+    box-shadow: 0 0 12px rgba(0,247,255,0.15);
 }
 
 .status-dot {
@@ -233,57 +201,7 @@ body {
     font-size: 1.1rem;
 }
 
-/* تصميم إشعار الحفظ الزجاجي المضيء */
-.save-toast {
-    position: fixed;
-    bottom: -80px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(10, 25, 30, 0.85);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(53, 216, 109, 0.4);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37), 0 0 15px rgba(53, 216, 109, 0.25);
-    color: #e2e8f0;
-    padding: 12px 24px;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 0.95rem;
-    font-weight: 600;
-    z-index: 9999;
-    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    direction: rtl;
-}
-
-    .save-toast.show {
-        bottom: 30px;
-    }
-
-.toast-icon {
-    color: #35d86d;
-    font-size: 1.3rem;
-    animation: pulseGlow 1.5s infinite;
-}
-
-@keyframes pulseGlow {
-    0% {
-        transform: scale(1);
-        opacity: 1;
-    }
-
-    50% {
-        transform: scale(1.1);
-        opacity: 0.8;
-    }
-
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
+/* ---------- Responsive ---------- */
 @media (max-width: 768px) {
     .control-grid {
         grid-template-columns: 1fr;
