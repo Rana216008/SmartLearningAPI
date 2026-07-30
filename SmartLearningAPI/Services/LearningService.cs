@@ -35,6 +35,12 @@ public class LearningService : Controller
         string currentCategory = "All";
         int? examTargetCardId = null;
 
+<<<<<<< HEAD
+=======
+        // 2. Read current category and mode from a FRESH context (no cache)
+        string currentCategory = "Arabic";
+        string currentMode = "Learn";
+>>>>>>> saleh
         using (var scope = _scopeFactory.CreateScope())
         {
             var freshDb = scope.ServiceProvider.GetRequiredService<AppDbContext>();
@@ -42,6 +48,7 @@ public class LearningService : Controller
 
             if (settings != null)
             {
+<<<<<<< HEAD
                 currentMode = settings.CurrentMode ?? "Learning";
                 currentCategory = settings.CurrentCategory ?? "All";
                 examTargetCardId = settings.CurrentExamTargetCardId;
@@ -146,6 +153,27 @@ public class LearningService : Controller
             }
         }
         // 5. معالجة وضع التعليم (Learning Mode)
+=======
+                currentCategory = settings.CurrentCategory ?? "Arabic";
+                currentMode = settings.CurrentMode ?? "Learn";
+            }
+        }
+
+        // 3. Apply category filter (skip if "All")
+        if (!string.IsNullOrEmpty(currentCategory)
+            && currentCategory != "All"
+            && card.Category?.Name != currentCategory)
+        {
+            return new ScanResponse
+            {
+                Action = "error",
+                Message = $"هذا الكرت ليس ضمن محتوى {currentCategory}",
+                Track = 0
+            };
+        }
+
+        // 4. Progress update and mastery check (10 scans)
+>>>>>>> saleh
         var progress = _db.Progress.SingleOrDefault(p => p.UID == uid);
         if (progress == null)
         {
@@ -155,16 +183,34 @@ public class LearningService : Controller
         else
         {
             progress.Count++;
-            if (progress.Count >= 3)
+            if (progress.Count >= 10)
                 progress.IsLearned = true;
         }
         _db.SaveChanges();
 
+<<<<<<< HEAD
         return new ScanResponse
         {
             Action = "play",
             Track = card.TrackNumber, // ينطق صوت الحرف أو اللون نفسه مباشرة (1 إلى 9)
             Message = card.Name
         };
+=======
+        // 5. Action based on mode (Learn / Exam)
+        if (currentMode == "Exam")
+            return new ScanResponse
+            {
+                Action = "quiz",
+                Track = card.TrackNumber,
+                Message = "ما هذا؟"
+            };
+        else
+            return new ScanResponse
+            {
+                Action = "play",
+                Track = card.TrackNumber,
+                Message = card.Name
+            };
+>>>>>>> saleh
     }
 }

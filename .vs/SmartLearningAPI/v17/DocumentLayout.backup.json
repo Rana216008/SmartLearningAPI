@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|d:\\eng\\final-prpject\\visual studio\\smartlearningapi\\smartlearningapi\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|d:\\eng\\final-prpject\\visual studio\\smartlearningapi\\smartlearningapi\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|d:\\eng\\final-prpject\\visual studio\\smartlearningapi\\smartlearningapi\\controllers\\learningcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\controllers\\learningcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -96,15 +104,11 @@
         },
         {
           "DockedHeight": 532,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:3:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             },
             {
               "$type": "Bookmark",
@@ -113,19 +117,43 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "LearningController.cs",
-              "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Controllers\\LearningController.cs",
-              "RelativeDocumentMoniker": "SmartLearningAPI\\Controllers\\LearningController.cs",
-              "ToolTip": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Controllers\\LearningController.cs",
-              "RelativeToolTip": "SmartLearningAPI\\Controllers\\LearningController.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAMwAoAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-04T14:17:59.468Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Views\\Dashboard\\Index.cshtml",
+              "RelativeDocumentMoniker": "SmartLearningAPI\\Views\\Dashboard\\Index.cshtml",
+              "ToolTip": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Views\\Dashboard\\Index.cshtml*",
+              "RelativeToolTip": "SmartLearningAPI\\Views\\Dashboard\\Index.cshtml*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAowA8AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-17T17:25:12.566Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "site.css",
+              "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "SmartLearningAPI\\wwwroot\\css\\site.css",
+              "ToolTip": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "SmartLearningAPI\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-07-17T17:25:00.78Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LearningController.cs",
+              "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Controllers\\LearningController.cs",
+              "RelativeDocumentMoniker": "SmartLearningAPI\\Controllers\\LearningController.cs",
+              "ToolTip": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Controllers\\LearningController.cs",
+              "RelativeToolTip": "SmartLearningAPI\\Controllers\\LearningController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-04T14:17:59.468Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "SmartLearningAPI\\Data\\AppDbContext.cs",
@@ -137,7 +165,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Views\\Admin\\Index.cshtml",
               "RelativeDocumentMoniker": "SmartLearningAPI\\Views\\Admin\\Index.cshtml",
@@ -149,7 +177,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "ErrorViewModel.cs",
               "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Models\\ErrorViewModel.cs",
               "RelativeDocumentMoniker": "SmartLearningAPI\\Models\\ErrorViewModel.cs",
@@ -161,7 +189,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "launchSettings.json",
               "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "SmartLearningAPI\\Properties\\launchSettings.json",
@@ -173,7 +201,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\appsettings.json",
               "RelativeDocumentMoniker": "SmartLearningAPI\\appsettings.json",
@@ -185,7 +213,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Program.cs",
               "RelativeDocumentMoniker": "SmartLearningAPI\\Program.cs",
@@ -197,7 +225,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Session.cs",
               "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Models\\Session.cs",
               "RelativeDocumentMoniker": "SmartLearningAPI\\Models\\Session.cs",
@@ -209,7 +237,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "UserProgress.cs",
               "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Models\\UserProgress.cs",
               "RelativeDocumentMoniker": "SmartLearningAPI\\Models\\UserProgress.cs",
@@ -221,7 +249,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "Login.css",
               "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\css\\Login.css",
               "RelativeDocumentMoniker": "SmartLearningAPI\\wwwroot\\css\\Login.css",
@@ -233,7 +261,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "Login.cshtml",
               "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Views\\Auth\\Login.cshtml",
               "RelativeDocumentMoniker": "SmartLearningAPI\\Views\\Auth\\Login.cshtml",
@@ -245,7 +273,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "SmartLearningAPI\\Views\\Shared\\_Layout.cshtml",
@@ -257,7 +285,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "SmartLearningAPI\\Views\\Home\\Index.cshtml",
@@ -269,7 +297,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "_ValidationScriptsPartial.cshtml",
               "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
               "RelativeDocumentMoniker": "SmartLearningAPI\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
@@ -281,7 +309,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "Login.js",
               "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\js\\Login.js",
               "RelativeDocumentMoniker": "SmartLearningAPI\\wwwroot\\js\\Login.js",
@@ -293,7 +321,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "SmartLearningAPI",
               "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\SmartLearningAPI.csproj",
               "RelativeDocumentMoniker": "SmartLearningAPI\\SmartLearningAPI.csproj",
@@ -304,7 +332,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "SmartLearningAPI.csproj",
               "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\SmartLearningAPI.csproj",
               "RelativeDocumentMoniker": "SmartLearningAPI\\SmartLearningAPI.csproj",
@@ -313,6 +341,10 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2026-05-01T15:18:13.138Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             },
             {
               "$type": "Bookmark",
