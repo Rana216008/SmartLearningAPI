@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace SmartLearningAPI.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260614200825_AddExamTargetToSettings")]
-    partial class AddExamTargetToSettings
+    [Migration("20260802165535_Migration2.8")]
+    partial class Migration28
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -57,6 +57,10 @@ namespace SmartLearningAPI.Migrations
 
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
+
+                    b.Property<string>("ImageName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()

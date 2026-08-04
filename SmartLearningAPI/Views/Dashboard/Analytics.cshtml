@@ -9,29 +9,31 @@
         _ => "#A0A0C0"
     };
 
-    // ----- Percentage calculation with guaranteed sum to 100% -----
-    var totalScans = Model.TotalScans > 0 ? Model.TotalScans : 1;
-    var arabicAttempts = Model.LearnedItems.Where(i => i.Category == "Arabic").Sum(i => i.ScanCount);
-    var englishAttempts = Model.LearnedItems.Where(i => i.Category == "English").Sum(i => i.ScanCount);
-    var colorsAttempts = Model.LearnedItems.Where(i => i.Category == "Colors").Sum(i => i.ScanCount);
+    int arabicPercent = 0, englishPercent = 0, colorsPercent = 0;
 
-    double rawArabic = arabicAttempts * 100.0 / totalScans;
-    double rawEnglish = englishAttempts * 100.0 / totalScans;
-    double rawColors = colorsAttempts * 100.0 / totalScans;
-
-    int arabicPercent = (int)Math.Round(rawArabic);
-    int englishPercent = (int)Math.Round(rawEnglish);
-    int colorsPercent = (int)Math.Round(rawColors);
-
-    int sum = arabicPercent + englishPercent + colorsPercent;
-    if (sum != 100)
+    if (Model.TotalScans > 0)
     {
-        int diff = 100 - sum;
-        if (rawArabic >= rawEnglish && rawArabic >= rawColors) arabicPercent += diff;
-        else if (rawEnglish >= rawArabic && rawEnglish >= rawColors) englishPercent += diff;
-        else colorsPercent += diff;
+        var arabicAttempts = Model.LearnedItems.Where(i => i.Category == "Arabic").Sum(i => i.ScanCount);
+        var englishAttempts = Model.LearnedItems.Where(i => i.Category == "English").Sum(i => i.ScanCount);
+        var colorsAttempts = Model.LearnedItems.Where(i => i.Category == "Colors").Sum(i => i.ScanCount);
+
+        double rawArabic = arabicAttempts * 100.0 / Model.TotalScans;
+        double rawEnglish = englishAttempts * 100.0 / Model.TotalScans;
+        double rawColors = colorsAttempts * 100.0 / Model.TotalScans;
+
+        arabicPercent = (int)Math.Round(rawArabic);
+        englishPercent = (int)Math.Round(rawEnglish);
+        colorsPercent = (int)Math.Round(rawColors);
+
+        int sum = arabicPercent + englishPercent + colorsPercent;
+        if (sum != 100 && sum > 0)
+        {
+            int diff = 100 - sum;
+            if (rawArabic >= rawEnglish && rawArabic >= rawColors) arabicPercent += diff;
+            else if (rawEnglish >= rawArabic && rawEnglish >= rawColors) englishPercent += diff;
+            else colorsPercent += diff;
+        }
     }
-    // ---------------------------------------------------------------
 }
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
@@ -39,233 +41,225 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>لوحة الأداء | التحليلات</title>
+    <link rel="stylesheet" href="~/css/analytics.css" />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="~/css/analytics.css" asp-append-version="true" />
 </head>
 <body>
-<div class="full-page" id="mainContent">
-    <!-- HERO TITLE -->
-    <div class="page-hero">
-        <h1>رحلة طفلك التعليمية بالتفصيل <span class="end-emoji">🌸</span></h1>
-        <p>✦ تابعي تقدم طفلك لحظة بلحظة ✦</p>
-    </div>
 
-    <!-- TOP PANEL with stats and breakdown -->
-    <div class="top-panel">
-        <div class="stat-block">
-            <div class="stat-circle">📊</div>
-            <div class="stat-text">
-                <h3>إجمالي المحاولات</h3>
-                <div class="big-number">@Model.TotalScans</div>
-            </div>
-        </div>
-
-        <!-- Language breakdown bars (guaranteed 100% sum) -->
-        <div class="breakdown-bars">
-            <div class="bar-row">
-                <span class="bar-label">🇸🇦 عربي</span>
-                <div class="bar-track">
-                    <div class="bar-fill" style="width:@arabicPercent%; background: #FF4D6A;"></div>
-                </div>
-                <span class="bar-value">@arabicPercent%</span>
-            </div>
-            <div class="bar-row">
-                <span class="bar-label">🇺🇸 إنجليزي</span>
-                <div class="bar-track">
-                    <div class="bar-fill" style="width:@englishPercent%; background: #38D9F5;"></div>
-                </div>
-                <span class="bar-value">@englishPercent%</span>
-            </div>
-            <div class="bar-row">
-                <span class="bar-label">🎨 ألوان</span>
-                <div class="bar-track">
-                    <div class="bar-fill" style="width:@colorsPercent%; background: #FFC048;"></div>
-                </div>
-                <span class="bar-value">@colorsPercent%</span>
-            </div>
-        </div>
-
-        <!-- Mastered count -->
-        <div class="stat-block">
-            <div class="stat-circle">⭐</div>
-            <div class="stat-text">
-                <h3>تم إتقانها</h3>
-                <div class="big-number">@Model.TotalLearned</div>
-            </div>
-        </div>
-    </div>
-
-    <!-- MASTERED CARDS NAMES (if any) -->
-        @if (Model.LearnedItems.Any(i => i.IsLearned))
-        {
-                <div class="mastered-list">
-                    <h3>📚 الكروت المتقنة :</h3>
-                    <div class="mastered-cards">
-                    @foreach (var card in Model.LearnedItems.Where(i => i.IsLearned))
-                    {
-                                    <span class="mastered-chip">@card.CardName</span>
-                    }
-                    </div>
-                </div>
-        }
-
-    <!-- Content grid: Categories & All cards -->
-    <div class="content-grid">
-        <div class="left-column">
-            <div class="glass-panel">
-                <h3 class="panel-title">📂 التصنيفات</h3>
-                <div class="category-list">
-                        @foreach (var cat in Model.CategoryCounts)
-                        {
-                                <div class="cat-item">
-                                    <span class="cat-name">
-                                        <i class="fas fa-folder-open" style="color:var(--cyan);"></i> @cat.Key
-                                    </span>
-                                    <span class="cat-count">@cat.Value كروت</span>
-                                </div>
-                        }
-                </div>
-            </div>
-        </div>
-        <div class="right-column">
-            <div class="glass-panel">
-                <h3 class="panel-title">📚 الكروت التي تم التفاعل معها</h3>
-                <div class="card-grid">
-                        @foreach (var item in Model.LearnedItems)
-                        {
-                            double fillPercent = Math.Min(item.ScanCount, 10) / 10.0 * 100;
-                            double circumference = 2 * Math.PI * 28;
-                            double dashoffset = circumference - (circumference * fillPercent / 100);
-                                <div class="card-item">
-                                    <div class="ring">
-                                        <svg width="75" height="75">
-                                            <circle cx="37.5" cy="37.5" r="28" stroke="#ffffff20" stroke-width="5" fill="none" />
-                                            <circle cx="37.5" cy="37.5" r="28" stroke="var(--cyan)" stroke-width="5" fill="none"
-                                                    stroke-dasharray="@circumference" stroke-dashoffset="@dashoffset"
-                                                    stroke-linecap="round" transform="rotate(-90 37.5 37.5)" />
-                                        </svg>
-                                        <div class="ring-center">@item.ScanCount</div>
-                                        <div class="ring-label">محاولة</div>
-                                    </div>
-                                    <div class="card-details">
-                                        <h4>@item.CardName</h4>
-                                        <span class="badge" style="background:@GetCategoryColor(item.Category)">@item.Category</span>
-                                        <div class="audio-hint"><i class="fas fa-headphones"></i> Track @item.TrackNumber</div>
-                                        <button class="btn-detail"
-                                                data-name="@item.CardName"
-                                                data-category="@item.Category"
-                                                data-uid="@item.UID"
-                                                data-track="@item.TrackNumber"
-                                                data-count="@item.ScanCount"
-                                                data-islearned="@(item.IsLearned ? "true" : "false")">
-                                            <i class="fas fa-info-circle"></i> تفاصيل
-                                        </button>
-                                    </div>
-                                </div>
-                        }
-                </div>
-                    @if (!Model.LearnedItems.Any())
-                    {
-                            <p style="opacity:0.6; text-align:center;">✨ امسح أول كرت لبدء التحليل ✨</p>
-                    }
-            </div>
-        </div>
-    </div>
-
-    <!-- Action buttons -->
-    <div class="action-bar">
-        <a href="@Url.Action("Index", "Dashboard")" class="btn-return">
+    <!-- ===== TOP NAVIGATION BAR ===== -->
+    <nav class="top-nav">
+        <a href="@Url.Action("Index", "Dashboard")" class="nav-back">
             <i class="fas fa-arrow-right"></i> العودة للوحة التحكم
         </a>
-        <a href="#" class="btn-reset"
-           data-reset-url="@Url.Action("ResetProgress", "Dashboard")"
-           onclick="event.preventDefault(); showResetModal(this);">
-            <i class="fas fa-redo-alt"></i> مسح كل المحاولات
-        </a>
-    </div>
-</div>
+        <div class="nav-title">
+            <h1>رحلة طفلك التعليمية بالتفصيل <span>🌸</span></h1>
+            <p>✦ تابعي تقدم طفلك لحظة بلحظة ✦</p>
+        </div>
+        <button class="nav-reset" data-reset-url="@Url.Action("ResetProgress", "Dashboard")"
+                onclick="event.preventDefault(); showResetModal(this);">
+            <i class="fas fa-redo-alt"></i> مسح المحاولات
+        </button>
+    </nav>
 
-<!-- Detail Modal -->
-<div id="cardDetailModal" class="modal-overlay">
-    <div class="modal-content">
-        <span class="modal-close" onclick="closeCardDetail()">&times;</span>
-        <div id="cardDetailContent"></div>
-    </div>
-</div>
-<script>
-    function getCategoryColor(cat) {
-        const colors = { 'Arabic': '#FF4D6A', 'English': '#38D9F5', 'Colors': '#FFC048' };
-        return colors[cat] || '#A0A0C0';
-    }
-    function openCardDetail(name, category, uid, track, scanCount, isLearned) {
-        const content = document.getElementById('cardDetailContent');
-        const masteryPercent = Math.min(scanCount, 10) * 10;
-        content.innerHTML = `
-            <h2 style="color:var(--cyan); margin-bottom:10px;">${name}</h2>
-            <span class="badge" style="background:${getCategoryColor(category)}; display:inline-block; padding:4px 14px; border-radius:20px; margin:10px 0;">${category}</span>
-            <div style="display:flex; justify-content:space-between; margin:20px 0;">
-                <div><i class="fas fa-music"></i> المسار الصوتي: ${track}</div>
-                <div><i class="fas fa-hand-pointer"></i> <strong>عدد المحاولات: ${scanCount}</strong></div>
+    <!-- ===== MAIN DASHBOARD CONTENT ===== -->
+    <div class="full-page" id="mainContent">
+
+        <!-- ===== STATS RIBBON ===== -->
+        <section class="stats-ribbon">
+            <div class="stat-block">
+                <div class="stat-circle">📊</div>
+                <div class="stat-text">
+                    <span>إجمالي المحاولات</span>
+                    <strong>@Model.TotalScans</strong>
+                </div>
             </div>
-            <div style="background:rgba(255,255,255,0.1); border-radius:10px; height:8px; margin:15px 0; overflow:hidden;">
-                <div style="width:${masteryPercent}%; height:100%; background:linear-gradient(90deg, var(--cyan), var(--violet));"></div>
+            <div class="stat-block">
+                <div class="stat-circle">⭐</div>
+                <div class="stat-text">
+                    <span>تم إتقانها</span>
+                    <strong>@Model.TotalLearned</strong>
+                </div>
             </div>
-            <div style="font-size:1.2rem;">${isLearned ? '✅ متقن' : '🔄 قيد التعلم'}</div>
-            <div style="margin-top:10px; opacity:0.7;">UID: ${uid}</div>
-        `;
-        document.getElementById('cardDetailModal').style.display = 'flex';
-    }
-    function closeCardDetail() {
-        document.getElementById('cardDetailModal').style.display = 'none';
-    }
-    document.getElementById('cardDetailModal').addEventListener('click', function(e) {
-        if (e.target === this) closeCardDetail();
-    });
-    document.addEventListener('DOMContentLoaded', function() {
-        document.querySelectorAll('.btn-detail').forEach(btn => {
-            btn.addEventListener('click', function() {
-                const { name, category, uid, track, count, islearned } = this.dataset;
-                openCardDetail(name, category, uid, parseInt(track), parseInt(count), islearned === 'true');
-            });
-        });
-    });
 
-    // ===== CINEMATIC REVEAL =====
-    window.addEventListener('load', function() {
-        setTimeout(function() {
-            document.getElementById('mainContent').classList.add('reveal');
-        }, 800); // 800ms of pure background
-    });
-</script>
+            <!-- Language breakdown -->
+            <div class="breakdown-bars">
+                <div class="bar-row">
+                    <span class="bar-label">🇸🇦 عربي</span>
+                    <div class="bar-track"><div class="bar-fill" style="width:@arabicPercent%; background:#FF4D6A;"></div></div>
+                    <span class="bar-value">@arabicPercent%</span>
+                </div>
+                <div class="bar-row">
+                    <span class="bar-label">🇺🇸 إنجليزي</span>
+                    <div class="bar-track"><div class="bar-fill" style="width:@englishPercent%; background:#38D9F5;"></div></div>
+                    <span class="bar-value">@englishPercent%</span>
+                </div>
+                <div class="bar-row">
+                    <span class="bar-label">🎨 ألوان</span>
+                    <div class="bar-track"><div class="bar-fill" style="width:@colorsPercent%; background:#FFC048;"></div></div>
+                    <span class="bar-value">@colorsPercent%</span>
+                </div>
+            </div>
+        </section>
 
-<!-- Reset Modal -->
-<div id="resetConfirmModal" class="modal-overlay">
-    <div class="modal-content">
-        <span class="modal-close" onclick="closeResetModal()">&times;</span>
-        <div style="font-size:3rem;">⚠️</div>
-        <h3 style="color:var(--pink);">تأكيد المسح</h3>
-        <p>هل أنتي متأكدة من مسح كل محاولات الطفل؟</p>
-        <div style="display:flex; justify-content:center; gap:1rem; margin-top:2rem;">
-            <button onclick="closeResetModal()" style="background:transparent; border:1px solid #fff; color:#fff; padding:0.7rem 2rem; border-radius:2rem; cursor:pointer;">إلغاء</button>
-            <button id="confirmResetBtn" style="background:var(--pink); border:none; color:#fff; padding:0.7rem 2rem; border-radius:2rem; cursor:pointer; font-weight:bold;">نعم، امسح الكل</button>
+        <!-- ===== MASTERED CARDS (if any) ===== -->
+        @if (Model.LearnedItems.Any(i => i.IsLearned))
+        {
+            <div class="mastered-list">
+                <h4>📚 الكروت المتقنة :</h4>
+                <div class="mastered-chips">
+                    @foreach (var card in Model.LearnedItems.Where(i => i.IsLearned))
+                    {
+                        <span class="mastered-chip">@card.CardName</span>
+                    }
+                </div>
+            </div>
+        }
+
+        <!-- ===== TWO‑COLUMN LAYOUT ===== -->
+        <div class="content-grid">
+            <!-- Left: categories -->
+            <aside class="side-panel">
+                <h3>📂 التصنيفات</h3>
+                <div class="category-list">
+                    @foreach (var cat in Model.CategoryCounts)
+                    {
+                        <div class="cat-item">
+                            <span class="cat-name">@cat.Key</span>
+                            <span class="cat-count">@cat.Value</span>
+                        </div>
+                    }
+                </div>
+            </aside>
+
+            <!-- Right: cards grid -->
+            <main class="cards-area">
+                <h3>📚 الكروت التي تم التفاعل معها</h3>
+                <div class="card-grid">
+                    @foreach (var item in Model.LearnedItems)
+                    {
+                        double fillPercent = Math.Min(item.ScanCount, 10) / 10.0 * 100;
+                        double circumference = 2 * Math.PI * 28;
+                        double dashoffset = circumference - (circumference * fillPercent / 100);
+                        <div class="card-item">
+                            <div class="ring">
+                                <svg width="80" height="80">
+                                    <circle cx="40" cy="40" r="32" stroke="#ffffff20" stroke-width="5" fill="none" />
+                                    <circle cx="40" cy="40" r="32" stroke="var(--cyan)" stroke-width="5" fill="none"
+                                            stroke-dasharray="@circumference" stroke-dashoffset="@dashoffset"
+                                            stroke-linecap="round" transform="rotate(-90 40 40)" />
+                                </svg>
+                                <span class="ring-center">@item.ScanCount</span>
+                            </div>
+                            <div class="card-info">
+                                <h4>@item.CardName</h4>
+                                <span class="badge" style="background:@GetCategoryColor(item.Category)">@item.Category</span>
+                                <div class="audio-hint"><i class="fas fa-headphones"></i> Track @item.TrackNumber</div>
+                                <button class="btn-detail"
+                                        data-name="@item.CardName"
+                                        data-category="@item.Category"
+                                        data-uid="@item.UID"
+                                        data-track="@item.TrackNumber"
+                                        data-count="@item.ScanCount"
+                                        data-islearned="@(item.IsLearned ? "true" : "false")">
+                                    <i class="fas fa-info-circle"></i> تفاصيل
+                                </button>
+                            </div>
+                        </div>
+                    }
+                </div>
+                @if (!Model.LearnedItems.Any())
+                {
+                    <p class="empty-state">✨ امسح أول كرت لبدء التحليل ✨</p>
+                }
+            </main>
         </div>
     </div>
-</div>
-<script>
-    let resetUrl = '';
-    function showResetModal(el) {
-        resetUrl = el.getAttribute('data-reset-url');
-        document.getElementById('resetConfirmModal').style.display = 'flex';
-    }
-    function closeResetModal() {
-        document.getElementById('resetConfirmModal').style.display = 'none';
-    }
-    document.getElementById('confirmResetBtn').addEventListener('click', () => {
-        window.location.href = resetUrl;
-    });
-    document.getElementById('resetConfirmModal').addEventListener('click', function(e) {
-        if (e.target === this) closeResetModal();
-    });
-</script>
+
+    <!-- ===== MODALS ===== -->
+    <div id="cardDetailModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeCardDetail()">&times;</span>
+            <div id="cardDetailContent"></div>
+        </div>
+    </div>
+
+    <!-- Reset Modal -->
+    <div id="resetConfirmModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeResetModal()">&times;</span>
+            <div style="font-size:3rem;">⚠️</div>
+            <h3 style="color:var(--pink);">تأكيد المسح</h3>
+            <p>هل أنتي متأكدة من مسح كل محاولات الطفل؟</p>
+            <div style="display:flex; justify-content:center; gap:1rem; margin-top:2rem;">
+                <button onclick="closeResetModal()" style="background:transparent; border:1px solid #fff; color:#fff; padding:0.7rem 2rem; border-radius:2rem; cursor:pointer;">إلغاء</button>
+                <button id="confirmResetBtn" style="background:var(--pink); border:none; color:#fff; padding:0.7rem 2rem; border-radius:2rem; cursor:pointer; font-weight:bold;">نعم، امسح الكل</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function getCategoryColor(cat) {
+            const colors = { 'Arabic': '#FF4D6A', 'English': '#38D9F5', 'Colors': '#FFC048' };
+            return colors[cat] || '#A0A0C0';
+        }
+        function openCardDetail(name, category, uid, track, scanCount, isLearned) {
+            const content = document.getElementById('cardDetailContent');
+            const masteryPercent = Math.min(scanCount, 10) * 10;
+            content.innerHTML = `
+                <h2 style="color:var(--cyan);">${name}</h2>
+                <span class="badge" style="background:${getCategoryColor(category)}; display:inline-block; padding:4px 14px; border-radius:20px; margin:10px 0;">${category}</span>
+                <div style="display:flex; justify-content:space-between; margin:20px 0;">
+                    <div><i class="fas fa-music"></i> المسار الصوتي: ${track}</div>
+                    <div><i class="fas fa-hand-pointer"></i> <strong>عدد المحاولات: ${scanCount}</strong></div>
+                </div>
+                <div style="background:rgba(255,255,255,0.1); border-radius:10px; height:8px; margin:15px 0; overflow:hidden;">
+                    <div style="width:${masteryPercent}%; height:100%; background:linear-gradient(90deg, var(--cyan), var(--violet));"></div>
+                </div>
+                <div style="font-size:1.2rem;">${isLearned ? '✅ متقن' : '🔄 قيد التعلم'}</div>
+                <div style="margin-top:10px; opacity:0.7;">UID: ${uid}</div>
+            `;
+            document.getElementById('cardDetailModal').style.display = 'flex';
+        }
+        function closeCardDetail() {
+            document.getElementById('cardDetailModal').style.display = 'none';
+        }
+        document.getElementById('cardDetailModal').addEventListener('click', function(e) {
+            if (e.target === this) closeCardDetail();
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.btn-detail').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const { name, category, uid, track, count, islearned } = this.dataset;
+                    openCardDetail(name, category, uid, parseInt(track), parseInt(count), islearned === 'true');
+                });
+            });
+        });
+
+        // Cinematic reveal
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                const el = document.getElementById('mainContent');
+                if (el) el.classList.add('reveal');
+            }, 600);
+        });
+
+        // Reset Modal Script
+        let resetUrl = '';
+        function showResetModal(el) {
+            resetUrl = el.getAttribute('data-reset-url');
+            document.getElementById('resetConfirmModal').style.display = 'flex';
+        }
+        function closeResetModal() {
+            document.getElementById('resetConfirmModal').style.display = 'none';
+        }
+        document.getElementById('confirmResetBtn').addEventListener('click', () => {
+            window.location.href = resetUrl;
+        });
+        document.getElementById('resetConfirmModal').addEventListener('click', function(e) {
+            if (e.target === this) closeResetModal();
+        });
+    </script>
 </body>
 </html>

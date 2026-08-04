@@ -1,4 +1,6 @@
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using SmartLearningAPI;
+using SmartLearningAPI.Services; 
 
 namespace SmartLearningAPI
 {
@@ -7,20 +9,26 @@ namespace SmartLearningAPI
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            //Database
+
+            // Database
             builder.Services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(
                     builder.Configuration.GetConnectionString("DefaultConnection")
                 ));
 
-            //  MVC
+            // MVC
             builder.Services.AddControllersWithViews();
 
-            //  Session 
+            // Session
             builder.Services.AddDistributedMemoryCache();
             builder.Services.AddSession();
+
+            // Web Host Binding
             builder.WebHost.UseUrls("http://0.0.0.0:5000");
+
+            // Custom Services Registration
             builder.Services.AddScoped<LearningService>();
+
             var app = builder.Build();
 
             app.UseSession();
@@ -31,11 +39,9 @@ namespace SmartLearningAPI
                 app.UseHsts();
             }
 
-            //app.UseHttpsRedirection();
+            // app.UseHttpsRedirection();
             app.UseStaticFiles();
-
             app.UseRouting();
-
             app.UseAuthorization();
 
             app.MapControllerRoute(

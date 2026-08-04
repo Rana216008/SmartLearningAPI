@@ -12,4 +12,5 @@
 
     public int TrackNumber { get; set; }
     public int QuizTrackNumber { get; set; }
+    public string ImageName { get; set; } = string.Empty;
 }

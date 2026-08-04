@@ -17,7 +17,7 @@ function toggleAddCard() {
 /**
  * وظيفة ملء بيانات الكرت في الفورم للتعديل
  */
-function editCard(id, name, uid, categoryId, trackNumber, quizTrackNumber) {
+function editCard(id, name, uid, categoryId, imageName, trackNumber, quizTrackNumber) {
     // إظهار السيكشن الخاص بالفورم أولاً
     const section = document.getElementById('add-card-section');
     if (section) section.style.display = 'block';
@@ -27,15 +27,23 @@ function editCard(id, name, uid, categoryId, trackNumber, quizTrackNumber) {
     document.getElementById('cardName').value = name;
     document.getElementById('cardUID').value = uid;
     document.getElementById('cardCat').value = categoryId;
+
+    // 👇 إسناد اسم الصورة للخانة الجديدة
+    document.getElementById('cardImageName').value = imageName || '';
+
     document.getElementById('cardTrack').value = trackNumber;
     document.getElementById('cardQuizTrack').value = quizTrackNumber;
+
+    // تمرير الشاشة بسلاسة نحو قسم التعديل
+    section.scrollIntoView({ behavior: 'smooth' });
 }
 
 /**
  * إعادة تعيين الحقول للقيم الافتراضية
  */
 function resetForm() {
-    const formFields = ['cardId', 'cardName', 'cardUID', 'cardTrack'];
+    // 👇 إضافة cardImageName و cardQuizTrack للقائمة للتصفير عند الإغلاق
+    const formFields = ['cardId', 'cardName', 'cardUID', 'cardImageName', 'cardTrack', 'cardQuizTrack'];
     formFields.forEach(field => {
         const element = document.getElementById(field);
         if (element) {

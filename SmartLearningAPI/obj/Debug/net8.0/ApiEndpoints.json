@@ -1,0 +1,28 @@
+[
+  {
+    "ContainingType": "SmartLearningAPI.Controllers.ScanController",
+    "Method": "Scan",
+    "RelativePath": "api/Scan",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ScanRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SmartLearningAPI.Controllers.ScanController",
+    "Method": "GetSettings",
+    "RelativePath": "api/Scan/settings",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

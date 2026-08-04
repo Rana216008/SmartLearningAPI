@@ -1,4 +1,4 @@
-﻿﻿model AdminDashboardViewModel
+﻿@model AdminDashboardViewModel
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -58,6 +58,12 @@
                         </select>
                     </div>
 
+                    <!-- 👇 إضافة حقل اسم الصورة لربطه بشاشة TFT والـ ESP32 -->
+                    <div class="input-group">
+                        <label>Image Name</label>
+                        <input type="text" name="ImageName" id="cardImageName" class="form-input" placeholder="alef.bmp أو Arabic Alef Card" required />
+                    </div>
+
                     <div class="input-group">
                         <label>Track</label>
                         <input type="number" name="TrackNumber" id="cardTrack" class="form-input" placeholder="1" required />
@@ -85,21 +91,22 @@
             <div class="card-grid">
                 @foreach (var card in Model.Cards)
                 {
-                    @* تم تمرير card.QuizTrackNumber كمعامل خامس في دالة editCard *@
-                    <div class="card" onclick="editCard('@card.Id', '@card.Name', '@card.UID', '@card.CategoryId', '@card.TrackNumber', '@card.QuizTrackNumber')">
+                    @* تمرير card.ImageName كمعامل في دالة editCard لتعبئته عند التعديل *@
+                    <div class="card" onclick="editCard('@card.Id', '@card.Name', '@card.UID', '@card.CategoryId', '@card.ImageName', '@card.TrackNumber', '@card.QuizTrackNumber')">
                         <div class="card-body">
                             <div class="card-title">@card.Name</div>
                             <div class="card-info"><i class="fas fa-tag"></i> @(card.Category?.Name ?? "بدون فئة")</div>
                             <div class="card-meta">UID: @card.UID</div>
+                            @* عرض اسم الصورة المخصصة للبطاقة *@
+                            <div class="card-meta"><i class="fas fa-image"></i> الصورة: @(string.IsNullOrEmpty(card.ImageName) ? "غير محددة" : card.ImageName)</div>
                             <div class="card-meta">صوت التعليم: #@card.TrackNumber</div>
-                            @* عرض تراك السؤال الجديد على الكرت للمسؤول *@
                             <div class="card-meta">صوت الاختبار: #@card.QuizTrackNumber</div>
 
                             <div class="card-actions">
                                 <a asp-action="DeleteCard" asp-route-id="@card.Id"
                                    class="btn-delete"
-                                   onclick="event.stopPropagation(); return confirm('Delet it?')">
-                                    <i class="fas fa-trash-alt"></i> Delet
+                                   onclick="event.stopPropagation(); return confirm('Delete it?')">
+                                    <i class="fas fa-trash-alt"></i> Delete
                                 </a>
                             </div>
                         </div>
@@ -126,8 +133,8 @@
                             <div class="card-title">@cat.Name</div>
                             <a asp-action="DeleteCategory" asp-route-id="@cat.Id"
                                class="btn-delete-text"
-                               onclick="return confirm('Delet This Category?')">
-                                <i class="fas fa-trash-alt"></i> Delet.
+                               onclick="return confirm('Delete This Category?')">
+                                <i class="fas fa-trash-alt"></i> Delete
                             </a>
                         </div>
                     </div>

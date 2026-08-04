@@ -13,8 +13,12 @@
       "PackagePath": "staticwebassets\\css\\Login.css"
     },
     {
-      "Id": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\css\\dashboard.css",
-      "PackagePath": "staticwebassets\\css\\dashboard.css"
+      "Id": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\css\\analytics.css",
+      "PackagePath": "staticwebassets\\css\\analytics.css"
+    },
+    {
+      "Id": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\css\\dashboard-index.css",
+      "PackagePath": "staticwebassets\\css\\dashboard-index.css"
     },
     {
       "Id": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\css\\site.css",

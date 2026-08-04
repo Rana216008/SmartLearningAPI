@@ -5,7 +5,7 @@
 namespace SmartLearningAPI.Migrations
 {
     /// <inheritdoc />
-    public partial class AddExamTargetToSettings : Migration
+    public partial class Migration28 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -77,7 +77,8 @@ namespace SmartLearningAPI.Migrations
                     UID = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CategoryId = table.Column<int>(type: "int", nullable: false),
                     TrackNumber = table.Column<int>(type: "int", nullable: false),
-                    QuizTrackNumber = table.Column<int>(type: "int", nullable: false)
+                    QuizTrackNumber = table.Column<int>(type: "int", nullable: false),
+                    ImageName = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
