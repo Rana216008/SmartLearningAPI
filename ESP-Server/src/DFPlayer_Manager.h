@@ -11,21 +11,38 @@ inline HardwareSerial mySerial(2);
 inline DFRobotDFPlayerMini player;
 
 inline void DF_init() {
+  // تهيئة السيريال رقم 2 على المنافذ (RX=16, TX=17)
   mySerial.begin(9600, SERIAL_8N1, 16, 17);
   pinMode(BUSY_PIN, INPUT);
 
-  if (!player.begin(mySerial)) {
-    Serial.println("DFPlayer Error");
-    // حذفنا while(true) لضمان عدم تعليق الكود بالكامل
+  Serial.println("Initializing DFPlayer...");
+  
+  int attempts = 0;
+  // محاولة الاتصال حتى 5 مرات مع مهلة ثانية بين كل محاولة لضمان استقرار القطعة
+  while (!player.begin(mySerial) && attempts < 5) {
+    delay(1000);
+    attempts++;
+    Serial.print("Retrying DFPlayer connection... Attempt ");
+    Serial.println(attempts);
   }
-  player.volume(30);
+
+  if (attempts >= 5) {
+    Serial.println("DFPlayer Error: Hardware connection failed.");
+  } else {
+    Serial.println("DFPlayer Connected Successfully!");
+    player.volume(30); // ضبط مستوى الصوت (من 0 إلى 30)
+  }
 }
 
+// دالة تشغيل تراك واحد (تُستخدم للتعلم، للاختبار، وللإجابات الصحيحة والخاطئة)
 inline void playTrack(int track) {
+  Serial.print("DFPlayer - Playing track: ");
+  Serial.println(track);
+  
   player.play(track);
-  while (digitalRead(BUSY_PIN) == LOW) {
-    delay(10);
-  }
+  
+  // مهلة كافية لمعالجة الأمر الصوتي ومنع المقاطعة الفورية
+  delay(500); 
 }
 
 #endif

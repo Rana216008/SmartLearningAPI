@@ -22,13 +22,16 @@ inline String RFID_read() {
 
   String content = "";
   for (byte i = 0; i < rfid.uid.size; i++) {
+    // إضافة صفر على اليسار إذا كان الرقم يتكون من خانة واحدة بالـ HEX
+    if (rfid.uid.uidByte[i] < 0x10) {
+      content += "0";
+    }
     content += String(rfid.uid.uidByte[i], HEX);
-    if (i < rfid.uid.size - 1) content += " ";
   }
 
   content.toUpperCase();
   rfid.PICC_HaltA();
-  return content;
+  return content; 
 }
 
 #endif
