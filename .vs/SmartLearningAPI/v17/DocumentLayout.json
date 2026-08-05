@@ -1,150 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\",
+  "WorkspaceRootPath": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|d:\\eng\\final-prpject\\visual studio\\smartlearningapi\\smartlearningapi\\controllers\\learningcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\controllers\\learningcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|d:\\eng\\final-prpject\\visual studio\\smartlearningapi\\smartlearningapi\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|d:\\eng\\final-prpject\\visual studio\\smartlearningapi\\smartlearningapi\\dtos\\scanresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\dtos\\scanresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|d:\\eng\\final-prpject\\visual studio\\smartlearningapi\\smartlearningapi\\dtos\\scanrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\dtos\\scanrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|d:\\eng\\final-prpject\\visual studio\\smartlearningapi\\smartlearningapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|d:\\eng\\final-prpject\\visual studio\\smartlearningapi\\smartlearningapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|d:\\eng\\final-prpject\\visual studio\\smartlearningapi\\smartlearningapi\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|d:\\eng\\final-prpject\\visual studio\\smartlearningapi\\smartlearningapi\\services\\learningservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\services\\learningservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|d:\\eng\\final-prpject\\visual studio\\smartlearningapi\\smartlearningapi\\controllers\\scancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\controllers\\scancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|d:\\eng\\final-prpject\\visual studio\\smartlearningapi\\smartlearningapi\\views\\dashboard\\analytics.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\views\\dashboard\\analytics.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|d:\\eng\\final-prpject\\visual studio\\smartlearningapi\\smartlearningapi\\wwwroot\\css\\analytics.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|c:\\users\\lenovo\\desktop\\new\\smartlearningapi\\smartlearningapi\\smartlearningapi\\wwwroot\\css\\analytics.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\wwwroot\\css\\analytics.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|d:\\eng\\final-prpject\\visual studio\\smartlearningapi\\smartlearningapi\\models\\analyticsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\models\\analyticsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|d:\\eng\\final-prpject\\visual studio\\smartlearningapi\\smartlearningapi\\models\\userprogress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\models\\userprogress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|d:\\eng\\final-prpject\\visual studio\\smartlearningapi\\smartlearningapi\\models\\session.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\models\\session.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|d:\\eng\\final-prpject\\visual studio\\smartlearningapi\\smartlearningapi\\models\\appsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\models\\appsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|d:\\eng\\final-prpject\\visual studio\\smartlearningapi\\smartlearningapi\\models\\appmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\models\\appmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|d:\\eng\\final-prpject\\visual studio\\smartlearningapi\\smartlearningapi\\models\\admindashbardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\models\\admindashbardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|d:\\eng\\final-prpject\\visual studio\\smartlearningapi\\smartlearningapi\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|d:\\eng\\final-prpject\\visual studio\\smartlearningapi\\smartlearningapi\\models\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\models\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|d:\\eng\\final-prpject\\visual studio\\smartlearningapi\\smartlearningapi\\wwwroot\\js\\admin.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\wwwroot\\js\\admin.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|d:\\eng\\final-prpject\\visual studio\\smartlearningapi\\smartlearningapi\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|d:\\eng\\final-prpject\\visual studio\\smartlearningapi\\smartlearningapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|d:\\eng\\final-prpject\\visual studio\\smartlearningapi\\smartlearningapi\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|d:\\eng\\final-prpject\\visual studio\\smartlearningapi\\smartlearningapi\\wwwroot\\css\\dashboard-index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\wwwroot\\css\\dashboard-index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|d:\\eng\\final-prpject\\visual studio\\smartlearningapi\\smartlearningapi\\wwwroot\\js\\dashboard.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\wwwroot\\js\\dashboard.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|d:\\eng\\final-prpject\\visual studio\\smartlearningapi\\smartlearningapi\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|d:\\eng\\final-prpject\\visual studio\\smartlearningapi\\smartlearningapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|d:\\eng\\final-prpject\\visual studio\\smartlearningapi\\smartlearningapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|c:\\users\\lenovo\\desktop\\new\\smartlearningapi\\smartlearningapi\\smartlearningapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|d:\\eng\\final-prpject\\visual studio\\smartlearningapi\\smartlearningapi\\wwwroot\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\wwwroot\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|d:\\eng\\final-prpject\\visual studio\\smartlearningapi\\smartlearningapi\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|d:\\eng\\final-prpject\\visual studio\\smartlearningapi\\smartlearningapi\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|d:\\eng\\final-prpject\\visual studio\\smartlearningapi\\smartlearningapi\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|d:\\eng\\final-prpject\\visual studio\\smartlearningapi\\smartlearningapi\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|d:\\eng\\final-prpject\\visual studio\\smartlearningapi\\smartlearningapi\\wwwroot\\js\\login.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\wwwroot\\js\\login.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|d:\\eng\\final-prpject\\visual studio\\smartlearningapi\\smartlearningapi\\smartlearningapi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\smartlearningapi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|d:\\eng\\final-prpject\\visual studio\\smartlearningapi\\smartlearningapi\\smartlearningapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{EF96EF1A-9422-4CC1-BEFE-C7EE6D008CD1}|SmartLearningAPI\\SmartLearningAPI.csproj|solutionrelative:smartlearningapi\\smartlearningapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -153,8 +17,8 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedHeight": 229,
-          "SelectedChildIndex": -1,
+          "DockedHeight": 48,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -167,12 +31,42 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "analytics.css",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\css\\analytics.css",
+              "RelativeDocumentMoniker": "SmartLearningAPI\\wwwroot\\css\\analytics.css",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\css\\analytics.css",
+              "RelativeToolTip": "SmartLearningAPI\\wwwroot\\css\\analytics.css",
+              "ViewState": "AgIAAGwBAAAAAAAAAAAiwIkBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-08-05T21:28:54.711Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\SmartLearningAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "SmartLearningAPI\\appsettings.json",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\SmartLearningAPI\\appsettings.json",
+              "RelativeToolTip": "SmartLearningAPI\\appsettings.json",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-08-05T20:31:58.274Z",
+              "EditorCaption": ""
             }
           ]
         },
         {
-          "DockedHeight": 532,
-          "SelectedChildIndex": 21,
+          "DockedHeight": 713,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -180,444 +74,11 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AnalyticsViewModel.cs",
-              "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Models\\AnalyticsViewModel.cs",
-              "RelativeDocumentMoniker": "SmartLearningAPI\\Models\\AnalyticsViewModel.cs",
-              "ToolTip": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Models\\AnalyticsViewModel.cs",
-              "RelativeToolTip": "SmartLearningAPI\\Models\\AnalyticsViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAA+wAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-02T22:31:39.078Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "AppSettings.cs",
-              "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Models\\AppSettings.cs",
-              "RelativeDocumentMoniker": "SmartLearningAPI\\Models\\AppSettings.cs",
-              "ToolTip": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Models\\AppSettings.cs",
-              "RelativeToolTip": "SmartLearningAPI\\Models\\AppSettings.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-02T20:41:48.743Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "AdminDashbardViewModel.cs",
-              "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Models\\AdminDashbardViewModel.cs",
-              "RelativeDocumentMoniker": "SmartLearningAPI\\Models\\AdminDashbardViewModel.cs",
-              "ToolTip": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Models\\AdminDashbardViewModel.cs",
-              "RelativeToolTip": "SmartLearningAPI\\Models\\AdminDashbardViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-02T17:48:12.609Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ScanRequest.cs",
-              "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\DTOs\\ScanRequest.cs",
-              "RelativeDocumentMoniker": "SmartLearningAPI\\DTOs\\ScanRequest.cs",
-              "ToolTip": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\DTOs\\ScanRequest.cs",
-              "RelativeToolTip": "SmartLearningAPI\\DTOs\\ScanRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-02T17:47:50.757Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Admin.js",
-              "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\js\\Admin.js",
-              "RelativeDocumentMoniker": "SmartLearningAPI\\wwwroot\\js\\Admin.js",
-              "ToolTip": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\js\\Admin.js",
-              "RelativeToolTip": "SmartLearningAPI\\wwwroot\\js\\Admin.js",
-              "ViewState": "AgIAACoAAAAAAAAAAAAQwDIAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-08-02T16:45:15.703Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Card.cs",
-              "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Models\\Card.cs",
-              "RelativeDocumentMoniker": "SmartLearningAPI\\Models\\Card.cs",
-              "ToolTip": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Models\\Card.cs",
-              "RelativeToolTip": "SmartLearningAPI\\Models\\Card.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAQwAwAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-31T21:48:50.023Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ScanResponse.cs",
-              "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\DTOs\\ScanResponse.cs",
-              "RelativeDocumentMoniker": "SmartLearningAPI\\DTOs\\ScanResponse.cs",
-              "ToolTip": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\DTOs\\ScanResponse.cs",
-              "RelativeToolTip": "SmartLearningAPI\\DTOs\\ScanResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAA+wAMAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-31T21:47:59.287Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "AppModels.cs",
-              "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Models\\AppModels.cs",
-              "RelativeDocumentMoniker": "SmartLearningAPI\\Models\\AppModels.cs",
-              "ToolTip": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Models\\AppModels.cs",
-              "RelativeToolTip": "SmartLearningAPI\\Models\\AppModels.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABNAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-31T21:45:03.203Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "dashboard-index.css",
-              "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\css\\dashboard-index.css",
-              "RelativeDocumentMoniker": "SmartLearningAPI\\wwwroot\\css\\dashboard-index.css",
-              "ToolTip": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\css\\dashboard-index.css",
-              "RelativeToolTip": "SmartLearningAPI\\wwwroot\\css\\dashboard-index.css",
-              "ViewState": "AgIAADoBAAAAAAAAAAAmwCkBAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-07-30T19:49:08.113Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Analytics.cshtml",
-              "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Views\\Dashboard\\Analytics.cshtml",
-              "RelativeDocumentMoniker": "SmartLearningAPI\\Views\\Dashboard\\Analytics.cshtml",
-              "ToolTip": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Views\\Dashboard\\Analytics.cshtml",
-              "RelativeToolTip": "SmartLearningAPI\\Views\\Dashboard\\Analytics.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-07-30T19:43:14.658Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "dashboard.js",
-              "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\js\\dashboard.js",
-              "RelativeDocumentMoniker": "SmartLearningAPI\\wwwroot\\js\\dashboard.js",
-              "ToolTip": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\js\\dashboard.js",
-              "RelativeToolTip": "SmartLearningAPI\\wwwroot\\js\\dashboard.js",
-              "ViewState": "AgIAABwAAAAAAAAAAAAuwDEAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-07-30T19:42:08.881Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "LearningService.cs",
-              "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Services\\LearningService.cs",
-              "RelativeDocumentMoniker": "SmartLearningAPI\\Services\\LearningService.cs",
-              "ToolTip": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Services\\LearningService.cs",
-              "RelativeToolTip": "SmartLearningAPI\\Services\\LearningService.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAAwCoAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-30T19:33:33.65Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ScanController.cs",
-              "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Controllers\\ScanController.cs",
-              "RelativeDocumentMoniker": "SmartLearningAPI\\Controllers\\ScanController.cs",
-              "ToolTip": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Controllers\\ScanController.cs",
-              "RelativeToolTip": "SmartLearningAPI\\Controllers\\ScanController.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAQwCYAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-30T19:20:19.996Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "SmartLearningAPI\\Controllers\\AuthController.cs",
-              "ToolTip": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "SmartLearningAPI\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-30T19:20:08.613Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "SmartLearningAPI\\Controllers\\AdminController.cs",
-              "ToolTip": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "SmartLearningAPI\\Controllers\\AdminController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEEAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-30T19:20:03.393Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "analytics.css",
-              "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\css\\analytics.css",
-              "RelativeDocumentMoniker": "SmartLearningAPI\\wwwroot\\css\\analytics.css",
-              "ToolTip": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\css\\analytics.css",
-              "RelativeToolTip": "SmartLearningAPI\\wwwroot\\css\\analytics.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkBAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-07-30T19:19:56.375Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DashboardController.cs",
-              "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Controllers\\DashboardController.cs",
-              "RelativeDocumentMoniker": "SmartLearningAPI\\Controllers\\DashboardController.cs",
-              "ToolTip": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Controllers\\DashboardController.cs",
-              "RelativeToolTip": "SmartLearningAPI\\Controllers\\DashboardController.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAgwIkAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-30T19:03:20.713Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Views\\Dashboard\\Index.cshtml",
-              "RelativeDocumentMoniker": "SmartLearningAPI\\Views\\Dashboard\\Index.cshtml",
-              "ToolTip": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Views\\Dashboard\\Index.cshtml",
-              "RelativeToolTip": "SmartLearningAPI\\Views\\Dashboard\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-07-17T17:25:12.566Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "site.css",
-              "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "SmartLearningAPI\\wwwroot\\css\\site.css",
-              "ToolTip": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "SmartLearningAPI\\wwwroot\\css\\site.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-07-17T17:25:00.78Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LearningController.cs",
-              "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Controllers\\LearningController.cs",
-              "RelativeDocumentMoniker": "SmartLearningAPI\\Controllers\\LearningController.cs",
-              "ToolTip": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Controllers\\LearningController.cs",
-              "RelativeToolTip": "SmartLearningAPI\\Controllers\\LearningController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-04T14:17:59.468Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Data\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "SmartLearningAPI\\Data\\AppDbContext.cs",
-              "ToolTip": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Data\\AppDbContext.cs",
-              "RelativeToolTip": "SmartLearningAPI\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAxwAkAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-01T15:27:41.248Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Views\\Admin\\Index.cshtml",
-              "RelativeDocumentMoniker": "SmartLearningAPI\\Views\\Admin\\Index.cshtml",
-              "ToolTip": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Views\\Admin\\Index.cshtml",
-              "RelativeToolTip": "SmartLearningAPI\\Views\\Admin\\Index.cshtml",
-              "ViewState": "AgIAAIAAAAAAAAAAAAAIwJUAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-05T17:28:53.785Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "ErrorViewModel.cs",
-              "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Models\\ErrorViewModel.cs",
-              "RelativeDocumentMoniker": "SmartLearningAPI\\Models\\ErrorViewModel.cs",
-              "ToolTip": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Models\\ErrorViewModel.cs",
-              "RelativeToolTip": "SmartLearningAPI\\Models\\ErrorViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-04T16:38:23.776Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "SmartLearningAPI\\Properties\\launchSettings.json",
-              "ToolTip": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Properties\\launchSettings.json",
-              "RelativeToolTip": "SmartLearningAPI\\Properties\\launchSettings.json",
-              "ViewState": "AgIAACEAAAAAAAAAAAAcwCwAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-05-01T15:18:23.57Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\appsettings.json",
-              "RelativeDocumentMoniker": "SmartLearningAPI\\appsettings.json",
-              "ToolTip": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\appsettings.json",
-              "RelativeToolTip": "SmartLearningAPI\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-05-05T17:13:43.325Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Program.cs",
-              "RelativeDocumentMoniker": "SmartLearningAPI\\Program.cs",
-              "ToolTip": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Program.cs",
-              "RelativeToolTip": "SmartLearningAPI\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-01T15:01:50.623Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Session.cs",
-              "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Models\\Session.cs",
-              "RelativeDocumentMoniker": "SmartLearningAPI\\Models\\Session.cs",
-              "ToolTip": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Models\\Session.cs",
-              "RelativeToolTip": "SmartLearningAPI\\Models\\Session.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-05T17:13:19.893Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "UserProgress.cs",
-              "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Models\\UserProgress.cs",
-              "RelativeDocumentMoniker": "SmartLearningAPI\\Models\\UserProgress.cs",
-              "ToolTip": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Models\\UserProgress.cs",
-              "RelativeToolTip": "SmartLearningAPI\\Models\\UserProgress.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-05T17:21:23.649Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "Login.css",
-              "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\css\\Login.css",
-              "RelativeDocumentMoniker": "SmartLearningAPI\\wwwroot\\css\\Login.css",
-              "ToolTip": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\css\\Login.css",
-              "RelativeToolTip": "SmartLearningAPI\\wwwroot\\css\\Login.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-05-03T14:49:55.773Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Views\\Auth\\Login.cshtml",
-              "RelativeDocumentMoniker": "SmartLearningAPI\\Views\\Auth\\Login.cshtml",
-              "ToolTip": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Views\\Auth\\Login.cshtml",
-              "RelativeToolTip": "SmartLearningAPI\\Views\\Auth\\Login.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-03T14:49:38.695Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "SmartLearningAPI\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "SmartLearningAPI\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-05T16:42:22.569Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "SmartLearningAPI\\Views\\Home\\Index.cshtml",
-              "ToolTip": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "SmartLearningAPI\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-05T16:44:04.426Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "_ValidationScriptsPartial.cshtml",
-              "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "RelativeDocumentMoniker": "SmartLearningAPI\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "ToolTip": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "RelativeToolTip": "SmartLearningAPI\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-05T16:44:19.044Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "Login.js",
-              "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\js\\Login.js",
-              "RelativeDocumentMoniker": "SmartLearningAPI\\wwwroot\\js\\Login.js",
-              "ToolTip": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\js\\Login.js",
-              "RelativeToolTip": "SmartLearningAPI\\wwwroot\\js\\Login.js",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAAwDAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-05-03T15:50:00.479Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "SmartLearningAPI",
-              "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\SmartLearningAPI.csproj",
-              "RelativeDocumentMoniker": "SmartLearningAPI\\SmartLearningAPI.csproj",
-              "ToolTip": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\SmartLearningAPI.csproj",
-              "RelativeToolTip": "SmartLearningAPI\\SmartLearningAPI.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-05-01T15:18:20.223Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "SmartLearningAPI.csproj",
-              "DocumentMoniker": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\SmartLearningAPI.csproj",
-              "RelativeDocumentMoniker": "SmartLearningAPI\\SmartLearningAPI.csproj",
-              "ToolTip": "D:\\ENG\\Final-Prpject\\Visual Studio\\SmartLearningAPI\\SmartLearningAPI\\SmartLearningAPI.csproj",
-              "RelativeToolTip": "SmartLearningAPI\\SmartLearningAPI.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-05-01T15:18:13.138Z"
+              "Name": "ST:3:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:3:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             },
             {
               "$type": "Bookmark",

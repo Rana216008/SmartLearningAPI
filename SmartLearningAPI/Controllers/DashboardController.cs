@@ -17,6 +17,8 @@ namespace SmartLearningAPI.Controllers
 
         public IActionResult Index()
         {
+            System.Diagnostics.Debug.WriteLine("=== ACTUAL DB: " + _db.Database.GetConnectionString());
+
             var settings = _db.AppSettings.FirstOrDefault();
 
             var model = new DashboardViewModel
