@@ -19,7 +19,7 @@ namespace SmartLearningAPI.Services
 
         public ScanResponse HandleScan(string uid)
         {
-            //  البحث عن الكرت
+            // البحث عن الكرت
             var card = _db.Cards.Include(c => c.Category).SingleOrDefault(c => c.UID == uid);
             if (card == null)
             {
@@ -27,12 +27,14 @@ namespace SmartLearningAPI.Services
                 {
                     Action = "error",
                     Message = "الكرت غير مسجل في النظام",
-                    Track = 19, // 0019.mp3: اختر كرتاً آخر
-                    ImageName = "Error"
+                    Track = 19,
+                    ImageName = "Error",
+                    Mode = "Learning",
+                    Category = "All"   // no category restriction when card not found
                 };
             }
 
-            // 2. قراءة الإعدادات
+            // قراءة الإعدادات
             string currentMode = "Learning";
             string currentCategory = "All";
             int? examTargetCardId = null;
@@ -50,9 +52,10 @@ namespace SmartLearningAPI.Services
                 }
             }
 
-            // 3. التحقق من المجموعة
-            //إذا كانت الأم محددة قسم معين(مثلاً: "الأرقام") والطفل سحب كرت من قسم "الحروف"، يرفض السيرفر الطلب ويُرجع 
-            //    أكشن wrong_category مع الصوت المناسب للتنبيه.
+            // وضع الاستجابة (نفس الوضع الحالي)
+            string responseMode = currentMode == "Exam" ? "Exam" : "Learning";
+
+            // التحقق من المجموعة
             if (currentCategory != "All")
             {
                 if (card.Category == null || card.Category.Name != currentCategory)
@@ -62,14 +65,14 @@ namespace SmartLearningAPI.Services
                         Action = "wrong_category",
                         Message = $"هذا الكرت خارج المجموعة المطلوبة: {currentCategory}",
                         Track = 19,
-                        ImageName = "WrongCategory"
+                        ImageName = "WrongCategory",
+                        Mode = responseMode,
+                        Category = currentCategory
                     };
                 }
             }
 
-            // 4. تحديث التقدم
-            //تم حفظ محاولة المسح الحالية وتأكيد تعلم الكرت بعد تكراره 3 مرات
-            //مثل المنطق الموجود بالكنترولر لضمان استمرارية تحديث البيانات عبر الـ API.
+            // تحديث التقدم
             var progress = _db.Progress.SingleOrDefault(p => p.UID == uid);
             if (progress == null)
             {
@@ -84,7 +87,7 @@ namespace SmartLearningAPI.Services
             }
             _db.SaveChanges();
 
-            // 5. وضع الاختبار (Exam Mode)
+            // وضع الاختبار (Exam Mode)
             if (currentMode == "Exam")
             {
                 var query = _db.Cards.Include(c => c.Category).AsQueryable();
@@ -96,18 +99,19 @@ namespace SmartLearningAPI.Services
 
                 if (!availableCards.Any())
                 {
-                    return new ScanResponse { Action = "error", Message = "لا توجد كروت متاحة للاختبار", Track = 19, ImageName = "Error" };
+                    return new ScanResponse
+                    {
+                        Action = "error",
+                        Message = "لا توجد كروت متاحة للاختبار",
+                        Track = 19,
+                        ImageName = "Error",
+                        Mode = responseMode,
+                        Category = currentCategory
+                    };
                 }
 
-                //يفحص ما إذا كان هناك سؤال قائم
-                //ومخزن مسبقاً في النظام(أي أن examTargetCardId ليس null)
                 if (examTargetCardId.HasValue)
                 {
-
-                    //يقرأ المعرّف(Id) للكرت الذي مسحه الطفل الآن على الجهاز، ويقارنه بمعرّف
-                    //الكرت المطلوب في السؤال الحاضر(examTargetCardId.Value).إذا تساويا، فهذا يعني أن الطفل أجاب إجابة صحيحة!
-
-
                     if (card.Id == examTargetCardId.Value)
                     {
                         // إجابة صحيحة -> اختيار سؤال جديد
@@ -126,7 +130,9 @@ namespace SmartLearningAPI.Services
                             Action = "correct_and_next",
                             Message = $"إجابة صحيحة! السؤال التالي: أين هو كرت {nextTargetCard.Name}؟",
                             Track = 9 + nextTargetCard.TrackNumber,
-                            ImageName = card.ImageName
+                            ImageName = card.ImageName,
+                            Mode = responseMode,
+                            Category = currentCategory
                         };
                     }
                     else
@@ -136,15 +142,16 @@ namespace SmartLearningAPI.Services
                         {
                             Action = "wrong",
                             Message = "حاول مرة أخرى",
-                            Track = 18, // 0018.mp3
-                            ImageName = "Wrong"
+                            Track = 18,
+                            ImageName = "Wrong",
+                            Mode = responseMode,
+                            Category = currentCategory
                         };
                     }
                 }
                 else
                 {
                     // بداية الاختبار
-                    //يستبدل الكرت المستهدف القديم بالكرت العشوائي الجديد الذي تم اختياره توًا.
                     var random = new Random();
                     var firstTargetCard = availableCards[random.Next(availableCards.Count)];
 
@@ -160,18 +167,22 @@ namespace SmartLearningAPI.Services
                         Action = "ask_question",
                         Message = $"بدء الاختبار! أين هو كرت: {firstTargetCard.Name}؟",
                         Track = 9 + firstTargetCard.TrackNumber,
-                        ImageName = "QuestionMark"
+                        ImageName = "QuestionMark",
+                        Mode = responseMode,
+                        Category = currentCategory
                     };
                 }
             }
 
-            // 6. وضع التعلم (Learning Mode)
+            // وضع التعلم (Learning Mode)
             return new ScanResponse
             {
                 Action = "play",
                 Track = card.TrackNumber,
                 Message = card.Name,
-                ImageName = card.ImageName
+                ImageName = card.ImageName,
+                Mode = responseMode,
+                Category = currentCategory
             };
         }
     }

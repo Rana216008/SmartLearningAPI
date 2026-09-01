@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "oOwxNUeX4Q1NrZwWsvJrb1vLzj4qH1BwcZQkcRPKPrA=",
+  "Hash": "cmMnImJSDktLEV8OkspXlrmNaZHYuCmYJYSxjDcZ4Jc=",
   "Source": "SmartLearningAPI",
   "BasePath": "_content/SmartLearningAPI",
   "Mode": "Default",
@@ -94,8 +94,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "tyqar4ii22",
-      "Integrity": "+y2wB0QxaTOo9TbSx/dsP5s8tDi5ioKoE9dVqLIbAds=",
+      "Fingerprint": "xv29k161uk",
+      "Integrity": "3U64lkCB/vUBU3c3iog/H8suki/lguCbQTB2tWKPH5E=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\analytics.css"
@@ -1623,7 +1623,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "7695"
+          "Value": "7439"
         },
         {
           "Name": "Content-Type",
@@ -1631,11 +1631,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"+y2wB0QxaTOo9TbSx/dsP5s8tDi5ioKoE9dVqLIbAds=\""
+          "Value": "\"3U64lkCB/vUBU3c3iog/H8suki/lguCbQTB2tWKPH5E=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 05 Aug 2026 21:29:25 GMT"
+          "Value": "Sat, 22 Aug 2026 08:24:49 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1645,12 +1645,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-+y2wB0QxaTOo9TbSx/dsP5s8tDi5ioKoE9dVqLIbAds="
+          "Value": "sha256-3U64lkCB/vUBU3c3iog/H8suki/lguCbQTB2tWKPH5E="
         }
       ]
     },
     {
-      "Route": "css/analytics.tyqar4ii22.css",
+      "Route": "css/analytics.xv29k161uk.css",
       "AssetFile": "C:\\Users\\Lenovo\\Desktop\\new\\SmartLearningAPI\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\css\\analytics.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1660,7 +1660,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "7695"
+          "Value": "7439"
         },
         {
           "Name": "Content-Type",
@@ -1668,11 +1668,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"+y2wB0QxaTOo9TbSx/dsP5s8tDi5ioKoE9dVqLIbAds=\""
+          "Value": "\"3U64lkCB/vUBU3c3iog/H8suki/lguCbQTB2tWKPH5E=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 05 Aug 2026 21:29:25 GMT"
+          "Value": "Sat, 22 Aug 2026 08:24:49 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1682,7 +1682,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "tyqar4ii22"
+          "Value": "xv29k161uk"
         },
         {
           "Name": "label",
@@ -1690,7 +1690,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-+y2wB0QxaTOo9TbSx/dsP5s8tDi5ioKoE9dVqLIbAds="
+          "Value": "sha256-3U64lkCB/vUBU3c3iog/H8suki/lguCbQTB2tWKPH5E="
         }
       ]
     },
@@ -1717,7 +1717,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 05 Aug 2026 14:26:15 GMT"
+          "Value": "Fri, 21 Aug 2026 14:00:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1754,7 +1754,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 05 Aug 2026 14:26:15 GMT"
+          "Value": "Fri, 21 Aug 2026 14:00:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2373,7 +2373,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 05 Aug 2026 14:26:15 GMT"
+          "Value": "Fri, 21 Aug 2026 14:00:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2410,7 +2410,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 05 Aug 2026 14:26:15 GMT"
+          "Value": "Fri, 21 Aug 2026 14:00:31 GMT"
         },
         {
           "Name": "Cache-Control",
