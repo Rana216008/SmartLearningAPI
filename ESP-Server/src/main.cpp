@@ -1,371 +1,40 @@
 #include <Arduino.h>
-#include <TFT_eSPI.h>
-#include <TJpg_Decoder.h>
+#include <SPI.h>
 #include <MFRC522.h>
-#include <HardwareSerial.h>
-#include <DFRobotDFPlayerMini.h>
+#include <WiFi.h>
 #include "API_Manager.h"
-
-// ===== Include ALL your JPEG arrays =====
-#include "C.h"
-#include "A.h"
-#include "AR.h"
-#include "B.h"
-#include "BLUE.h"
-#include "BT.h"
-#include "GREEN.h"
-#include "RED.h"
-#include "T.h"
-
-// ===== Exam Mode Images =====
-#include "TM.h"
-#include "FQ.h"
-#include "SQ.h"
-#include "TQ.h"
-#include "WA.h"
-#include "CA.h"
-
-// ===== Include Error Images =====
-#include "EE.h"
-#include "EA.h"
-#include "EC.h"
-
-// ===== Robot Face Images =====
-#include "R1.h"  // Eyes open
-#include "R3.h"  // Eyes closed
-
-// ===== DFPlayer Pin Definitions =====
-#define DFPLAYER_RX_PIN 16
-#define DFPLAYER_TX_PIN 17
+#include "Config.h"
+#include "DisplayManager.h"
+#include "RFIDManager.h"
+#include "DFPlayerManager.h"
+#include "ExamMode.h"
 
 // ===== Current Category Setting =====
 String currentCategory = "All";
 
-// ===== Pin Definitions =====
-#define TFT_BL 21
-#define RFID_SS   5
-#define RFID_RST  22
-
 // ============================================
-// ROBOT FACE ANIMATION STATE
+// Robot Face Animation Timing
 // ============================================
-bool robotEyesOpen = true;  // Start with eyes open
 unsigned long lastFaceChange = 0;
 const unsigned long FACE_CHANGE_INTERVAL = 2000;  // Change every 2 seconds
 
-// ===== Object Initialization =====
-TFT_eSPI tft = TFT_eSPI();
-MFRC522 mfrc522(RFID_SS, RFID_RST);
-HardwareSerial dfSerial(2);
-DFRobotDFPlayerMini myDFPlayer;
-
-// ===== Target Card UIDs =====
-byte aUID[4] = {0xB8, 0x30, 0x24, 0xA2};
-byte bUID[4] = {0x48, 0x27, 0xDB, 0xA2};
-byte tUID[4] = {0xA8, 0x5F, 0x7C, 0xA2};
-byte redUID[4] = {0x58, 0x05, 0xA5, 0xA2};
-
 // ============================================
-// EXAM MODE STATE MACHINE
+// Target Card UIDs (Definitions)
 // ============================================
-enum ExamState {
-    EXAM_IDLE,
-    EXAM_START,
-    EXAM_FQ,
-    EXAM_SQ,
-    EXAM_TQ,
-    EXAM_SHOW_IMAGE,
-    EXAM_WAIT_RETURN
-};
+// English Cards
+byte aUID[4] = {0xB8, 0x30, 0x24, 0xA2};   // A - Track 1
+byte bUID[4] = {0x13, 0x84, 0x98, 0xAA};   // B - Track 5 (NEW)
+byte cUID[4] = {0xE2, 0xAD, 0xB8, 0x89};   // C - Track 6 (NEW)
 
-ExamState examState = EXAM_IDLE;
-String examTargetUID = "";
-String examImageToShow = "";
-bool examModeActive = false;
-unsigned long examImageStartTime = 0;
-const unsigned long IMAGE_DISPLAY_DURATION = 3000;
+// Arabic Cards
+byte arUID[4] = {0x58, 0x05, 0xA5, 0xA2};  // ا (Alef) - Track 4
+byte btUID[4] = {0x48, 0x27, 0xDB, 0xA2};  // ب - Track 2
+byte tUID[4] = {0xA8, 0x5F, 0x7C, 0xA2};   // ت - Track 3
 
-// ============================================
-// DFPLAYER VOICE FUNCTIONS
-// ============================================
-
-void playVoice(int trackNumber) {
-    myDFPlayer.play(trackNumber);
-    Serial.print("[DFPlayer] Playing voice track: ");
-    Serial.println(trackNumber);
-}
-
-// ============================================
-// HARD RESET FUNCTION
-// ============================================
-void hardResetMFRC522() {
-    Serial.println("[RFID] 🔄 Performing HARD RESET...");
-    pinMode(RFID_RST, OUTPUT);
-    digitalWrite(RFID_RST, LOW);
-    delay(150);
-    digitalWrite(RFID_RST, HIGH);
-    delay(150);
-    mfrc522.PCD_Reset();
-    delay(150);
-    Serial.println("[RFID] ✅ Hard reset complete.");
-}
-
-bool isRFIDAlive() {
-    byte version = mfrc522.PCD_ReadRegister(MFRC522::VersionReg);
-    return (version == 0x92 || version == 0x91);
-}
-
-bool reviveRFID() {
-    Serial.println("[RFID] ⚠️ Attempting revival...");
-    for (int attempt = 0; attempt < 3; attempt++) {
-        hardResetMFRC522();
-        mfrc522.PCD_Init();
-        delay(100);
-        if (isRFIDAlive()) {
-            Serial.println("[RFID] ✅ Revived!");
-            return true;
-        }
-        delay(200);
-    }
-    Serial.println("[RFID] ❌ Failed to revive!");
-    return false;
-}
-
-// ============================================
-// CALLBACK FUNCTION for TJpg_Decoder
-// ============================================
-bool tft_output(int16_t x, int16_t y, uint16_t w, uint16_t h, uint16_t* bitmap) {
-    if (y >= tft.height()) return 0;
-    tft.pushImage(x, y, w, h, bitmap);
-    return 1;
-}
-
-void displayImage(const unsigned char* jpegData, size_t jpegSize, const char* name) {
-    Serial.print("[DISPLAY] Displaying: ");
-    Serial.println(name);
-    Serial.print("[DISPLAY] JPEG size: ");
-    Serial.println(jpegSize);
-    
-    bool result = TJpgDec.drawJpg(0, 0, jpegData, jpegSize);
-    if (result) {
-        Serial.println("[DISPLAY] OK");
-    } else {
-        Serial.println("[DISPLAY] ERROR! Check JPEG data.");
-    }
-}
-
-void showCategoryError(String category) {
-    if (category == "English") {
-        displayImage(EE, EE_size, "Error English");
-        playVoice(19);
-    } else if (category == "Arabic") {
-        displayImage(EA, EA_size, "Error Arabic");
-        playVoice(19);
-    } else if (category == "Colors") {
-        displayImage(EC, EC_size, "Error Colors");
-        playVoice(19);
-    } else {
-        displayImage(EE, EE_size, "Error Fallback");
-        playVoice(19);
-    }
-}
-
-// ============================================
-// ROBOT FACE ANIMATION (LIVE FACE)
-// ============================================
-void showTestCardScreen() {
-    // This function is called when the system is idle
-    // It displays the current robot face (R1 or R2) based on the state
-    // The actual animation timing is handled in loop()
-    if (robotEyesOpen) {
-        displayImage(R1, R1_size, "Robot Face - Eyes Open");
-    } else {
-        displayImage(R3, R3_size, "Robot Face - Eyes Closed");
-    }
-}
-
-void updateRobotFace() {
-    // Toggle between eyes open and closed
-    robotEyesOpen = !robotEyesOpen;
-    showTestCardScreen();
-}
-
-void displayImageByTrack(int track) {
-    Serial.print("[DISPLAY] Displaying image for track: ");
-    Serial.println(track);
-    
-    switch(track) {
-        case 1:
-            displayImage(A, A_size, "A");
-            playVoice(4);
-            break;
-        case 2:
-            displayImage(BT, BT_size, "BT (ب)");
-            playVoice(2);
-            break;
-        case 3:
-            displayImage(T, T_size, "T");
-            playVoice(3);
-            break;
-        case 5:
-            displayImage(RED, RED_size, "RED");
-            playVoice(7);
-            break;
-        case 6:
-            displayImage(GREEN, GREEN_size, "GREEN");
-            playVoice(6);
-            break;
-        case 7:
-            displayImage(BLUE, BLUE_size, "BLUE");
-            playVoice(5);
-            break;
-        default:
-            Serial.println("[DISPLAY] Unknown track!");
-            showTestCardScreen();
-            break;
-    }
-}
-
-bool compareUID(byte *uid1, byte *uid2, byte size) {
-    for (byte i = 0; i < size; i++) {
-        if (uid1[i] != uid2[i]) return false;
-    }
-    return true;
-}
-
-String buildUIDString(byte *uid, byte size) {
-    String result = "";
-    for (byte i = 0; i < size; i++) {
-        if (uid[i] < 0x10) result += "0";
-        result += String(uid[i], HEX);
-        if (i < size - 1) result += " ";
-    }
-    result.toUpperCase();
-    return result;
-}
-
-// ============================================
-// EXAM MODE FUNCTIONS
-// ============================================
-
-void startExamMode() {
-    Serial.println("[EXAM] 🎯 Starting Exam Mode!");
-    examModeActive = true;
-    examState = EXAM_START;
-    displayImage(TM, TM_size, "TM - Test Mode");
-    // NO VOICE FOR TM
-    examImageStartTime = millis();
-}
-
-void showCurrentQuestion() {
-    switch(examState) {
-        case EXAM_FQ:
-            displayImage(FQ, FQ_size, "FQ - First Question (ب)");
-            playVoice(11);
-            break;
-        case EXAM_SQ:
-            displayImage(SQ, SQ_size, "SQ - Second Question (ت)");
-            playVoice(12);
-            break;
-        case EXAM_TQ:
-            displayImage(TQ, TQ_size, "TQ - Third Question (A)");
-            playVoice(13);
-            break;
-        default:
-            break;
-    }
-}
-
-void handleCorrectAnswer(String imageName) {
-    Serial.println("[EXAM] ✅ Correct Answer!");
-    
-    if (imageName == "BT") {
-        displayImage(BT, BT_size, "BT - ب");
-        playVoice(2);
-    } else if (imageName == "T") {
-        displayImage(T, T_size, "T - ت");
-        playVoice(3);
-    } else if (imageName == "A") {
-        displayImage(A, A_size, "A - A");
-        playVoice(4);
-    }
-    
-    delay(3000);
-    
-    displayImage(CA, CA_size, "CA - Correct Answer!");
-    playVoice(16);
-    
-    delay(3000);
-    
-    switch(examState) {
-        case EXAM_FQ:
-            examState = EXAM_SQ;
-            showCurrentQuestion();
-            break;
-        case EXAM_SQ:
-            examState = EXAM_TQ;
-            showCurrentQuestion();
-            break;
-        case EXAM_TQ:
-            examState = EXAM_FQ;
-            showCurrentQuestion();
-            break;
-        default:
-            break;
-    }
-}
-
-void handleWrongAnswer() {
-    Serial.println("[EXAM] ❌ Wrong Answer!");
-    
-    displayImage(WA, WA_size, "WA - Wrong Answer!");
-    playVoice(18);
-    delay(2000);
-    
-    showCurrentQuestion();
-}
-
-void processExamCard(String uid) {
-    Serial.println("[EXAM] Processing card: " + uid);
-    
-    bool matched = false;
-    
-    byte readUID[4];
-    int idx = 0;
-    String temp = uid;
-    temp.replace(" ", "");
-    for (int i = 0; i < temp.length(); i += 2) {
-        String hex = temp.substring(i, i+2);
-        readUID[idx++] = (byte)strtol(hex.c_str(), NULL, 16);
-    }
-    
-    switch(examState) {
-        case EXAM_FQ:
-            if (idx == 4 && compareUID(readUID, bUID, 4)) {
-                handleCorrectAnswer("BT");
-                matched = true;
-            }
-            break;
-        case EXAM_SQ:
-            if (idx == 4 && compareUID(readUID, tUID, 4)) {
-                handleCorrectAnswer("T");
-                matched = true;
-            }
-            break;
-        case EXAM_TQ:
-            if (idx == 4 && compareUID(readUID, aUID, 4)) {
-                handleCorrectAnswer("A");
-                matched = true;
-            }
-            break;
-        default:
-            break;
-    }
-    
-    if (!matched) {
-        handleWrongAnswer();
-    }
-}
+// Colors Cards
+byte redUID[4] = {0xF3, 0xDB, 0xFD, 0xA6};   // Red - Track 7
+byte greenUID[4] = {0x13, 0x18, 0x76, 0xBD}; // Green - Track 8
+byte blueUID[4] = {0x23, 0x26, 0xB1, 0x1B};  // Blue - Track 9
 
 // ============================================
 // SETUP
@@ -377,19 +46,8 @@ void setup() {
     Serial.println("=== ROBOT SYSTEM STARTING ===");
     Serial.println("========================================");
 
-    // --- Initialize Display ---
-    Serial.println("[DISPLAY] Initializing...");
-    tft.init();
-    tft.setRotation(1);
-    pinMode(TFT_BL, OUTPUT);
-    digitalWrite(TFT_BL, HIGH);
-    Serial.println("[DISPLAY] OK");
-
-    // --- Initialize JPEG Decoder ---
-    Serial.println("[JPEG] Initializing...");
-    TJpgDec.setSwapBytes(true);
-    TJpgDec.setCallback(tft_output);
-    Serial.println("[JPEG] OK");
+    // --- Initialize Display + JPEG Decoder ---
+    initDisplay();
 
     // --- Initialize DFPlayer ---
     Serial.println("[DFPlayer] Initializing serial...");
@@ -398,15 +56,23 @@ void setup() {
 
     if (myDFPlayer.begin(dfSerial)) {
         Serial.println("[DFPlayer] ✅ DFPlayer initialized!");
-        myDFPlayer.volume(25);
+        delay(100);
+        myDFPlayer.volume(40);
         Serial.println("[DFPlayer] Volume set to 25");
     } else {
         Serial.println("[DFPlayer] ❌ DFPlayer initialization failed!");
     }
 
-    // --- Show initial robot face ---
+    // --- Show initial robot face AND play startup voice ---
     showTestCardScreen();
     Serial.println("[DISPLAY] Showing Robot Face Animation");
+
+    // ============================================
+    // STARTUP VOICE (PLAYS WITH ROBOT FACE)
+    // ============================================
+    playVoice(11);
+    Serial.println("[DFPlayer] 🎵 Startup voice played (track 11)");
+    delay(3000);  // Wait for the startup voice to finish
 
     // --- Initialize RFID ---
     Serial.println("[RFID] Initializing SPI bus...");
@@ -453,20 +119,14 @@ void loop() {
     unsigned long currentTime = millis();
 
     // ============================================
-    // STEP 1: UPDATE ROBOT FACE ANIMATION (IDLE ONLY)
+    // STEP 1: ROBOT FACE ANIMATION (IDLE ONLY)
     // ============================================
-    // Only update face if:
-    // 1. No card is being processed
-    // 2. Not in exam mode
-    // 3. System is idle
     if (!examModeActive && examState == EXAM_IDLE) {
-        // Check if it's time to change the face
         if (currentTime - lastFaceChange >= FACE_CHANGE_INTERVAL) {
             lastFaceChange = currentTime;
-            updateRobotFace();  // Toggle between R1 and R2
+            updateRobotFace();
         }
     } else {
-        // Reset the timer when not idle so animation resumes smoothly
         lastFaceChange = currentTime;
     }
 
@@ -493,7 +153,7 @@ void loop() {
     }
 
     // ============================================
-    // STEP 4: CARD DETECTED - READ UID
+    // STEP 4: READ UID
     // ============================================
     if (!mfrc522.PICC_ReadCardSerial()) {
         Serial.println("[RFID] Failed to read card UID!");
@@ -544,7 +204,7 @@ void loop() {
     }
 
     // ============================================
-    // STEP 6: NORMAL MODE (Learning Mode)
+    // STEP 6: NORMAL MODE (Learning)
     // ============================================
 
     bool matched = false;
@@ -612,17 +272,25 @@ void loop() {
         Serial.println("[API] ⚠️ Server failed. Using local fallback...");
     }
 
+    // ============================================
+    // STEP 7: LOCAL FALLBACK
+    // ============================================
     if (!matched) {
         if (mfrc522.uid.size == 4) {
             bool isA = compareUID(mfrc522.uid.uidByte, aUID, 4);
             bool isB = compareUID(mfrc522.uid.uidByte, bUID, 4);
+            bool isC = compareUID(mfrc522.uid.uidByte, cUID, 4);
+            bool isAR = compareUID(mfrc522.uid.uidByte, arUID, 4);
+            bool isBT = compareUID(mfrc522.uid.uidByte, btUID, 4);
             bool isT = compareUID(mfrc522.uid.uidByte, tUID, 4);
             bool isRed = compareUID(mfrc522.uid.uidByte, redUID, 4);
+            bool isGreen = compareUID(mfrc522.uid.uidByte, greenUID, 4);
+            bool isBlue = compareUID(mfrc522.uid.uidByte, blueUID, 4);
             
             String cardCategory = "";
-            if (isA) cardCategory = "English";
-            else if (isB || isT) cardCategory = "Arabic";
-            else if (isRed) cardCategory = "Colors";
+            if (isA || isB || isC) cardCategory = "English";
+            else if (isAR || isBT || isT) cardCategory = "Arabic";
+            else if (isRed || isGreen || isBlue) cardCategory = "Colors";
             
             if (cardCategory != "" && (currentCategory == "All" || cardCategory == currentCategory)) {
                 if (isA) {
@@ -630,6 +298,18 @@ void loop() {
                     matched = true;
                     Serial.println("[LOCAL] A card (English) - Category allowed!");
                 } else if (isB) {
+                    trackToPlay = 5;
+                    matched = true;
+                    Serial.println("[LOCAL] B card (English) - Category allowed!");
+                } else if (isC) {
+                    trackToPlay = 6;
+                    matched = true;
+                    Serial.println("[LOCAL] C card (English) - Category allowed!");
+                } else if (isAR) {
+                    trackToPlay = 4;
+                    matched = true;
+                    Serial.println("[LOCAL] ا card (Arabic) - Category allowed!");
+                } else if (isBT) {
                     trackToPlay = 2;
                     matched = true;
                     Serial.println("[LOCAL] ب card (Arabic) - Category allowed!");
@@ -638,9 +318,17 @@ void loop() {
                     matched = true;
                     Serial.println("[LOCAL] ت card (Arabic) - Category allowed!");
                 } else if (isRed) {
-                    trackToPlay = 5;
+                    trackToPlay = 7;
                     matched = true;
                     Serial.println("[LOCAL] Red card (Colors) - Category allowed!");
+                } else if (isGreen) {
+                    trackToPlay = 8;
+                    matched = true;
+                    Serial.println("[LOCAL] Green card (Colors) - Category allowed!");
+                } else if (isBlue) {
+                    trackToPlay = 9;
+                    matched = true;
+                    Serial.println("[LOCAL] Blue card (Colors) - Category allowed!");
                 }
             } else if (cardCategory != "") {
                 Serial.println("[LOCAL] ❌ Card blocked! Category mismatch.");
@@ -660,18 +348,15 @@ void loop() {
         }
     }
 
+    // ============================================
+    // STEP 8: DISPLAY
+    // ============================================
     if (matched) {
         displayImageByTrack(trackToPlay);
         delay(5000);
         showTestCardScreen();
         Serial.println("[DISPLAY] Returned to 'Test your card'");
-    } else {
-        Serial.println("[RFID] Unknown card!");
-        displayImage(EE, EE_size, "Unknown Card - Showing Error English");
-        playVoice(19);
-        delay(3000);
-        showTestCardScreen();
-    }
+    } 
 
     mfrc522.PICC_HaltA();
     mfrc522.PCD_StopCrypto1();
