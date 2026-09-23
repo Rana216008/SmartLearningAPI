@@ -7,12 +7,12 @@
 #include <ArduinoJson.h>
 
 // ===== WiFi Credentials =====
-const char* ssid = "HTR";
-const char* password = "12345678SAS";
+const char* ssid = "Rana";
+const char* password = "ranaakram216008";
 
 // ===== Server URL =====
-const char* serverUrl = "http://192.168.1.103:5000/api/scan";
-const char* healthUrl = "http://192.168.1.103:5000/";
+const char* serverUrl = "http://192.168.150.102:5000/api/scan";
+const char* healthUrl = "http://192.168.150.102:5000/";
 
 // ===== Response Structure =====
 struct ApiResponse {
@@ -25,9 +25,6 @@ struct ApiResponse {
     bool success;
 };
 
-// ============================================
-// WiFi Initialization
-// ============================================
 inline void WiFi_init() {
     WiFi.begin(ssid, password);
     Serial.print("Connecting to WiFi");
@@ -46,18 +43,17 @@ inline void WiFi_init() {
     }
 }
 
-// ============================================
-// Health Check - ONE ATTEMPT ONLY
-// ============================================
 inline bool checkServerHealth() {
     if (WiFi.status() != WL_CONNECTED) {
-        Serial.println("[HEALTH] ❌ WiFi not connected!");
+        Serial.println("[HEALTH] ⚠️ WiFi not connected!");
         return false;
     }
 
     HTTPClient http;
     http.begin(healthUrl);
+    http.addHeader("Connection", "close");
     http.setTimeout(3000);
+
     int httpCode = http.GET();
     http.end();
 
@@ -65,16 +61,13 @@ inline bool checkServerHealth() {
         Serial.println("[HEALTH] ✅ Server is reachable!");
         return true;
     } else {
-        Serial.print("[HEALTH] ❌ Server not reachable (HTTP ");
+        Serial.print("[HEALTH] ⚠️ Server not reachable (HTTP ");
         Serial.print(httpCode);
         Serial.println(")");
         return false;
     }
 }
 
-// ============================================
-// Send UID to Server - ONE ATTEMPT ONLY
-// ============================================
 inline ApiResponse sendUID(String uid) {
     ApiResponse result;
     result.track = -1;
@@ -86,13 +79,18 @@ inline ApiResponse sendUID(String uid) {
     result.success = false;
 
     if (WiFi.status() != WL_CONNECTED) {
-        Serial.println("[API] ❌ WiFi not connected!");
+        Serial.println("[API] ⚠️ WiFi not connected!");
         return result;
     }
 
     HTTPClient http;
-    http.begin(serverUrl);
+    if (!http.begin(serverUrl)) {
+        Serial.println("[API] ❌ Failed to begin HTTP connection");
+        return result;
+    }
+
     http.addHeader("Content-Type", "application/json");
+    http.addHeader("Connection", "close"); // إجبار السيرفر على إغلاق الجلسة فور الرد
     http.setTimeout(5000);
 
     JsonDocument docOut;
@@ -119,33 +117,24 @@ inline ApiResponse sendUID(String uid) {
             result.message = docIn["message"] | "";
             result.imageName = docIn["imageName"] | "";
             result.mode = docIn["mode"] | "Learning";
-            result.category = docIn["category"] | "All";  // NEW
+            result.category = docIn["category"] | "All";
             result.success = true;
-            
-            Serial.print("[API] ✅ Track: ");
-            Serial.print(result.track);
-            Serial.print(", Action: ");
-            Serial.print(result.action);
-            Serial.print(", Mode: ");
-            Serial.print(result.mode);
-            Serial.print(", Category: ");
-            Serial.println(result.category);
+
+            Serial.printf("[API] ✅ Track: %d, Action: %s, Mode: %s, Category: %s\n", 
+                          result.track, result.action.c_str(), result.mode.c_str(), result.category.c_str());
         } else {
             Serial.print("[API] ❌ JSON parse error: ");
             Serial.println(error.c_str());
         }
     } else {
-        Serial.print("[API] ❌ HTTP error: ");
+        Serial.print("[API] ❌ HTTP error code: ");
         Serial.println(httpResponseCode);
-        
-        http.end();
-        
+
         if (httpResponseCode == -1 || httpResponseCode == -11) {
-            Serial.println("[API] 🔄 Resetting WiFi connection...");
+            Serial.println("[API] 🔄 Connection dropped. Reconnecting WiFi...");
             WiFi.disconnect();
-            delay(100);
+            delay(200);
             WiFi.reconnect();
-            delay(500);
         }
     }
 
@@ -153,25 +142,16 @@ inline ApiResponse sendUID(String uid) {
     return result;
 }
 
-// ============================================
-// Check Current Mode (using a dummy UID)
-// ============================================
 inline String checkCurrentMode() {
     if (WiFi.status() != WL_CONNECTED) {
-        Serial.println("[MODE] ❌ WiFi not connected!");
         return "Learning";
     }
 
-    String dummyUID = "CHECK_MODE";
-    
-    ApiResponse result = sendUID(dummyUID);
-    
-    if (result.mode == "Exam" || result.mode == "Learning") {
-        Serial.print("[MODE] Current mode: ");
-        Serial.println(result.mode);
+    ApiResponse result = sendUID("CHECK_MODE");
+    if (result.success && (result.mode == "Exam" || result.mode == "Learning")) {
         return result.mode;
     }
-    
+
     return "Learning";
 }
 

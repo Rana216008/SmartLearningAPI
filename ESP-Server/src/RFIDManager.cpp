@@ -2,12 +2,8 @@
 #include "Config.h"
 #include <SPI.h>
 
-// ===== Object Initialization =====
 MFRC522 mfrc522(RFID_SS, RFID_RST);
 
-// ============================================
-// HARD RESET FUNCTION
-// ============================================
 void hardResetMFRC522() {
     Serial.println("[RFID] 🔄 Performing HARD RESET...");
     pinMode(RFID_RST, OUTPUT);
@@ -20,17 +16,11 @@ void hardResetMFRC522() {
     Serial.println("[RFID] ✅ Hard reset complete.");
 }
 
-// ============================================
-// CHECK RFID IS ALIVE
-// ============================================
 bool isRFIDAlive() {
     byte version = mfrc522.PCD_ReadRegister(MFRC522::VersionReg);
     return (version == 0x92 || version == 0x91);
 }
 
-// ============================================
-// REVIVE RFID
-// ============================================
 bool reviveRFID() {
     Serial.println("[RFID] ⚠️ Attempting revival...");
     for (int attempt = 0; attempt < 3; attempt++) {

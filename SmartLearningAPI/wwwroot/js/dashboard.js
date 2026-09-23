@@ -3,24 +3,56 @@ let activityChart;
 
 /* تحديث وضع التشغيل أو التصنيف بشكل تفاعلي */
 function updateMode(type, value, clickedButton) {
-    fetch(`/Dashboard/UpdateSettings?type=${type}&value=${value}`, {
-        method: 'POST'
+    // تجهيز البيانات لترسل ضمن body الخاص بالطلب كـ Form Formats لتطابق الـ Action Parameters
+    const formData = new URLSearchParams();
+    formData.append('type', type);
+    formData.append('value', value);
+
+    fetch('/Dashboard/UpdateSettings', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: formData
     })
-        .then(response => response.json())
+        .then(async response => {
+            if (!response.ok) {
+                throw new Error(`Server returned status: ${response.status}`);
+            }
+            return response.json();
+        })
         .then(data => {
-            if (data.status === 'Success' || response.ok) {
-                // Remove active from all buttons in the same card
-                const card = clickedButton.closest('.card');
-                card.querySelectorAll('.ctrl-btn').forEach(btn => btn.classList.remove('active'));
-                // Add active to the clicked button
-                clickedButton.classList.add('active');
-                // Show success toast
-                showToast('تم تحديث الإعدادات بنجاح ✓');
+            // التحقق من حالة النجاح بغض النظر عن حالة الأحرف (Status / status)
+            const isSuccess = data && (data.status === 'Success' || data.Status === 'Success');
+
+            if (isSuccess) {
+                // إزالة التحديد النشط من جميع الأزرار داخل الكارت الحالي
+                if (clickedButton) {
+                    const card = clickedButton.closest('.card');
+                    if (card) {
+                        card.querySelectorAll('.ctrl-btn').forEach(btn => btn.classList.remove('active'));
+                    }
+                    // إضافة التحديد النشط للزر المضروب عليه
+                    clickedButton.classList.add('active');
+                }
+
+                // إذا كان الرد يحوي رسالة مخصصة (مثل اختيار كارت الاختبار) يتم عرضها، وإلا يظهر التنبيه الافتراضي
+                const message = data.message || data.Message || 'تم تحديث الإعدادات بنجاح ✓';
+                showToast(message);
+
+                // طباعة بيانات المسار المطلوبة في وضع الاختبار للتأكد منها في Console
+                if (data.askTrack || data.AskTrack) {
+                    console.log(`Exam Target Track Number: ${data.askTrack || data.AskTrack}`);
+                }
             } else {
-                console.error('Update failed');
+                console.error('Update failed:', data);
+                showToast('حدث خطأ أثناء تحديث الإعدادات ❌');
             }
         })
-        .catch(error => console.error('Error:', error));
+        .catch(error => {
+            console.error('Error:', error);
+            showToast('تعذر الاتصال بالخادم ❌');
+        });
 }
 
 /* Toast notification */
@@ -33,18 +65,28 @@ function showToast(message) {
             position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%);
             background: #00e5ff; color: #000; padding: 0.8rem 2rem; border-radius: 3rem;
             font-weight: bold; z-index: 9999; opacity: 0; transition: opacity 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 229, 255, 0.4);
         `;
         document.body.appendChild(toast);
     }
     toast.textContent = message;
     toast.style.opacity = '1';
-    setTimeout(() => toast.style.opacity = '0', 2500);
+
+    // إلغاء أي مؤقت قديم إذا تم الضغط أكثر من مرة بشكل متتالي
+    if (toast.timeoutId) clearTimeout(toast.timeoutId);
+
+    toast.timeoutId = setTimeout(() => {
+        toast.style.opacity = '0';
+    }, 3000);
 }
 
 /* Help modal */
 function openHelpModal() {
-    document.getElementById('helpModal').style.display = 'flex';
+    const modal = document.getElementById('helpModal');
+    if (modal) modal.style.display = 'flex';
 }
+
 function closeHelpModal() {
-    document.getElementById('helpModal').style.display = 'none';
+    const modal = document.getElementById('helpModal');
+    if (modal) modal.style.display = 'none';
 }

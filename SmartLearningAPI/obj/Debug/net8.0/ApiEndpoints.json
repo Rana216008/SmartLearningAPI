@@ -1,6 +1,16 @@
 [
   {
     "ContainingType": "SmartLearningAPI.Controllers.ScanController",
+    "Method": "HealthCheck",
+    "RelativePath": "",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SmartLearningAPI.Controllers.ScanController",
     "Method": "Scan",
     "RelativePath": "api/Scan",
     "HttpMethod": "POST",

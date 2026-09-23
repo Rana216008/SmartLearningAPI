@@ -19,6 +19,11 @@ namespace SmartLearningAPI.Controllers
             _service = service;
             _scopeFactory = scopeFactory;
         }
+        [HttpGet("/")]
+        public IActionResult HealthCheck()
+        {
+            return Ok(new { status = "Online", message = "Smart Learning Server is Running" });
+        }
 
         // POST: api/scan
         [HttpPost]

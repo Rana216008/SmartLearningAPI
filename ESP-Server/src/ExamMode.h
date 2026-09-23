@@ -3,7 +3,6 @@
 
 #include <Arduino.h>
 
-// ===== Exam State Machine =====
 enum ExamState {
     EXAM_IDLE,
     EXAM_START,

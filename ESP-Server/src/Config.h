@@ -6,23 +6,27 @@
 // ===== Pin Definitions =====
 #define DFPLAYER_RX_PIN 16
 #define DFPLAYER_TX_PIN 17
-#define TFT_BL 21
-#define RFID_SS 5
-#define RFID_RST 22
+#define TFT_BL          21
+#define RFID_SS         5
+#define RFID_RST        22
 
-// ===== Card UIDs (defined in main.cpp) =====
-extern byte aUID[4];
-extern byte bUID[4];
-extern byte cUID[4];
-extern byte arUID[4];
-extern byte btUID[4];
-extern byte tUID[4];
-extern byte redUID[4];
-extern byte greenUID[4];
-extern byte blueUID[4];
+// ===== Card Data Structure =====
+struct CardModel {
+    byte uid[4];
+    const unsigned char* imageData;
+    size_t imageSize;
+    const char* imageName;
+    int voiceTrack;
+    int trackNumber;
+    String category;
+};
 
-// ===== Inline Helpers =====
-inline bool compareUID(byte *uid1, byte *uid2, byte size) {
+// ===== External Declarations =====
+extern const CardModel cards[];
+extern const size_t TOTAL_CARDS;
+
+// ===== Helper Functions =====
+inline bool compareUID(byte *uid1, byte *uid2, byte size = 4) {
     for (byte i = 0; i < size; i++) {
         if (uid1[i] != uid2[i]) return false;
     }

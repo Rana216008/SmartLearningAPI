@@ -4,10 +4,8 @@
 
 namespace SmartLearningAPI.Migrations
 {
-    /// <inheritdoc />
-    public partial class Migration28 : Migration
+    public partial class Migration1 : Migration
     {
-        /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
@@ -102,7 +100,6 @@ namespace SmartLearningAPI.Migrations
                 column: "CategoryId");
         }
 
-        /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(

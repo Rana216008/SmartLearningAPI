@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SmartLearningAPI;
-using SmartLearningAPI.Services; 
+using SmartLearningAPI.Services;
 
 namespace SmartLearningAPI
 {
@@ -9,6 +9,12 @@ namespace SmartLearningAPI
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            // Configure Kestrel to listen on all IPv4 interfaces
+            builder.WebHost.ConfigureKestrel(serverOptions =>
+            {
+                serverOptions.ListenAnyIP(5000);
+            });
 
             // Database
             builder.Services.AddDbContext<AppDbContext>(options =>
@@ -22,9 +28,6 @@ namespace SmartLearningAPI
             // Session
             builder.Services.AddDistributedMemoryCache();
             builder.Services.AddSession();
-
-            // Web Host Binding
-            builder.WebHost.UseUrls("http://0.0.0.0:5000");
 
             // Custom Services Registration
             builder.Services.AddScoped<LearningService>();

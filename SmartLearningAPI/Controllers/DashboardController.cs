@@ -38,37 +38,41 @@ namespace SmartLearningAPI.Controllers
         {
             var settings = _db.AppSettings.FirstOrDefault();
 
+            // إنشاء سجل افتراضي إذا كان الجدول فارغاً
             if (settings == null)
-                return BadRequest("Settings not found");
+            {
+                settings = new AppSettings { CurrentMode = "Learning", CurrentCategory = "All" };
+                _db.AppSettings.Add(settings);
+                _db.SaveChanges();
+            }
 
-            if (type == "Category")
+            if (string.Equals(type, "Category", StringComparison.OrdinalIgnoreCase))
             {
                 settings.CurrentCategory = value;
             }
-            else if (type == "Status")
+            else if (string.Equals(type, "Status", StringComparison.OrdinalIgnoreCase) || string.Equals(type, "Mode", StringComparison.OrdinalIgnoreCase))
             {
                 settings.CurrentMode = value;
 
                 // تحويل الوضع إلى "وضع الاختبار"
                 if (value == "Exam")
                 {
-                    var query = _db.Cards.AsQueryable();
-                    if (settings.CurrentCategory != "All")
+                    var query = _db.Cards.Include(c => c.Category).AsQueryable();
+
+                    if (!string.IsNullOrEmpty(settings.CurrentCategory) && settings.CurrentCategory != "All")
                     {
-                        query = query.Where(c => c.Category != null && c.Category.Name == settings.CurrentCategory);
+                        query = query.Where(c => c.Category != null &&
+                            (c.Category.Name.ToLower() == settings.CurrentCategory.ToLower()));
                     }
 
                     var availableCards = query.ToList();
 
                     if (availableCards.Any())
                     {
-                        // اختيار كارت عشوائي ليكون هو السؤال
                         var random = new Random();
                         var targetCard = availableCards[random.Next(availableCards.Count)];
 
                         settings.CurrentExamTargetCardId = targetCard.Id;
-
-                        // تحديد رقم التراك الصوتي للسؤال بناءً على ترتيب الـ SD Card
                         int questionTrack = 9 + targetCard.TrackNumber;
 
                         _db.SaveChanges();
@@ -87,7 +91,6 @@ namespace SmartLearningAPI.Controllers
                 }
                 else
                 {
-                    // العودة لوضع التعلم يتم تصفير السؤال
                     settings.CurrentExamTargetCardId = null;
                 }
             }
