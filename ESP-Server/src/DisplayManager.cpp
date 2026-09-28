@@ -1,18 +1,7 @@
 #include "DisplayManager.h"
-#include "DFPlayerManager.h"
-
-// // ===== Include Image Headers =====
-// #include "C.h"
-// #include "A.h"
-// #include "AR.h"
-// #include "B.h"
-// #include "BLUE.h"
-// #include "BT.h"
-// #include "GREEN.h"
-// #include "RED.h"
-// #include "T.h"
-#include "R1.h"  // Eyes open
-#include "R3.h"  // Eyes closed
+#include "Cards.h"
+#include <TJpg_Decoder.h>
+#include <TFT_eSPI.h>
 
 TFT_eSPI tft = TFT_eSPI();
 static bool robotEyesOpen = true;
@@ -24,7 +13,6 @@ bool tft_output(int16_t x, int16_t y, uint16_t w, uint16_t h, uint16_t* bitmap) 
 }
 
 void initDisplay() {
-    Serial.println("[DISPLAY] Initializing...");
     tft.init();
     tft.setRotation(1);
     pinMode(TFT_BL, OUTPUT);
@@ -32,64 +20,41 @@ void initDisplay() {
 
     TJpgDec.setSwapBytes(true);
     TJpgDec.setCallback(tft_output);
-    Serial.println("[DISPLAY] OK");
-}
-
-void displayImage(const unsigned char* jpegData, size_t jpegSize, const char* name) {
-    Serial.printf("[DISPLAY] Displaying: %s (Size: %d)\n", name, jpegSize);
-    if (!TJpgDec.drawJpg(0, 0, jpegData, jpegSize)) {
-        Serial.println("[DISPLAY] ERROR! Check JPEG data.");
-    }
-}
-
-void displayTrackImage(int track) {
-    for (size_t i = 0; i < TOTAL_CARDS; i++) {
-        if (cards[i].trackNumber == track) {
-            displayImage(cards[i].imageData, cards[i].imageSize, cards[i].imageName);
-            return;
-        }
-    }
-    Serial.println("[DISPLAY] Unknown track!");
-    showTestCardScreen();
 }
 
 void displayImageByTrack(int track) {
-    for (size_t i = 0; i < TOTAL_CARDS; i++) {
-        if (cards[i].trackNumber == track) {
-            displayImage(cards[i].imageData, cards[i].imageSize, cards[i].imageName);
-            playVoice(cards[i].voiceTrack);
+    if (track <= 0) return;
+
+    for (size_t i = 0; i < TOTAL_IMAGES; i++) {
+        // البحث برقم التراك العادي أو رقم تراك السؤال
+        if (images[i].TrackNumber == track || images[i].QuizTrackNumber == track) {
+            Serial.printf("[Display] 🖼️ Showing Image: %s for Track: %d\n", images[i].displayName, track);
+            TJpgDec.drawJpg(0, 0, images[i].imageData, images[i].imageSize);
+            // delay(4000);
             return;
         }
     }
-    Serial.println("[DISPLAY] Unknown track!");
-    showTestCardScreen();
+    
+    Serial.printf("[Display] ⚠️ Image for Track %d not found in Cards.h!\n", track);
+    showDefaultFace();
 }
 
-void showTestCardScreen() {
-    if (robotEyesOpen) {
-        displayImage(R1, R1_size, "Robot Face - Eyes Open");
-    } else {
-        displayImage(R3, R3_size, "Robot Face - Eyes Closed");
-    }
+void showDefaultFace() {
+    TJpgDec.drawJpg(0, 0, R3, R3_size);
+    robotEyesOpen = false;
+    
+    delay(150); 
+    
+    TJpgDec.drawJpg(0, 0, R1, R1_size);
+    robotEyesOpen = true;
+    // if (robotEyesOpen) {
+    //     TJpgDec.drawJpg(0, 0, R1, R1_size);
+    // } else {
+    //     TJpgDec.drawJpg(0, 0, R3, R3_size);
+    // }
 }
 
-void updateRobotFace() {
+void updateRobotFaceAnimation() {
     robotEyesOpen = !robotEyesOpen;
-    showTestCardScreen();
-}
-
-void showCategoryError(String category) {
-    if (category == "English") {
-        displayImage(R1, R1_size, "Error English");
-        playVoice(21);
-    } else if (category == "Arabic") {
-        displayImage(R1, R1_size, "Error Arabic");
-        playVoice(20);
-    } else if (category == "Colors") {
-        displayImage(R3, R3_size, "Error Colors");
-        playVoice(19);
-    } else {
-        displayImage(R3, R3_size, "Error Fallback");
-        playVoice(21);
-    }
+    showDefaultFace();
 }

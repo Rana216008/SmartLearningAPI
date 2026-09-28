@@ -12,8 +12,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ykrk8trg8e</Fingerprint>
-      <Integrity>ohSbICHu97x+QrNunTdvEdr8VcWnI5nAVKbZpGSOV+U=</Integrity>
+      <Fingerprint>m1ky5c6uvk</Fingerprint>
+      <Integrity>+k7d06jF+4EUSKyzG0Axu3XEOuWu2qH28/x1PBSQ/lI=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\Admin.css'))</OriginalItemSpec>
@@ -66,8 +66,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>1ricdsxcqy</Fingerprint>
-      <Integrity>7RZ+AbF4v3gnHCa2NzNZjF2PljjtOCCV8MPYOwA1OFM=</Integrity>
+      <Fingerprint>ozo2i2vmso</Fingerprint>
+      <Integrity>BPXMYIMH8VlaQAn9B4Sj/pJIUteeUFeGlnHPE3LMV6A=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\Login.css'))</OriginalItemSpec>
@@ -144,6 +144,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imge\imgdashboard.png'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imge\PICKU.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>SmartLearningAPI</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/SmartLearningAPI</BasePath>
+      <RelativePath>imge/PICKU.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>gclc64hg49</Fingerprint>
+      <Integrity>EF0ZiyO8T75/PaQW/o4JpDAPWVu66Gy8DehzQMnKM2w=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imge\PICKU.png'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imge\Rash_and_kid.png'))">
       <SourceType>Package</SourceType>
       <SourceId>SmartLearningAPI</SourceId>
@@ -174,8 +192,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>q23vmnolmi</Fingerprint>
-      <Integrity>roy+4/0hVuHqurwtckFaeH6bEkWlcQ7lijwwFzGjiLc=</Integrity>
+      <Fingerprint>fvmdbre24i</Fingerprint>
+      <Integrity>9bMx0xut2ozT5gxYRJ5d7VJ9z8bvBToR8t8ipRr6OY0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\Admin.js'))</OriginalItemSpec>
@@ -192,8 +210,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>nf02z71wjr</Fingerprint>
-      <Integrity>TQJtGBOaYbjLiH8FiaVsxRUQ8ZLXeQPA8D5Z8l78mFo=</Integrity>
+      <Fingerprint>l3ol15n39g</Fingerprint>
+      <Integrity>QXLsrYjT4QANyAY8M0XRY82PCuocCfmVDaHIIoHI7zE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\dashboard.js'))</OriginalItemSpec>

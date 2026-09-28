@@ -90,3 +90,30 @@ function closeHelpModal() {
     const modal = document.getElementById('helpModal');
     if (modal) modal.style.display = 'none';
 }
+// دالة تُستدعى فور تغيير الفئة أو الوضع
+async function changeSettings(mode, category) {
+    try {
+        const response = await fetch('/api/learning/update-settings', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ mode: mode, category: category })
+        });
+
+        const data = await response.json();
+        if (data.success) {
+            console.log("تم تحديث الوضع والفئة فوراً في السيرفر");
+        }
+    } catch (error) {
+        console.error("خطأ في الاتصال بالسيرفر:", error);
+    }
+}
+
+// مثال: عند تغيير القائمة المنسدلة للفئة
+document.getElementById('categorySelect').addEventListener('change', function () {
+    const selectedCategory = this.value; // "Arabic", "English", إلخ
+    const currentMode = document.getElementById('modeSelect').value; // "Learning" or "Exam"
+
+    changeSettings(currentMode, selectedCategory);
+});

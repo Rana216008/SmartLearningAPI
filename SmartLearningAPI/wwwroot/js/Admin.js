@@ -18,7 +18,7 @@ function toggleAddCard() {
  * وظيفة ملء بيانات الكرت في الفورم للتعديل
  */
 function editCard(id, name, uid, categoryId, imageName, trackNumber, quizTrackNumber) {
-    // إظهار السيكشن الخاص بالفورم أولاً
+
     const section = document.getElementById('add-card-section');
     if (section) section.style.display = 'block';
 
@@ -28,7 +28,7 @@ function editCard(id, name, uid, categoryId, imageName, trackNumber, quizTrackNu
     document.getElementById('cardUID').value = uid;
     document.getElementById('cardCat').value = categoryId;
 
-    // 👇 إسناد اسم الصورة للخانة الجديدة
+    // إسناد اسم الصورة للخانة الجديدة
     document.getElementById('cardImageName').value = imageName || '';
 
     document.getElementById('cardTrack').value = trackNumber;
@@ -42,7 +42,6 @@ function editCard(id, name, uid, categoryId, imageName, trackNumber, quizTrackNu
  * إعادة تعيين الحقول للقيم الافتراضية
  */
 function resetForm() {
-    // 👇 إضافة cardImageName و cardQuizTrack للقائمة للتصفير عند الإغلاق
     const formFields = ['cardId', 'cardName', 'cardUID', 'cardImageName', 'cardTrack', 'cardQuizTrack'];
     formFields.forEach(field => {
         const element = document.getElementById(field);
@@ -61,3 +60,46 @@ function scrollToSection(sectionId) {
         element.scrollIntoView({ behavior: 'smooth' });
     }
 }
+
+/**
+ * 🚀 وظيفة التحديث الفوري للوضع والفئة بالسيرفر لحظياً
+ */
+async function updateSettingsRealtime() {
+    const mode = document.getElementById('modeSelect')?.value || "Learning";
+    const category = document.getElementById('categorySelect')?.value || "All";
+
+    try {
+        const response = await fetch('/api/learning/update-settings', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                mode: mode,
+                category: category
+            })
+        });
+
+        if (response.ok) {
+            console.log(`[Realtime Dashboard] Updated successfully: Mode=${mode}, Category=${category}`);
+        } else {
+            console.error('[Realtime Dashboard] Failed to update settings');
+        }
+    } catch (error) {
+        console.error('[Realtime Dashboard] Error connecting to server:', error);
+    }
+}
+
+// ⚡ ربط الأحداث للتنفيذ الفوري فور تغيير الأم للخيار في القائمة المنسدلة
+document.addEventListener('DOMContentLoaded', function () {
+    const modeSelect = document.getElementById('modeSelect');
+    const categorySelect = document.getElementById('categorySelect');
+
+    if (modeSelect) {
+        modeSelect.addEventListener('change', updateSettingsRealtime);
+    }
+
+    if (categorySelect) {
+        categorySelect.addEventListener('change', updateSettingsRealtime);
+    }
+});

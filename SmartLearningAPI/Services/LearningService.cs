@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using SmartLearningAPI.Models;
 using System;
 using System.Linq;
@@ -9,17 +8,24 @@ namespace SmartLearningAPI.Services
     public class LearningService
     {
         private readonly AppDbContext _db;
-        private readonly IServiceScopeFactory _scopeFactory;
 
-        public LearningService(AppDbContext db, IServiceScopeFactory scopeFactory)
+        public LearningService(AppDbContext db)
         {
             _db = db;
-            _scopeFactory = scopeFactory;
         }
 
         public ScanResponse HandleScan(string uid)
         {
-            // البحث عن الكرت
+            // قراءة الإعدادات الحالية من نفس سياق البيانات
+            var settings = _db.AppSettings.FirstOrDefault();
+
+            string currentMode = settings?.CurrentMode ?? "Learning";
+            string currentCategory = settings?.CurrentCategory ?? "All";
+            int? examTargetCardId = settings?.CurrentExamTargetCardId;
+
+            string responseMode = currentMode == "Exam" ? "Exam" : "Learning";
+
+            // 1. البحث عن الكرت
             var card = _db.Cards.Include(c => c.Category).SingleOrDefault(c => c.UID == uid);
             if (card == null)
             {
@@ -27,44 +33,34 @@ namespace SmartLearningAPI.Services
                 {
                     Action = "error",
                     Message = "الكرت غير مسجل في النظام",
-                    Track = 19,
+                    Track = 25, // "حاول مرة أخرى"
                     ImageName = "Error",
-                    Mode = "Learning",
-                    Category = "All"   // no category restriction when card not found
+                    Mode = responseMode,
+                    Category = currentCategory
                 };
             }
 
-            // قراءة الإعدادات
-            string currentMode = "Learning";
-            string currentCategory = "All";
-            int? examTargetCardId = null;
-
-            using (var scope = _scopeFactory.CreateScope())
+            // 2. التحقق من مطابقة الفئة
+            if (!string.Equals(currentCategory, "All", StringComparison.OrdinalIgnoreCase))
             {
-                var freshDb = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-                var settings = freshDb.AppSettings.FirstOrDefault();
+                string cardCatName = card.Category?.Name?.Trim() ?? "";
+                string targetCatName = currentCategory.Trim();
 
-                if (settings != null)
+                if (!string.Equals(cardCatName, targetCatName, StringComparison.OrdinalIgnoreCase))
                 {
-                    currentMode = settings.CurrentMode ?? "Learning";
-                    currentCategory = settings.CurrentCategory ?? "All";
-                    examTargetCardId = settings.CurrentExamTargetCardId;
-                }
-            }
+                    int categoryErrorTrack = targetCatName.ToLower() switch
+                    {
+                        "arabic" => 19,
+                        "english" => 20,
+                        "colors" => 21,
+                        _ => 19
+                    };
 
-            // وضع الاستجابة (نفس الوضع الحالي)
-            string responseMode = currentMode == "Exam" ? "Exam" : "Learning";
-
-            // التحقق من المجموعة
-            if (currentCategory != "All")
-            {
-                if (card.Category == null || card.Category.Name != currentCategory)
-                {
                     return new ScanResponse
                     {
                         Action = "wrong_category",
                         Message = $"هذا الكرت خارج المجموعة المطلوبة: {currentCategory}",
-                        Track = 19,
+                        Track = categoryErrorTrack,
                         ImageName = "WrongCategory",
                         Mode = responseMode,
                         Category = currentCategory
@@ -72,7 +68,7 @@ namespace SmartLearningAPI.Services
                 }
             }
 
-            // تحديث التقدم
+            // 3. تحديث التقدم
             var progress = _db.Progress.SingleOrDefault(p => p.UID == uid);
             if (progress == null)
             {
@@ -87,41 +83,74 @@ namespace SmartLearningAPI.Services
             }
             _db.SaveChanges();
 
-            // وضع الاختبار (Exam Mode)
+            // 4. وضع الاختبار (Exam Mode)
             if (currentMode == "Exam")
             {
                 var query = _db.Cards.Include(c => c.Category).AsQueryable();
-                if (currentCategory != "All")
+                if (!string.Equals(currentCategory, "All", StringComparison.OrdinalIgnoreCase))
                 {
-                    query = query.Where(c => c.Category != null && c.Category.Name == currentCategory);
+                    query = query.Where(c => c.Category != null &&
+                        c.Category.Name.ToLower() == currentCategory.ToLower());
                 }
-                var availableCards = query.ToList();
 
-                if (!availableCards.Any())
+                var allCategoryCards = query.ToList();
+
+                if (!allCategoryCards.Any())
                 {
                     return new ScanResponse
                     {
                         Action = "error",
-                        Message = "لا توجد كروت متاحة للاختبار",
-                        Track = 19,
+                        Message = "لا توجد كروت مضافة في هذه المجموعة للاختبار",
+                        Track = 25,
                         ImageName = "Error",
                         Mode = responseMode,
                         Category = currentCategory
                     };
                 }
 
+                var cardUids = allCategoryCards.Select(c => c.UID).ToList();
+                var learnedProgress = _db.Progress
+                    .Where(p => cardUids.Contains(p.UID) && p.Count > 0)
+                    .ToList();
+
+                var candidateCards = allCategoryCards
+                    .Where(c => learnedProgress.Any(p => p.UID == c.UID))
+                    .ToList();
+
+                if (!candidateCards.Any())
+                {
+                    candidateCards = allCategoryCards;
+                }
+
+                Card GetNextSmartQuestionCard(int? excludeCardId = null)
+                {
+                    var filteredCandidates = candidateCards
+                        .Where(c => !excludeCardId.HasValue || c.Id != excludeCardId.Value)
+                        .ToList();
+
+                    if (!filteredCandidates.Any()) filteredCandidates = candidateCards;
+
+                    var random = new Random();
+                    return filteredCandidates
+                        .Select(c => new
+                        {
+                            Card = c,
+                            Count = learnedProgress.FirstOrDefault(p => p.UID == c.UID)?.Count ?? 0
+                        })
+                        .OrderBy(x => x.Count)
+                        .ThenBy(_ => random.Next())
+                        .First().Card;
+                }
+
                 if (examTargetCardId.HasValue)
                 {
                     if (card.Id == examTargetCardId.Value)
                     {
-                        // إجابة صحيحة -> اختيار سؤال جديد
-                        var random = new Random();
-                        var nextTargetCard = availableCards[random.Next(availableCards.Count)];
+                        var nextTargetCard = GetNextSmartQuestionCard(excludeCardId: card.Id);
 
-                        var settingsToUpdate = _db.AppSettings.FirstOrDefault();
-                        if (settingsToUpdate != null)
+                        if (settings != null)
                         {
-                            settingsToUpdate.CurrentExamTargetCardId = nextTargetCard.Id;
+                            settings.CurrentExamTargetCardId = nextTargetCard.Id;
                             _db.SaveChanges();
                         }
 
@@ -129,21 +158,21 @@ namespace SmartLearningAPI.Services
                         {
                             Action = "correct_and_next",
                             Message = $"إجابة صحيحة! السؤال التالي: أين هو كرت {nextTargetCard.Name}؟",
-                            Track = 9 + nextTargetCard.TrackNumber,
-                            ImageName = card.ImageName,
-                            Mode = responseMode,
+                            Track = nextTargetCard.QuizTrackNumber, 
+                            FeedbackTrack = 23,                     
+                            ImageName = card.ImageName,             
                             Category = currentCategory
                         };
                     }
                     else
                     {
-                        // إجابة خاطئة
                         return new ScanResponse
                         {
                             Action = "wrong",
-                            Message = "حاول مرة أخرى",
-                            Track = 18,
-                            ImageName = "Wrong",
+                            Message = "إجابة خاطئة، حاول مرة أخرى",
+                            Track = 25,                             // رقم تراك (حاول مرة أخرى)
+                            FeedbackTrack = -1,
+                            ImageName = "Wrong",                    // صورة الخطأ أو DefaultFace
                             Mode = responseMode,
                             Category = currentCategory
                         };
@@ -151,14 +180,11 @@ namespace SmartLearningAPI.Services
                 }
                 else
                 {
-                    // بداية الاختبار
-                    var random = new Random();
-                    var firstTargetCard = availableCards[random.Next(availableCards.Count)];
+                    var firstTargetCard = GetNextSmartQuestionCard();
 
-                    var settingsToUpdate = _db.AppSettings.FirstOrDefault();
-                    if (settingsToUpdate != null)
+                    if (settings != null)
                     {
-                        settingsToUpdate.CurrentExamTargetCardId = firstTargetCard.Id;
+                        settings.CurrentExamTargetCardId = firstTargetCard.Id;
                         _db.SaveChanges();
                     }
 
@@ -166,7 +192,7 @@ namespace SmartLearningAPI.Services
                     {
                         Action = "ask_question",
                         Message = $"بدء الاختبار! أين هو كرت: {firstTargetCard.Name}؟",
-                        Track = 9 + firstTargetCard.TrackNumber,
+                        Track = firstTargetCard.QuizTrackNumber,
                         ImageName = "QuestionMark",
                         Mode = responseMode,
                         Category = currentCategory
@@ -174,7 +200,7 @@ namespace SmartLearningAPI.Services
                 }
             }
 
-            // وضع التعلم (Learning Mode)
+            // 5. وضع التعلم العادي (Learning Mode)
             return new ScanResponse
             {
                 Action = "play",

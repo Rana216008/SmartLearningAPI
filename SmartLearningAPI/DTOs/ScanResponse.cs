@@ -6,4 +6,5 @@
     public string ImageName { get; set; } = string.Empty;
     public string Mode { get; set; } = string.Empty;
     public string Category { get; set; } = string.Empty;   // "All" or specific category
+    public int? FeedbackTrack { get; set; }
 }

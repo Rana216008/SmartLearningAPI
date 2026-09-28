@@ -1,5 +1,5 @@
 #include "RFIDManager.h"
-#include "Config.h"
+#include "Cards.h"
 #include <SPI.h>
 
 MFRC522 mfrc522(RFID_SS, RFID_RST);

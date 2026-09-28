@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "YclSIXEmOfO3RRcMU1Rewe7bvC6TMbm10qhAHgpCTy8=",
+  "Hash": "GOqoLpTI4/hH/3B4w+JHTttINrb966x+eE/13LVEtuk=",
   "Source": "SmartLearningAPI",
   "BasePath": "_content/SmartLearningAPI",
   "Mode": "Default",
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ykrk8trg8e",
-      "Integrity": "ohSbICHu97x+QrNunTdvEdr8VcWnI5nAVKbZpGSOV+U=",
+      "Fingerprint": "m1ky5c6uvk",
+      "Integrity": "+k7d06jF+4EUSKyzG0Axu3XEOuWu2qH28/x1PBSQ/lI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Admin.css"
@@ -136,8 +136,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "1ricdsxcqy",
-      "Integrity": "7RZ+AbF4v3gnHCa2NzNZjF2PljjtOCCV8MPYOwA1OFM=",
+      "Fingerprint": "ozo2i2vmso",
+      "Integrity": "BPXMYIMH8VlaQAn9B4Sj/pJIUteeUFeGlnHPE3LMV6A=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Login.css"
@@ -227,6 +227,27 @@
       "OriginalItemSpec": "wwwroot\\imge\\imgdashboard.png"
     },
     {
+      "Identity": "D:\\ENG\\Final-Prpject\\VisualStudio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\imge\\PICKU.png",
+      "SourceId": "SmartLearningAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ENG\\Final-Prpject\\VisualStudio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\",
+      "BasePath": "_content/SmartLearningAPI",
+      "RelativePath": "imge/PICKU#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "gclc64hg49",
+      "Integrity": "EF0ZiyO8T75/PaQW/o4JpDAPWVu66Gy8DehzQMnKM2w=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imge\\PICKU.png"
+    },
+    {
       "Identity": "D:\\ENG\\Final-Prpject\\VisualStudio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\imge\\Rash_and_kid.png",
       "SourceId": "SmartLearningAPI",
       "SourceType": "Discovered",
@@ -262,8 +283,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "q23vmnolmi",
-      "Integrity": "roy+4/0hVuHqurwtckFaeH6bEkWlcQ7lijwwFzGjiLc=",
+      "Fingerprint": "fvmdbre24i",
+      "Integrity": "9bMx0xut2ozT5gxYRJ5d7VJ9z8bvBToR8t8ipRr6OY0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\Admin.js"
@@ -283,8 +304,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "nf02z71wjr",
-      "Integrity": "TQJtGBOaYbjLiH8FiaVsxRUQ8ZLXeQPA8D5Z8l78mFo=",
+      "Fingerprint": "l3ol15n39g",
+      "Integrity": "QXLsrYjT4QANyAY8M0XRY82PCuocCfmVDaHIIoHI7zE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\dashboard.js"
@@ -1541,7 +1562,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6041"
+          "Value": "6314"
         },
         {
           "Name": "Content-Type",
@@ -1549,11 +1570,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ohSbICHu97x+QrNunTdvEdr8VcWnI5nAVKbZpGSOV+U=\""
+          "Value": "\"+k7d06jF+4EUSKyzG0Axu3XEOuWu2qH28/x1PBSQ/lI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 13 Sep 2026 14:08:57 GMT"
+          "Value": "Sun, 27 Sep 2026 17:50:36 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1563,12 +1584,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-ohSbICHu97x+QrNunTdvEdr8VcWnI5nAVKbZpGSOV+U="
+          "Value": "sha256-+k7d06jF+4EUSKyzG0Axu3XEOuWu2qH28/x1PBSQ/lI="
         }
       ]
     },
     {
-      "Route": "css/Admin.ykrk8trg8e.css",
+      "Route": "css/Admin.m1ky5c6uvk.css",
       "AssetFile": "D:\\ENG\\Final-Prpject\\VisualStudio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\css\\Admin.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1578,7 +1599,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6041"
+          "Value": "6314"
         },
         {
           "Name": "Content-Type",
@@ -1586,11 +1607,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ohSbICHu97x+QrNunTdvEdr8VcWnI5nAVKbZpGSOV+U=\""
+          "Value": "\"+k7d06jF+4EUSKyzG0Axu3XEOuWu2qH28/x1PBSQ/lI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 13 Sep 2026 14:08:57 GMT"
+          "Value": "Sun, 27 Sep 2026 17:50:36 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1600,7 +1621,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "ykrk8trg8e"
+          "Value": "m1ky5c6uvk"
         },
         {
           "Name": "label",
@@ -1608,7 +1629,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-ohSbICHu97x+QrNunTdvEdr8VcWnI5nAVKbZpGSOV+U="
+          "Value": "sha256-+k7d06jF+4EUSKyzG0Axu3XEOuWu2qH28/x1PBSQ/lI="
         }
       ]
     },
@@ -1777,51 +1798,6 @@
       ]
     },
     {
-      "Route": "css/Login.1ricdsxcqy.css",
-      "AssetFile": "D:\\ENG\\Final-Prpject\\VisualStudio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\css\\Login.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "4757"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"7RZ+AbF4v3gnHCa2NzNZjF2PljjtOCCV8MPYOwA1OFM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 05 May 2026 20:30:33 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "1ricdsxcqy"
-        },
-        {
-          "Name": "label",
-          "Value": "css/Login.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-7RZ+AbF4v3gnHCa2NzNZjF2PljjtOCCV8MPYOwA1OFM="
-        }
-      ]
-    },
-    {
       "Route": "css/Login.css",
       "AssetFile": "D:\\ENG\\Final-Prpject\\VisualStudio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\css\\Login.css",
       "Selectors": [],
@@ -1832,7 +1808,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4757"
+          "Value": "4758"
         },
         {
           "Name": "Content-Type",
@@ -1840,11 +1816,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"7RZ+AbF4v3gnHCa2NzNZjF2PljjtOCCV8MPYOwA1OFM=\""
+          "Value": "\"BPXMYIMH8VlaQAn9B4Sj/pJIUteeUFeGlnHPE3LMV6A=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 05 May 2026 20:30:33 GMT"
+          "Value": "Mon, 28 Sep 2026 12:22:46 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1854,7 +1830,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-7RZ+AbF4v3gnHCa2NzNZjF2PljjtOCCV8MPYOwA1OFM="
+          "Value": "sha256-BPXMYIMH8VlaQAn9B4Sj/pJIUteeUFeGlnHPE3LMV6A="
+        }
+      ]
+    },
+    {
+      "Route": "css/Login.ozo2i2vmso.css",
+      "AssetFile": "D:\\ENG\\Final-Prpject\\VisualStudio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\css\\Login.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4758"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BPXMYIMH8VlaQAn9B4Sj/pJIUteeUFeGlnHPE3LMV6A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Sep 2026 12:22:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ozo2i2vmso"
+        },
+        {
+          "Name": "label",
+          "Value": "css/Login.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-BPXMYIMH8VlaQAn9B4Sj/pJIUteeUFeGlnHPE3LMV6A="
         }
       ]
     },
@@ -2187,6 +2208,88 @@
       ]
     },
     {
+      "Route": "imge/PICKU.gclc64hg49.png",
+      "AssetFile": "D:\\ENG\\Final-Prpject\\VisualStudio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\imge\\PICKU.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2104220"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EF0ZiyO8T75/PaQW/o4JpDAPWVu66Gy8DehzQMnKM2w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 27 Sep 2026 17:47:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gclc64hg49"
+        },
+        {
+          "Name": "label",
+          "Value": "imge/PICKU.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-EF0ZiyO8T75/PaQW/o4JpDAPWVu66Gy8DehzQMnKM2w="
+        }
+      ]
+    },
+    {
+      "Route": "imge/PICKU.png",
+      "AssetFile": "D:\\ENG\\Final-Prpject\\VisualStudio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\imge\\PICKU.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2104220"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EF0ZiyO8T75/PaQW/o4JpDAPWVu66Gy8DehzQMnKM2w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 27 Sep 2026 17:47:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-EF0ZiyO8T75/PaQW/o4JpDAPWVu66Gy8DehzQMnKM2w="
+        }
+      ]
+    },
+    {
       "Route": "imge/Rash_and_kid.png",
       "AssetFile": "D:\\ENG\\Final-Prpject\\VisualStudio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\imge\\Rash_and_kid.png",
       "Selectors": [],
@@ -2269,6 +2372,51 @@
       ]
     },
     {
+      "Route": "js/Admin.fvmdbre24i.js",
+      "AssetFile": "D:\\ENG\\Final-Prpject\\VisualStudio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\js\\Admin.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3796"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9bMx0xut2ozT5gxYRJ5d7VJ9z8bvBToR8t8ipRr6OY0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Sep 2026 21:34:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fvmdbre24i"
+        },
+        {
+          "Name": "label",
+          "Value": "js/Admin.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-9bMx0xut2ozT5gxYRJ5d7VJ9z8bvBToR8t8ipRr6OY0="
+        }
+      ]
+    },
+    {
       "Route": "js/Admin.js",
       "AssetFile": "D:\\ENG\\Final-Prpject\\VisualStudio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\js\\Admin.js",
       "Selectors": [],
@@ -2279,7 +2427,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2411"
+          "Value": "3796"
         },
         {
           "Name": "Content-Type",
@@ -2287,11 +2435,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"roy+4/0hVuHqurwtckFaeH6bEkWlcQ7lijwwFzGjiLc=\""
+          "Value": "\"9bMx0xut2ozT5gxYRJ5d7VJ9z8bvBToR8t8ipRr6OY0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 02 Aug 2026 16:49:35 GMT"
+          "Value": "Wed, 23 Sep 2026 21:34:53 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2301,52 +2449,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-roy+4/0hVuHqurwtckFaeH6bEkWlcQ7lijwwFzGjiLc="
-        }
-      ]
-    },
-    {
-      "Route": "js/Admin.q23vmnolmi.js",
-      "AssetFile": "D:\\ENG\\Final-Prpject\\VisualStudio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\js\\Admin.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2411"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"roy+4/0hVuHqurwtckFaeH6bEkWlcQ7lijwwFzGjiLc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 02 Aug 2026 16:49:35 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "q23vmnolmi"
-        },
-        {
-          "Name": "label",
-          "Value": "js/Admin.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-roy+4/0hVuHqurwtckFaeH6bEkWlcQ7lijwwFzGjiLc="
+          "Value": "sha256-9bMx0xut2ozT5gxYRJ5d7VJ9z8bvBToR8t8ipRr6OY0="
         }
       ]
     },
@@ -2361,7 +2464,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3947"
+          "Value": "5043"
         },
         {
           "Name": "Content-Type",
@@ -2369,11 +2472,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"TQJtGBOaYbjLiH8FiaVsxRUQ8ZLXeQPA8D5Z8l78mFo=\""
+          "Value": "\"QXLsrYjT4QANyAY8M0XRY82PCuocCfmVDaHIIoHI7zE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 20 Sep 2026 17:06:30 GMT"
+          "Value": "Wed, 23 Sep 2026 21:28:41 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2383,12 +2486,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-TQJtGBOaYbjLiH8FiaVsxRUQ8ZLXeQPA8D5Z8l78mFo="
+          "Value": "sha256-QXLsrYjT4QANyAY8M0XRY82PCuocCfmVDaHIIoHI7zE="
         }
       ]
     },
     {
-      "Route": "js/dashboard.nf02z71wjr.js",
+      "Route": "js/dashboard.l3ol15n39g.js",
       "AssetFile": "D:\\ENG\\Final-Prpject\\VisualStudio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\js\\dashboard.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2398,7 +2501,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3947"
+          "Value": "5043"
         },
         {
           "Name": "Content-Type",
@@ -2406,11 +2509,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"TQJtGBOaYbjLiH8FiaVsxRUQ8ZLXeQPA8D5Z8l78mFo=\""
+          "Value": "\"QXLsrYjT4QANyAY8M0XRY82PCuocCfmVDaHIIoHI7zE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 20 Sep 2026 17:06:30 GMT"
+          "Value": "Wed, 23 Sep 2026 21:28:41 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2420,7 +2523,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "nf02z71wjr"
+          "Value": "l3ol15n39g"
         },
         {
           "Name": "label",
@@ -2428,7 +2531,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-TQJtGBOaYbjLiH8FiaVsxRUQ8ZLXeQPA8D5Z8l78mFo="
+          "Value": "sha256-QXLsrYjT4QANyAY8M0XRY82PCuocCfmVDaHIIoHI7zE="
         }
       ]
     },

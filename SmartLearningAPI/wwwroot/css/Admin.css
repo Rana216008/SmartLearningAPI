@@ -1,4 +1,10 @@
-﻿body {
+﻿
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: radial-gradient(circle at top, #0b1020, #05060f);
@@ -6,9 +12,10 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
+    width: 100%;
 }
 
-/* ================= NAVBAR ================= */
 .navbar {
     background: rgba(10, 12, 25, 0.85);
     color: white;
@@ -93,21 +100,18 @@
         text-shadow: 0 0 8px rgba(0,247,255,0.25);
     }
 
-/* ================= EDIT MODE ================= */
 .edit-mode-border {
     border: 2px solid #00f7ff !important;
     display: none;
 }
 
-/* ================= GRID ================= */
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 160px), 1fr));
     gap: 1rem;
     margin-top: 1rem;
 }
 
-/* ================= CARD ================= */
 .card {
     border-radius: 20px;
     background: rgba(10, 12, 25, 0.75);
@@ -147,6 +151,7 @@
 .card-meta {
     font-size: 0.8rem;
     color: #94a3b8;
+    word-break: break-word;
 }
 
 /* ================= FORMS ================= */
@@ -157,7 +162,14 @@
     margin-top: 1.5rem;
 }
 
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
 .form-input {
+    width: 100%;
     padding: 12px;
     border-radius: 12px;
     background: rgba(2, 6, 23, 0.8);
@@ -189,6 +201,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .close-btn {
@@ -235,18 +249,24 @@
 .inline-form {
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
-/* ================= RESPONSIVE ================= */
+img, svg, video {
+    max-width: 100%;
+    height: auto;
+}
+
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
         align-items: flex-start;
         gap: 1rem;
+        padding: 1rem;
     }
 
     .button-row {
-        justify-content: center;
+        justify-content: flex-end;
         width: 100%;
     }
 
@@ -257,4 +277,12 @@
     .main-content {
         padding: 1rem;
     }
+
+    .inline-form {
+        width: 100%;
+    }
+
+        .inline-form .form-input {
+            flex: 1;
+        }
 }

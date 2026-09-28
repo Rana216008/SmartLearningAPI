@@ -2,67 +2,238 @@
 #include <SPI.h>
 #include <MFRC522.h>
 #include <WiFi.h>
+#include <HTTPClient.h>
+#include <ArduinoJson.h>
 
+#include "Cards.h"
 #include "API_Manager.h"
-#include "Config.h"
 #include "DisplayManager.h"
 #include "RFIDManager.h"
 #include "DFPlayerManager.h"
-#include "ExamMode.h"
 
-// ===== Headers for Card Images =====
-#include "A.h"
-#include "B.h"
-#include "C.h"
-#include "AR.h"
-#include "BT.h"
-#include "T.h"
-#include "RED.h"
-#include "GREEN.h"
-#include "BLUE.h"
-#include "CA.h"
-#include "WA.h"
-#include "TM.h"
-#include "Q.h"
-#include "R1.h"
-#include "R3.h"
-// ===== Central Cards Database Definition =====
-const CardModel cards[] = {
-    // UID                     Image, Size      Name    Voice Track  Category
-    {{0xB8, 0x30, 0x24, 0xA2}, A,     A_size,    "A",    13,   1,     "English"},
-    {{0x13, 0x84, 0x98, 0xAA}, B,     B_size,    "B",    12,   5,     "English"},
-    {{0xE2, 0xAD, 0xB8, 0x89}, C,     C_size,    "C",    10,   6,     "English"},
-    {{0x58, 0x05, 0xA5, 0xA2}, AR,    AR_size,   "AR",   16,   4,     "Arabic"},
-    {{0x48, 0x27, 0xDB, 0xA2}, BT,    BT_size,   "BT",   15,   2,     "Arabic"},
-    {{0xA8, 0x5F, 0x7C, 0xA2}, T,     T_size,    "T",    14,   3,     "Arabic"},
-    {{0xF3, 0xDB, 0xFD, 0xA6}, RED,   RED_size,  "RED",  9,    7,     "Colors"},
-    {{0x13, 0x18, 0x76, 0xBD}, GREEN, GREEN_size,"GREEN",8,    8,     "Colors"},
-    {{0x23, 0x26, 0xB1, 0x1B}, BLUE,  BLUE_size, "BLUE", 7,    9,     "Colors"}
-};
-
-const size_t TOTAL_CARDS = sizeof(cards) / sizeof(cards[0]);
-
-// ===== Global System State =====
-String currentCategory = "All";
+// المتغيرات العامة
 unsigned long lastFaceChange = 0;
-const unsigned long FACE_CHANGE_INTERVAL = 2000;
+const unsigned long FACE_INTERVAL = 2000;
+bool isExecutingAction = false;
 
-// Helper function to find local card by UID
-int findLocalCardIndex(byte* uid) {
-    for (size_t i = 0; i < TOTAL_CARDS; i++) {
-        if (compareUID(uid, (byte*)cards[i].uid, 4)) {
-            return i;
+String lastMode = "";
+String lastCategory = "";
+int lastQuizTrack = -1;
+unsigned long lastStatusCheck = 0;
+const unsigned long STATUS_CHECK_INTERVAL = 1200;
+
+// دالة تشغيل صوت السؤال مع الانتظار
+// void playQuestionSequence(int quizTrack) {
+//     if (quizTrack <= 0) return;
+
+//     Serial.printf("[Exam System] Playing Question Track: %d\n", quizTrack);
+//     playVoice(quizTrack);
+    
+//     delay(3000); 
+// }
+void playVoiceWithDelay(int track, unsigned long durationMs) {
+    if (track <= 0) return;
+    playVoice(track);
+    delay(durationMs);
+}
+
+// دالة تشغيل السؤال مع العرض الصحيح
+void playQuestionSequence(int quizTrack) {
+    if (quizTrack <= 0) return;
+
+    Serial.printf("[Exam System] Playing Question Track: %d\n", quizTrack);
+    
+    displayImageByTrack(quizTrack);
+    
+    playVoiceWithDelay(quizTrack, 5000); 
+}
+
+void onModeOrCategoryChanged(const String& mode, const String& category, int quizTrack) {
+    Serial.println("[Event Triggered] Mode: " + mode + " | Category: " + category + " | Track: " + String(quizTrack));
+
+    isExecutingAction = true;
+
+    if (mode.equalsIgnoreCase("Exam")) {
+        Serial.println("[Exam] Playing Intro Track 22...");
+        playVoice(22); 
+        delay(3500); 
+
+        playQuestionSequence(quizTrack);
+    } 
+    else {
+        if (category.equalsIgnoreCase("Arabic")) playVoice(19);
+        else if (category.equalsIgnoreCase("English")) playVoice(20);
+        else if (category.equalsIgnoreCase("Colors")) playVoice(21);
+        else playVoice(26); 
+        delay(2500);
+    }
+
+    showDefaultFace();
+    isExecutingAction = false;
+}
+
+// void executeServerAction(const ApiResponse& response) {
+//     if (!response.success) return;
+
+//     isExecutingAction = true;
+
+//     if (response.action.equalsIgnoreCase("correct_and_next")) {
+//         if (response.imageTrack > 0) {
+//             displayImageByTrack(response.imageTrack);
+//         }
+
+//         int correctSoundTrack = (response.feedbackTrack > 0) ? response.feedbackTrack : 23;
+//         Serial.printf("[Exam] Correct! Playing Track: %d\n", correctSoundTrack);
+//         playVoice(correctSoundTrack);
+        
+//         delay(2500); 
+
+//         showDefaultFace();
+
+//         if (response.audioTrack > 0) {
+//             lastQuizTrack = response.audioTrack; 
+//             Serial.printf("[Exam] Playing Next Question Track: %d\n", response.audioTrack);
+//             playQuestionSequence(response.audioTrack); 
+//         }
+//     } 
+//     else if (response.action.equalsIgnoreCase("wrong")) {
+//         showDefaultFace();
+
+//         Serial.println("[Exam] Playing Wrong Sound Track 25...");
+//         playVoice(25);
+//         delay(2500);
+
+//         if (lastQuizTrack > 0) {
+//             playQuestionSequence(lastQuizTrack);
+//         }
+//     }
+//     else if (response.action.equalsIgnoreCase("ask_question")) {
+//         showDefaultFace();
+//         if (response.audioTrack > 0) {
+//             lastQuizTrack = response.audioTrack;
+//             playQuestionSequence(response.audioTrack);
+//         }
+//     }
+//     else {
+//         if (response.imageTrack > 0) {
+//             displayImageByTrack(response.imageTrack);
+//         }
+
+//         if (response.audioTrack > 0) {
+//             playVoice(response.audioTrack);
+//             delay(2000);
+//         }
+//     }
+
+//     showDefaultFace();
+//     isExecutingAction = false;
+// }
+
+void executeServerAction(const ApiResponse& response) {
+    if (!response.success) return;
+
+    isExecutingAction = true;
+
+    if (response.action.equalsIgnoreCase("correct_and_next")) {
+        // 1. عرض صورة الكارت الممكسوح
+        if (response.imageTrack > 0) {
+            displayImageByTrack(response.imageTrack);
+        }
+
+        // 2. تشغيل صوت التعزيز (أحسنت / إجابة صحيحة) فوراً وإبقاء الصورة معروضة
+        int correctSoundTrack = (response.feedbackTrack > 0) ? response.feedbackTrack : 23;
+        Serial.printf("[Exam] Correct! Playing Track: %d\n", correctSoundTrack);
+        playVoiceWithDelay(correctSoundTrack, 2500); 
+
+        // 3. عرض السؤال الجديد وصوته
+        if (response.audioTrack > 0) {
+            lastQuizTrack = response.audioTrack; 
+            Serial.printf("[Exam] Playing Next Question Track: %d\n", response.audioTrack);
+            playQuestionSequence(response.audioTrack); 
+        }
+         else {
+            showDefaultFace();
+        }
+    } 
+    else if (response.action.equalsIgnoreCase("wrong")) {
+        showDefaultFace();
+
+        Serial.println("[Exam] Playing Wrong Sound Track 25...");
+        playVoiceWithDelay(25, 2500);
+
+        if (lastQuizTrack > 0) {
+            playQuestionSequence(lastQuizTrack);
         }
     }
-    return -1;
+    else if (response.action.equalsIgnoreCase("ask_question")) {
+        if (response.audioTrack > 0) {
+            lastQuizTrack = response.audioTrack;
+            playQuestionSequence(response.audioTrack);
+        }
+    }
+    else {
+        // الحالة العادية (مثلاً عند التمرير في وضع التعلم)
+        if (response.imageTrack > 0) {
+            displayImageByTrack(response.imageTrack);
+            delay(2000); // زيادة وقت بقاء الصورة لمدة ثانيتين
+    }
+        }
+
+        if (response.audioTrack > 0) {
+            playVoiceWithDelay(response.audioTrack, response.delayMs);
+        } 
+        else {
+            delay(3000);
+        }
+
+        showDefaultFace();
+            isExecutingAction = false;
+
+    }
+void checkServerStatus() {
+    if (WiFi.status() != WL_CONNECTED || isExecutingAction) return;
+
+    HTTPClient http;
+    http.begin(statusUrl);
+    http.setTimeout(1000); 
+
+    int httpCode = http.GET();
+
+    if (httpCode == HTTP_CODE_OK) {
+        String payload = http.getString();
+        
+        JsonDocument doc;
+        DeserializationError error = deserializeJson(doc, payload);
+
+        if (!error) {
+            String currentMode = doc["mode"] | "";
+            String currentCategory = doc["category"] | "";
+            int quizTrack = doc["quizTrack"] | -1;
+
+            if (lastMode == "" && lastCategory == "") {
+                lastMode = currentMode;
+                lastCategory = currentCategory;
+                lastQuizTrack = quizTrack;
+
+                if (currentMode.equalsIgnoreCase("Exam") && quizTrack > 0) {
+                    onModeOrCategoryChanged(currentMode, currentCategory, quizTrack);
+                }
+            }
+            else if (currentMode != lastMode || currentCategory != lastCategory || (currentMode.equalsIgnoreCase("Exam") && quizTrack != lastQuizTrack && quizTrack > 0)) {
+                lastMode = currentMode;
+                lastCategory = currentCategory;
+                lastQuizTrack = quizTrack;
+                
+                onModeOrCategoryChanged(currentMode, currentCategory, quizTrack);
+            }
+        }
+    }
+    http.end();
 }
 
 void setup() {
     Serial.begin(115200);
     delay(1000);
-    Serial.println("========================================");
-    Serial.println("=== ROBOT SYSTEM STARTING ===");
-    Serial.println("========================================");
 
     initDisplay();
 
@@ -70,149 +241,46 @@ void setup() {
     delay(1000);
 
     if (myDFPlayer.begin(dfSerial)) {
-        Serial.println("[DFPlayer] ✅ DFPlayer initialized!");
-        myDFPlayer.volume(40);
-    } else {
-        Serial.println("[DFPlayer] ❌ DFPlayer initialization failed!");
+        myDFPlayer.volume(30);
     }
 
-    showTestCardScreen();
-    playVoice(11); // Startup sound
-    delay(3000);
+    showDefaultFace();
+    playVoice(27); 
 
     SPI.begin();
     hardResetMFRC522();
     mfrc522.PCD_Init();
-    delay(100);
-
-    if (isRFIDAlive()) {
-        Serial.println("[RFID] ✅ RFID reader ready!");
-    } else {
-        reviveRFID();
-    }
 
     WiFi_init();
-
-    if (checkServerHealth()) {
-        Serial.println("[HEALTH] ✅ Server connected.");
-    } else {
-        Serial.println("[HEALTH] ⚠️ Server unreachable. Will use Local Fallback.");
-    }
 }
 
 void loop() {
-    static unsigned long lastRFIDCheck = 0;
     unsigned long currentTime = millis();
 
-    // 1. Idle Robot Face Animation
-    if (!examModeActive && examState == EXAM_IDLE) {
-        if (currentTime - lastFaceChange >= FACE_CHANGE_INTERVAL) {
+    if (!isExecutingAction) {
+        if (currentTime - lastFaceChange >= FACE_INTERVAL) {
             lastFaceChange = currentTime;
-            updateRobotFace();
+            updateRobotFaceAnimation();
         }
-    } else {
-        lastFaceChange = currentTime;
-    }
 
-    // 2. Periodic RFID Health Monitor
-    if (currentTime - lastRFIDCheck > 5000) {
-        lastRFIDCheck = currentTime;
-        if (!isRFIDAlive()) {
-            reviveRFID();
-            if (isRFIDAlive()) showTestCardScreen();
+        if (currentTime - lastStatusCheck >= STATUS_CHECK_INTERVAL) {
+            lastStatusCheck = currentTime;
+            checkServerStatus();
         }
     }
 
-    // 3. Scan RFID Card
     if (!mfrc522.PICC_IsNewCardPresent() || !mfrc522.PICC_ReadCardSerial()) {
         delay(10);
         return;
     }
 
     String uidStr = buildUIDString(mfrc522.uid.uidByte, mfrc522.uid.size);
-    Serial.println("[RFID] Card scanned: " + uidStr);
+    Serial.println("[RFID] Read UID: " + uidStr);
 
-    // 4. Handle Exam Mode States
-    if (examState == EXAM_START) {
-        examState = EXAM_FQ;
-        showCurrentQuestion();
-        mfrc522.PICC_HaltA();
-        mfrc522.PCD_StopCrypto1();
-        return;
-    }
+    ApiResponse actionResponse = sendUID(uidStr);
 
-    if (examModeActive && (examState == EXAM_FQ || examState == EXAM_SQ || examState == EXAM_TQ)) {
-        ApiResponse result = sendUID(uidStr);
-        if (result.mode == "Learning") {
-            examModeActive = false;
-            examState = EXAM_IDLE;
-            showTestCardScreen();
-        } else {
-            processExamCard(uidStr);
-        }
-        mfrc522.PICC_HaltA();
-        mfrc522.PCD_StopCrypto1();
-        return;
-    }
-
-    // 5. Handle Normal / Learning Mode (Server Priority)
-    bool matched = false;
-    int trackToPlay = -1;
-
-    if (WiFi.status() != WL_CONNECTED) WiFi.reconnect();
-
-    ApiResponse result = sendUID(uidStr);
-
-    if (result.success) {
-        if (result.mode == "Exam") {
-            startExamMode();
-            mfrc522.PICC_HaltA();
-            mfrc522.PCD_StopCrypto1();
-            return;
-        }
-
-        if (result.category != "") currentCategory = result.category;
-
-        if (result.action == "wrong_category") {
-            showCategoryError(currentCategory);
-            delay(4000);
-            showTestCardScreen();
-            mfrc522.PICC_HaltA();
-            mfrc522.PCD_StopCrypto1();
-            return;
-        }
-
-        if (result.track > 0) {
-            trackToPlay = result.track;
-            matched = true;
-        }
-    }
-
-    // 6. Local Fallback (If Server Fails)
-    if (!matched && mfrc522.uid.size == 4) {
-        int cardIdx = findLocalCardIndex(mfrc522.uid.uidByte);
-        
-        if (cardIdx != -1) {
-            String cardCat = cards[cardIdx].category;
-            if (currentCategory == "All" || currentCategory == cardCat) {
-                trackToPlay = cards[cardIdx].trackNumber;
-                matched = true;
-            } else {
-                showCategoryError(currentCategory);
-                delay(4000);
-                showTestCardScreen();
-                mfrc522.PICC_HaltA();
-                mfrc522.PCD_StopCrypto1();
-                return;
-            }
-        }
-    }
-
-    // 7. Render Result
-    if (matched) {
-        displayImageByTrack(trackToPlay);
-        delay(5000);
-        showTestCardScreen();
+    if (actionResponse.success) {
+        executeServerAction(actionResponse);
     }
 
     mfrc522.PICC_HaltA();

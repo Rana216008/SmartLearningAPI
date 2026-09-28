@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace SmartLearningAPI.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260920130357_Migration1")]
-    partial class Migration1
+    [Migration("20260923164252_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

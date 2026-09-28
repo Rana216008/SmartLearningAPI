@@ -1,86 +1,117 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SmartLearningAPI.Models;
-using System.Linq;
+using SmartLearningAPI.Services;
+using SmartLearningAPI.DTOs;
 
-namespace SmartLearningAPI.Controllers
+[ApiController]
+[Route("api/[controller]")]
+public class LearningController : ControllerBase
 {
-    public class LearningController : Controller
+    private readonly AppDbContext _db;
+
+    public LearningController(AppDbContext db)
     {
-        private readonly AppDbContext _context;
+        _db = db;
+    }
 
-        public LearningController(AppDbContext context)
+    [HttpGet("status")]
+    public IActionResult GetCurrentStatus()
+    {
+        var settings = _db.AppSettings.FirstOrDefault();
+
+        if (settings == null)
         {
-            _context = context;
+            return Ok(new
+            {
+                mode = "Learning",
+                category = "All",
+                examTargetCardId = (int?)null,
+                quizTrack = -1,
+                targetCardName = "",
+                targetImageName = ""
+            });
         }
 
-        public IActionResult GetNextCard()
+        int quizTrack = -1;
+        string targetName = "";
+        string targetImage = "";
+
+        if (string.Equals(settings.CurrentMode, "Exam", StringComparison.OrdinalIgnoreCase)
+            && settings.CurrentExamTargetCardId.HasValue)
         {
-            var settings = _context.AppSettings.FirstOrDefault();
-
-            if (settings == null)
+            var targetCard = _db.Cards.FirstOrDefault(c => c.Id == settings.CurrentExamTargetCardId.Value);
+            if (targetCard != null)
             {
-                return Content("لم يتم ضبط الإعدادات بعد في قاعدة البيانات");
-            }
-
-            // فلترة الكروت بناءً على القسم الذي اختارته الأم (عربي، إنجليزي، )
-            var cards = _context.Cards
-                .Where(c => c.Category != null && c.Category.Name == settings.CurrentCategory)
-                .OrderBy(c => c.TrackNumber)
-                .ToList();
-
-            if (!cards.Any())
-            {
-                return Content($"لا توجد كروت مضافة في قسم {settings.CurrentCategory}");
-            }
-
-            // تحديث جدول الجلسة (Session) ليعرف النظام الوضع الحالي (Learning أو Exam)
-            var currentSession = _context.Sessions.FirstOrDefault(s => s.Id == 1);
-            if (currentSession != null)
-            {
-                currentSession.Mode = settings.CurrentMode;
-                _context.SaveChanges();
-            }
-
-            var nextCard = cards.FirstOrDefault(c =>
-                !_context.Progress.Any(p => p.UID == c.UID && p.IsLearned));
-
-            if (nextCard == null) nextCard = cards.First();
-
-            if (settings.CurrentMode == "Exam")
-            {
-                // في وضع الامتحان، نرسل كل الكروت المختارة ليتم اختبار الطفل فيها
-                return View("ExamMode", cards);
-            }
-            else
-            {
-                // في وضع التعليم، نرسل الكرت التالي فقط للتركيز عليه
-                return View("LearningMode", nextCard);
+                quizTrack = targetCard.QuizTrackNumber;
+                targetName = targetCard.Name;
+                targetImage = targetCard.ImageName;
             }
         }
 
-        // أكشن إضافي لتحديث التقدم عند مسح الكرت
-        [HttpPost]
-        public IActionResult UpdateProgress(string uid)
+        return Ok(new
         {
-            var progress = _context.Progress.FirstOrDefault(p => p.UID == uid);
+            mode = settings.CurrentMode ?? "Learning",
+            category = settings.CurrentCategory ?? "All",
+            examTargetCardId = settings.CurrentExamTargetCardId,
+            quizTrack = quizTrack,
+            targetCardName = targetName,
+            targetImageName = targetImage
+        });
+    }
 
-            if (progress == null)
+    [HttpPost("update-settings")]
+    public IActionResult UpdateSettings([FromBody] UpdateSettingsDto dto)
+    {
+        var settings = _db.AppSettings.FirstOrDefault();
+        if (settings == null)
+        {
+            settings = new AppSettings();
+            _db.AppSettings.Add(settings);
+        }
+
+        settings.CurrentMode = dto.Mode;
+        settings.CurrentCategory = dto.Category;
+
+        if (string.Equals(dto.Mode, "Exam", StringComparison.OrdinalIgnoreCase))
+        {
+            var query = _db.Cards.Include(c => c.Category).AsQueryable();
+            if (!string.Equals(dto.Category, "All", StringComparison.OrdinalIgnoreCase))
             {
-                _context.Progress.Add(new UserProgress { UID = uid, Count = 1, IsLearned = false });
+                query = query.Where(c => c.Category != null &&
+                    c.Category.Name.ToLower() == dto.Category.ToLower());
             }
-            else
+
+            var availableCards = query.ToList();
+
+            if (availableCards.Any())
             {
-                progress.Count++;
-                // إذا تكرر الكرت 3 مرات، نعتبره "تم تعلمه" تلقائياً
-                if (progress.Count >= 3)
+                var cardUids = availableCards.Select(c => c.UID).ToList();
+
+                var learnedUids = _db.Progress
+                    .Where(p => cardUids.Contains(p.UID) && p.Count > 0)
+                    .Select(p => p.UID)
+                    .ToList();
+
+                var candidateCards = availableCards.Where(c => learnedUids.Contains(c.UID)).ToList();
+
+                if (!candidateCards.Any())
                 {
-                    progress.IsLearned = true;
+                    candidateCards = availableCards;
                 }
-            }
 
-            _context.SaveChanges();
-            return Ok();
+                var random = new Random();
+                var selectedTargetCard = candidateCards[random.Next(candidateCards.Count)];
+
+                settings.CurrentExamTargetCardId = selectedTargetCard.Id;
+            }
         }
+        else
+        {
+            settings.CurrentExamTargetCardId = null;
+        }
+
+        _db.SaveChanges();
+        return Ok(new { success = true, message = "تم تحديث الإعدادات بنجاح" });
     }
 }
