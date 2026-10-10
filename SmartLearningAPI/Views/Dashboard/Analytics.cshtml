@@ -199,67 +199,6 @@
         </div>
     </div>
 
-    <script>
-        function getCategoryColor(cat) {
-            const colors = { 'Arabic': '#FF4D6A', 'English': '#38D9F5', 'Colors': '#FFC048' };
-            return colors[cat] || '#A0A0C0';
-        }
-        function openCardDetail(name, category, uid, track, scanCount, isLearned) {
-            const content = document.getElementById('cardDetailContent');
-            const masteryPercent = Math.min(scanCount, 10) * 10;
-            content.innerHTML = `
-                <h2 style="color:var(--cyan);">${name}</h2>
-                <span class="badge" style="background:${getCategoryColor(category)}; display:inline-block; padding:4px 14px; border-radius:20px; margin:10px 0;">${category}</span>
-                <div style="display:flex; justify-content:space-between; margin:20px 0;">
-                    <div><i class="fas fa-music"></i> المسار الصوتي: ${track}</div>
-                    <div><i class="fas fa-hand-pointer"></i> <strong>عدد المحاولات: ${scanCount}</strong></div>
-                </div>
-                <div style="background:rgba(255,255,255,0.1); border-radius:10px; height:8px; margin:15px 0; overflow:hidden;">
-                    <div style="width:${masteryPercent}%; height:100%; background:linear-gradient(90deg, var(--cyan), var(--violet));"></div>
-                </div>
-                <div style="font-size:1.2rem;">${isLearned ? '✅ متقن' : '🔄 قيد التعلم'}</div>
-                <div style="margin-top:10px; opacity:0.7;">UID: ${uid}</div>
-            `;
-            document.getElementById('cardDetailModal').style.display = 'flex';
-        }
-        function closeCardDetail() {
-            document.getElementById('cardDetailModal').style.display = 'none';
-        }
-        document.getElementById('cardDetailModal').addEventListener('click', function(e) {
-            if (e.target === this) closeCardDetail();
-        });
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('.btn-detail').forEach(btn => {
-                btn.addEventListener('click', function() {
-                    const { name, category, uid, track, count, islearned } = this.dataset;
-                    openCardDetail(name, category, uid, parseInt(track), parseInt(count), islearned === 'true');
-                });
-            });
-        });
-
-        // Cinematic reveal
-        window.addEventListener('load', function() {
-            setTimeout(function() {
-                const el = document.getElementById('mainContent');
-                if (el) el.classList.add('reveal');
-            }, 600);
-        });
-
-        // Reset Modal Script
-        let resetUrl = '';
-        function showResetModal(el) {
-            resetUrl = el.getAttribute('data-reset-url');
-            document.getElementById('resetConfirmModal').style.display = 'flex';
-        }
-        function closeResetModal() {
-            document.getElementById('resetConfirmModal').style.display = 'none';
-        }
-        document.getElementById('confirmResetBtn').addEventListener('click', () => {
-            window.location.href = resetUrl;
-        });
-        document.getElementById('resetConfirmModal').addEventListener('click', function(e) {
-            if (e.target === this) closeResetModal();
-        });
-    </script>
+    <script src="~/js/Analytics.js"></script>
 </body>
 </html>

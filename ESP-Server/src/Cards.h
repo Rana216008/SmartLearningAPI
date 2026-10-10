@@ -38,7 +38,7 @@ static const ImageResource images[] = {
     // { UID, TrackNumber, QuizTrackNumber, displayName, imageData, imageSize }
     {"B8 30 24 A2", 4, 13, "A",     A,     A_size},     // حرف A
     {"48 27 DB A2", 2, 11, "ب",     BT,    BT_size},    // حرف الباء
-    {"A8 5F 7C A2", 3, 12, "ت",     T,     T_size},     // حرف التاء
+    {"C3 30 A5 AA", 3, 12, "ت",     T,     T_size},     // حرف التاء
     {"58 05 A5 A2", 1, 10, "أ",     AR,    AR_size},    // حرف الألف
     {"13 84 98 AA", 5, 14, "B",     B,     B_size},     // حرف B
     {"E2 AD B9 89", 6, 15, "C",     C,     C_size},     // حرف C

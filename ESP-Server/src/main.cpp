@@ -22,29 +22,19 @@ int lastQuizTrack = -1;
 unsigned long lastStatusCheck = 0;
 const unsigned long STATUS_CHECK_INTERVAL = 1200;
 
-// دالة تشغيل صوت السؤال مع الانتظار
-// void playQuestionSequence(int quizTrack) {
-//     if (quizTrack <= 0) return;
-
-//     Serial.printf("[Exam System] Playing Question Track: %d\n", quizTrack);
-//     playVoice(quizTrack);
-    
-//     delay(3000); 
-// }
 void playVoiceWithDelay(int track, unsigned long durationMs) {
     if (track <= 0) return;
     playVoice(track);
     delay(durationMs);
 }
 
-// دالة تشغيل السؤال مع العرض الصحيح
+// دالة تشغيل صوت السؤال (بدون عرض صورة - مخصصة لوضع الاختبار)
 void playQuestionSequence(int quizTrack) {
     if (quizTrack <= 0) return;
 
     Serial.printf("[Exam System] Playing Question Track: %d\n", quizTrack);
     
-    displayImageByTrack(quizTrack);
-    
+    // تم إلغاء displayImageByTrack من هنا حتى لا تظهر صورة مع السؤال
     playVoiceWithDelay(quizTrack, 5000); 
 }
 
@@ -72,86 +62,26 @@ void onModeOrCategoryChanged(const String& mode, const String& category, int qui
     isExecutingAction = false;
 }
 
-// void executeServerAction(const ApiResponse& response) {
-//     if (!response.success) return;
-
-//     isExecutingAction = true;
-
-//     if (response.action.equalsIgnoreCase("correct_and_next")) {
-//         if (response.imageTrack > 0) {
-//             displayImageByTrack(response.imageTrack);
-//         }
-
-//         int correctSoundTrack = (response.feedbackTrack > 0) ? response.feedbackTrack : 23;
-//         Serial.printf("[Exam] Correct! Playing Track: %d\n", correctSoundTrack);
-//         playVoice(correctSoundTrack);
-        
-//         delay(2500); 
-
-//         showDefaultFace();
-
-//         if (response.audioTrack > 0) {
-//             lastQuizTrack = response.audioTrack; 
-//             Serial.printf("[Exam] Playing Next Question Track: %d\n", response.audioTrack);
-//             playQuestionSequence(response.audioTrack); 
-//         }
-//     } 
-//     else if (response.action.equalsIgnoreCase("wrong")) {
-//         showDefaultFace();
-
-//         Serial.println("[Exam] Playing Wrong Sound Track 25...");
-//         playVoice(25);
-//         delay(2500);
-
-//         if (lastQuizTrack > 0) {
-//             playQuestionSequence(lastQuizTrack);
-//         }
-//     }
-//     else if (response.action.equalsIgnoreCase("ask_question")) {
-//         showDefaultFace();
-//         if (response.audioTrack > 0) {
-//             lastQuizTrack = response.audioTrack;
-//             playQuestionSequence(response.audioTrack);
-//         }
-//     }
-//     else {
-//         if (response.imageTrack > 0) {
-//             displayImageByTrack(response.imageTrack);
-//         }
-
-//         if (response.audioTrack > 0) {
-//             playVoice(response.audioTrack);
-//             delay(2000);
-//         }
-//     }
-
-//     showDefaultFace();
-//     isExecutingAction = false;
-// }
-
 void executeServerAction(const ApiResponse& response) {
     if (!response.success) return;
 
     isExecutingAction = true;
 
     if (response.action.equalsIgnoreCase("correct_and_next")) {
-        // 1. عرض صورة الكارت الممكسوح
-        if (response.imageTrack > 0) {
-            displayImageByTrack(response.imageTrack);
-        }
+        // تم إزالة عرض صورة الكارت الممسوح هنا لإيقاف الصور في وضع الاختبار
 
-        // 2. تشغيل صوت التعزيز (أحسنت / إجابة صحيحة) فوراً وإبقاء الصورة معروضة
+        // 1. تشغيل صوت التعزيز (أحسنت / إجابة صحيحة)
         int correctSoundTrack = (response.feedbackTrack > 0) ? response.feedbackTrack : 23;
         Serial.printf("[Exam] Correct! Playing Track: %d\n", correctSoundTrack);
         playVoiceWithDelay(correctSoundTrack, 2500); 
 
-        // 3. عرض السؤال الجديد وصوته
+        // 2. تشغيل صوت السؤال الجديد
         if (response.audioTrack > 0) {
             lastQuizTrack = response.audioTrack; 
             Serial.printf("[Exam] Playing Next Question Track: %d\n", response.audioTrack);
             playQuestionSequence(response.audioTrack); 
-        }
-         else {
+        } 
+        else {
             showDefaultFace();
         }
     } 
@@ -166,32 +96,74 @@ void executeServerAction(const ApiResponse& response) {
         }
     }
     else if (response.action.equalsIgnoreCase("ask_question")) {
+        showDefaultFace();
         if (response.audioTrack > 0) {
             lastQuizTrack = response.audioTrack;
             playQuestionSequence(response.audioTrack);
         }
     }
     else {
-        // الحالة العادية (مثلاً عند التمرير في وضع التعلم)
+        // الوضع العادي (التعلم)
+        
         if (response.imageTrack > 0) {
             displayImageByTrack(response.imageTrack);
-            delay(2000); // زيادة وقت بقاء الصورة لمدة ثانيتين
-    }
         }
-
         if (response.audioTrack > 0) {
-            playVoiceWithDelay(response.audioTrack, response.delayMs);
+            playVoice(response.audioTrack);
         } 
-        else {
-            delay(3000);
-        }
+        delay(5000); 
 
         showDefaultFace();
-            isExecutingAction = false;
-
+        isExecutingAction = false;
     }
+   
+    showDefaultFace();
+    isExecutingAction = false;
+}
+
+// void checkServerStatus() {
+//     if (WiFi.status() != WL_CONNECTED || isExecutingAction) return;
+
+//     HTTPClient http;
+//     http.begin(statusUrl);
+//     http.setTimeout(1000); 
+
+//     int httpCode = http.GET();
+
+//     if (httpCode == HTTP_CODE_OK) {
+//         String payload = http.getString();
+        
+//         JsonDocument doc;
+//         DeserializationError error = deserializeJson(doc, payload);
+
+//         if (!error) {
+//             String currentMode = doc["mode"] | "";
+//             String currentCategory = doc["category"] | "";
+//             int quizTrack = doc["quizTrack"] | -1;
+
+//             if (lastMode == "" && lastCategory == "") {
+//                 lastMode = currentMode;
+//                 lastCategory = currentCategory;
+//                 lastQuizTrack = quizTrack;
+
+//                 if (currentMode.equalsIgnoreCase("Exam") && quizTrack > 0) {
+//                     onModeOrCategoryChanged(currentMode, currentCategory, quizTrack);
+//                 }
+//             }
+//             else if (currentMode != lastMode || currentCategory != lastCategory || (currentMode.equalsIgnoreCase("Exam") && quizTrack != lastQuizTrack && quizTrack > 0)) {
+//                 lastMode = currentMode;
+//                 lastCategory = currentCategory;
+//                 lastQuizTrack = quizTrack;
+                
+//                 onModeOrCategoryChanged(currentMode, currentCategory, quizTrack);
+//             }
+//         }
+//     }
+//     http.end();
+// }
 void checkServerStatus() {
-    if (WiFi.status() != WL_CONNECTED || isExecutingAction) return;
+    // التأكد من وجود لابتوب/جهاز متصل بشبكة الـ ESP32
+    if (WiFi.softAPgetStationNum() == 0 || isExecutingAction) return;
 
     HTTPClient http;
     http.begin(statusUrl);
@@ -241,7 +213,7 @@ void setup() {
     delay(1000);
 
     if (myDFPlayer.begin(dfSerial)) {
-        myDFPlayer.volume(30);
+        myDFPlayer.volume(50);
     }
 
     showDefaultFace();
@@ -268,6 +240,8 @@ void loop() {
             checkServerStatus();
         }
     }
+
+    if (isExecutingAction) return;
 
     if (!mfrc522.PICC_IsNewCardPresent() || !mfrc522.PICC_ReadCardSerial()) {
         delay(10);

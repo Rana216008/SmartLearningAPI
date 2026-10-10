@@ -49,16 +49,16 @@
       "PackagePath": "staticwebassets\\js\\Admin.js"
     },
     {
+      "Id": "D:\\ENG\\Final-Prpject\\VisualStudio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\js\\Analytics.js",
+      "PackagePath": "staticwebassets\\js\\Analytics.js"
+    },
+    {
       "Id": "D:\\ENG\\Final-Prpject\\VisualStudio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\js\\Login.js",
       "PackagePath": "staticwebassets\\js\\Login.js"
     },
     {
       "Id": "D:\\ENG\\Final-Prpject\\VisualStudio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\js\\dashboard.js",
       "PackagePath": "staticwebassets\\js\\dashboard.js"
-    },
-    {
-      "Id": "D:\\ENG\\Final-Prpject\\VisualStudio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\js\\site.js",
-      "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
       "Id": "D:\\ENG\\Final-Prpject\\VisualStudio\\SmartLearningAPI\\SmartLearningAPI\\wwwroot\\lib\\bootstrap\\LICENSE",

@@ -1,4 +1,72 @@
-﻿let performanceChart;
+﻿
+//// تحديث وضع التشغيل والفئة فورياً في السيرفر عبر JSON
+//async function updateSettingsRealtime() {
+//    const mode = document.getElementById('modeSelect')?.value || "Learning";
+//    const category = document.getElementById('categorySelect')?.value || "All";
+
+//    try {
+//        const response = await fetch('/api/learning/update-settings', {
+//            method: 'POST',
+//            headers: {
+//                'Content-Type': 'application/json',
+//                'Accept': 'application/json'
+//            },
+//            body: JSON.stringify({ mode: mode, category: category })
+//        });
+
+//        if (response.ok) {
+//            console.log(`[Realtime Dashboard] Updated successfully: Mode=${mode}, Category=${category}`);
+//            if (typeof showToast === 'function') {
+//                showToast('تم تحديث الإعدادات بنجاح ✓');
+//            }
+//        } else {
+//            console.error('[Realtime Dashboard] Failed to update settings');
+//            if (typeof showToast === 'function') {
+//                showToast('حدث خطأ أثناء تحديث الإعدادات ❌');
+//            }
+//        }
+//    } catch (error) {
+//        console.error('[Realtime Dashboard] Error connecting to server:', error);
+//        if (typeof showToast === 'function') {
+//            showToast('تعذر الاتصال بالخادم ❌');
+//        }
+//    }
+//}
+
+//// تحديث الوضع عبر الأزرار التفاعلية
+//function updateMode(type, value, clickedButton) {
+//    const modeSelect = document.getElementById('modeSelect');
+//    const categorySelect = document.getElementById('categorySelect');
+
+//    if (type === 'mode' && modeSelect) modeSelect.value = value;
+//    if (type === 'category' && categorySelect) categorySelect.value = value;
+
+//    if (clickedButton) {
+//        const card = clickedButton.closest('.card');
+//        if (card) {
+//            card.querySelectorAll('.ctrl-btn').forEach(btn => btn.classList.remove('active'));
+//        }
+//        clickedButton.classList.add('active');
+//    }
+
+//    updateSettingsRealtime();
+//}
+
+//// ربط أحداث القوائم المنسدلة للتحديث اللحظي
+//document.addEventListener('DOMContentLoaded', function () {
+//    const modeSelect = document.getElementById('modeSelect');
+//    const categorySelect = document.getElementById('categorySelect');
+
+//    if (modeSelect) {
+//        modeSelect.addEventListener('change', updateSettingsRealtime);
+//    }
+
+//    if (categorySelect) {
+//        categorySelect.addEventListener('change', updateSettingsRealtime);
+//    }
+//});
+
+let performanceChart;
 let activityChart;
 
 /* تحديث وضع التشغيل أو التصنيف بشكل تفاعلي */
